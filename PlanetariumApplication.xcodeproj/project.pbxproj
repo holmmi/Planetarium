@@ -1,0 +1,625 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7338F30827452FCF0038C370 /* PlanetariumApplicationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7338F30727452FCF0038C370 /* PlanetariumApplicationApp.swift */; };
+		7338F30A27452FCF0038C370 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7338F30927452FCF0038C370 /* ContentView.swift */; };
+		7338F30C27452FD10038C370 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7338F30B27452FD10038C370 /* Assets.xcassets */; };
+		7338F30F27452FD10038C370 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7338F30E27452FD10038C370 /* Preview Assets.xcassets */; };
+		7338F31127452FD10038C370 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7338F31027452FD10038C370 /* Persistence.swift */; };
+		7338F31427452FD10038C370 /* PlanetariumApplication.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7338F31227452FD10038C370 /* PlanetariumApplication.xcdatamodeld */; };
+		7338F31E27452FD10038C370 /* PlanetariumApplicationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7338F31D27452FD10038C370 /* PlanetariumApplicationTests.swift */; };
+		7338F32827452FD10038C370 /* PlanetariumApplicationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7338F32727452FD10038C370 /* PlanetariumApplicationUITests.swift */; };
+		7338F32A27452FD10038C370 /* PlanetariumApplicationUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7338F32927452FD10038C370 /* PlanetariumApplicationUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7338F31A27452FD10038C370 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7338F2FC27452FCF0038C370 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7338F30327452FCF0038C370;
+			remoteInfo = PlanetariumApplication;
+		};
+		7338F32427452FD10038C370 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7338F2FC27452FCF0038C370 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7338F30327452FCF0038C370;
+			remoteInfo = PlanetariumApplication;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7338F30427452FCF0038C370 /* PlanetariumApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlanetariumApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7338F30727452FCF0038C370 /* PlanetariumApplicationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetariumApplicationApp.swift; sourceTree = "<group>"; };
+		7338F30927452FCF0038C370 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7338F30B27452FD10038C370 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7338F30E27452FD10038C370 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7338F31027452FD10038C370 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		7338F31327452FD10038C370 /* PlanetariumApplication.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PlanetariumApplication.xcdatamodel; sourceTree = "<group>"; };
+		7338F31927452FD10038C370 /* PlanetariumApplicationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlanetariumApplicationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7338F31D27452FD10038C370 /* PlanetariumApplicationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetariumApplicationTests.swift; sourceTree = "<group>"; };
+		7338F32327452FD10038C370 /* PlanetariumApplicationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlanetariumApplicationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7338F32727452FD10038C370 /* PlanetariumApplicationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetariumApplicationUITests.swift; sourceTree = "<group>"; };
+		7338F32927452FD10038C370 /* PlanetariumApplicationUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetariumApplicationUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7338F30127452FCF0038C370 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7338F31627452FD10038C370 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7338F32027452FD10038C370 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7338F2FB27452FCF0038C370 = {
+			isa = PBXGroup;
+			children = (
+				7338F30627452FCF0038C370 /* PlanetariumApplication */,
+				7338F31C27452FD10038C370 /* PlanetariumApplicationTests */,
+				7338F32627452FD10038C370 /* PlanetariumApplicationUITests */,
+				7338F30527452FCF0038C370 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7338F30527452FCF0038C370 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7338F30427452FCF0038C370 /* PlanetariumApplication.app */,
+				7338F31927452FD10038C370 /* PlanetariumApplicationTests.xctest */,
+				7338F32327452FD10038C370 /* PlanetariumApplicationUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7338F30627452FCF0038C370 /* PlanetariumApplication */ = {
+			isa = PBXGroup;
+			children = (
+				7338F30727452FCF0038C370 /* PlanetariumApplicationApp.swift */,
+				7338F30927452FCF0038C370 /* ContentView.swift */,
+				7338F30B27452FD10038C370 /* Assets.xcassets */,
+				7338F31027452FD10038C370 /* Persistence.swift */,
+				7338F31227452FD10038C370 /* PlanetariumApplication.xcdatamodeld */,
+				7338F30D27452FD10038C370 /* Preview Content */,
+			);
+			path = PlanetariumApplication;
+			sourceTree = "<group>";
+		};
+		7338F30D27452FD10038C370 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				7338F30E27452FD10038C370 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7338F31C27452FD10038C370 /* PlanetariumApplicationTests */ = {
+			isa = PBXGroup;
+			children = (
+				7338F31D27452FD10038C370 /* PlanetariumApplicationTests.swift */,
+			);
+			path = PlanetariumApplicationTests;
+			sourceTree = "<group>";
+		};
+		7338F32627452FD10038C370 /* PlanetariumApplicationUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7338F32727452FD10038C370 /* PlanetariumApplicationUITests.swift */,
+				7338F32927452FD10038C370 /* PlanetariumApplicationUITestsLaunchTests.swift */,
+			);
+			path = PlanetariumApplicationUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7338F30327452FCF0038C370 /* PlanetariumApplication */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7338F32D27452FD10038C370 /* Build configuration list for PBXNativeTarget "PlanetariumApplication" */;
+			buildPhases = (
+				7338F30027452FCF0038C370 /* Sources */,
+				7338F30127452FCF0038C370 /* Frameworks */,
+				7338F30227452FCF0038C370 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PlanetariumApplication;
+			productName = PlanetariumApplication;
+			productReference = 7338F30427452FCF0038C370 /* PlanetariumApplication.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7338F31827452FD10038C370 /* PlanetariumApplicationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7338F33027452FD10038C370 /* Build configuration list for PBXNativeTarget "PlanetariumApplicationTests" */;
+			buildPhases = (
+				7338F31527452FD10038C370 /* Sources */,
+				7338F31627452FD10038C370 /* Frameworks */,
+				7338F31727452FD10038C370 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7338F31B27452FD10038C370 /* PBXTargetDependency */,
+			);
+			name = PlanetariumApplicationTests;
+			productName = PlanetariumApplicationTests;
+			productReference = 7338F31927452FD10038C370 /* PlanetariumApplicationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7338F32227452FD10038C370 /* PlanetariumApplicationUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7338F33327452FD10038C370 /* Build configuration list for PBXNativeTarget "PlanetariumApplicationUITests" */;
+			buildPhases = (
+				7338F31F27452FD10038C370 /* Sources */,
+				7338F32027452FD10038C370 /* Frameworks */,
+				7338F32127452FD10038C370 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7338F32527452FD10038C370 /* PBXTargetDependency */,
+			);
+			name = PlanetariumApplicationUITests;
+			productName = PlanetariumApplicationUITests;
+			productReference = 7338F32327452FD10038C370 /* PlanetariumApplicationUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7338F2FC27452FCF0038C370 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					7338F30327452FCF0038C370 = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					7338F31827452FD10038C370 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = 7338F30327452FCF0038C370;
+					};
+					7338F32227452FD10038C370 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = 7338F30327452FCF0038C370;
+					};
+				};
+			};
+			buildConfigurationList = 7338F2FF27452FCF0038C370 /* Build configuration list for PBXProject "PlanetariumApplication" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7338F2FB27452FCF0038C370;
+			productRefGroup = 7338F30527452FCF0038C370 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7338F30327452FCF0038C370 /* PlanetariumApplication */,
+				7338F31827452FD10038C370 /* PlanetariumApplicationTests */,
+				7338F32227452FD10038C370 /* PlanetariumApplicationUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7338F30227452FCF0038C370 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7338F30F27452FD10038C370 /* Preview Assets.xcassets in Resources */,
+				7338F30C27452FD10038C370 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7338F31727452FD10038C370 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7338F32127452FD10038C370 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7338F30027452FCF0038C370 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7338F31127452FD10038C370 /* Persistence.swift in Sources */,
+				7338F31427452FD10038C370 /* PlanetariumApplication.xcdatamodeld in Sources */,
+				7338F30A27452FCF0038C370 /* ContentView.swift in Sources */,
+				7338F30827452FCF0038C370 /* PlanetariumApplicationApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7338F31527452FD10038C370 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7338F31E27452FD10038C370 /* PlanetariumApplicationTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7338F31F27452FD10038C370 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7338F32A27452FD10038C370 /* PlanetariumApplicationUITestsLaunchTests.swift in Sources */,
+				7338F32827452FD10038C370 /* PlanetariumApplicationUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7338F31B27452FD10038C370 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7338F30327452FCF0038C370 /* PlanetariumApplication */;
+			targetProxy = 7338F31A27452FD10038C370 /* PBXContainerItemProxy */;
+		};
+		7338F32527452FD10038C370 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7338F30327452FCF0038C370 /* PlanetariumApplication */;
+			targetProxy = 7338F32427452FD10038C370 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		7338F32B27452FD10038C370 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7338F32C27452FD10038C370 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7338F32E27452FD10038C370 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"PlanetariumApplication/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = fi.metropolia.PlanetariumApplication;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7338F32F27452FD10038C370 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"PlanetariumApplication/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = fi.metropolia.PlanetariumApplication;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7338F33127452FD10038C370 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = fi.metropolia.PlanetariumApplicationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PlanetariumApplication.app/PlanetariumApplication";
+			};
+			name = Debug;
+		};
+		7338F33227452FD10038C370 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = fi.metropolia.PlanetariumApplicationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PlanetariumApplication.app/PlanetariumApplication";
+			};
+			name = Release;
+		};
+		7338F33427452FD10038C370 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = fi.metropolia.PlanetariumApplicationUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PlanetariumApplication;
+			};
+			name = Debug;
+		};
+		7338F33527452FD10038C370 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = fi.metropolia.PlanetariumApplicationUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PlanetariumApplication;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7338F2FF27452FCF0038C370 /* Build configuration list for PBXProject "PlanetariumApplication" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7338F32B27452FD10038C370 /* Debug */,
+				7338F32C27452FD10038C370 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7338F32D27452FD10038C370 /* Build configuration list for PBXNativeTarget "PlanetariumApplication" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7338F32E27452FD10038C370 /* Debug */,
+				7338F32F27452FD10038C370 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7338F33027452FD10038C370 /* Build configuration list for PBXNativeTarget "PlanetariumApplicationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7338F33127452FD10038C370 /* Debug */,
+				7338F33227452FD10038C370 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7338F33327452FD10038C370 /* Build configuration list for PBXNativeTarget "PlanetariumApplicationUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7338F33427452FD10038C370 /* Debug */,
+				7338F33527452FD10038C370 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7338F31227452FD10038C370 /* PlanetariumApplication.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7338F31327452FD10038C370 /* PlanetariumApplication.xcdatamodel */,
+			);
+			currentVersion = 7338F31327452FD10038C370 /* PlanetariumApplication.xcdatamodel */;
+			path = PlanetariumApplication.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 7338F2FC27452FCF0038C370 /* Project object */;
+}
