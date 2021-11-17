@@ -8,14 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		7338F30827452FCF0038C370 /* PlanetariumApplicationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7338F30727452FCF0038C370 /* PlanetariumApplicationApp.swift */; };
-		7338F30A27452FCF0038C370 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7338F30927452FCF0038C370 /* ContentView.swift */; };
 		7338F30C27452FD10038C370 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7338F30B27452FD10038C370 /* Assets.xcassets */; };
 		7338F30F27452FD10038C370 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7338F30E27452FD10038C370 /* Preview Assets.xcassets */; };
-		7338F31127452FD10038C370 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7338F31027452FD10038C370 /* Persistence.swift */; };
-		7338F31427452FD10038C370 /* PlanetariumApplication.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7338F31227452FD10038C370 /* PlanetariumApplication.xcdatamodeld */; };
 		7338F31E27452FD10038C370 /* PlanetariumApplicationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7338F31D27452FD10038C370 /* PlanetariumApplicationTests.swift */; };
 		7338F32827452FD10038C370 /* PlanetariumApplicationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7338F32727452FD10038C370 /* PlanetariumApplicationUITests.swift */; };
 		7338F32A27452FD10038C370 /* PlanetariumApplicationUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7338F32927452FD10038C370 /* PlanetariumApplicationUITestsLaunchTests.swift */; };
+		7338F3472745309F0038C370 /* APODListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7338F3372745309F0038C370 /* APODListItemView.swift */; };
+		7338F3482745309F0038C370 /* APODListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7338F3382745309F0038C370 /* APODListView.swift */; };
+		7338F34A2745309F0038C370 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7338F33A2745309F0038C370 /* MainView.swift */; };
+		7338F34B2745309F0038C370 /* APODListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7338F33B2745309F0038C370 /* APODListViewModel.swift */; };
+		7338F34C2745309F0038C370 /* APODItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7338F33C2745309F0038C370 /* APODItemView.swift */; };
+		7338F34D2745309F0038C370 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 7338F33D2745309F0038C370 /* Config.xcconfig */; };
+		7338F34E2745309F0038C370 /* FavoriteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7338F33F2745309F0038C370 /* FavoriteRepository.swift */; };
+		7338F34F2745309F0038C370 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7338F3412745309F0038C370 /* Persistence.swift */; };
+		7338F3512745309F0038C370 /* APODRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7338F3442745309F0038C370 /* APODRequest.swift */; };
+		7338F3522745309F0038C370 /* PictureInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7338F3462745309F0038C370 /* PictureInfo.swift */; };
+		7338F356274532A60038C370 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7338F358274532A60038C370 /* Localizable.strings */; };
+		7338F35C274534950038C370 /* Main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7338F35A274534950038C370 /* Main.xcdatamodeld */; };
+		7338F35F274537020038C370 /* FavoriteRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7338F35E274537020038C370 /* FavoriteRepositoryTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,16 +48,28 @@
 /* Begin PBXFileReference section */
 		7338F30427452FCF0038C370 /* PlanetariumApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlanetariumApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7338F30727452FCF0038C370 /* PlanetariumApplicationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetariumApplicationApp.swift; sourceTree = "<group>"; };
-		7338F30927452FCF0038C370 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7338F30B27452FD10038C370 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7338F30E27452FD10038C370 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		7338F31027452FD10038C370 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		7338F31327452FD10038C370 /* PlanetariumApplication.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PlanetariumApplication.xcdatamodel; sourceTree = "<group>"; };
 		7338F31927452FD10038C370 /* PlanetariumApplicationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlanetariumApplicationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7338F31D27452FD10038C370 /* PlanetariumApplicationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetariumApplicationTests.swift; sourceTree = "<group>"; };
 		7338F32327452FD10038C370 /* PlanetariumApplicationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlanetariumApplicationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7338F32727452FD10038C370 /* PlanetariumApplicationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetariumApplicationUITests.swift; sourceTree = "<group>"; };
 		7338F32927452FD10038C370 /* PlanetariumApplicationUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetariumApplicationUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7338F3372745309F0038C370 /* APODListItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APODListItemView.swift; sourceTree = "<group>"; };
+		7338F3382745309F0038C370 /* APODListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APODListView.swift; sourceTree = "<group>"; };
+		7338F33A2745309F0038C370 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		7338F33B2745309F0038C370 /* APODListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APODListViewModel.swift; sourceTree = "<group>"; };
+		7338F33C2745309F0038C370 /* APODItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APODItemView.swift; sourceTree = "<group>"; };
+		7338F33D2745309F0038C370 /* Config.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		7338F33F2745309F0038C370 /* FavoriteRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteRepository.swift; sourceTree = "<group>"; };
+		7338F3412745309F0038C370 /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		7338F3442745309F0038C370 /* APODRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APODRequest.swift; sourceTree = "<group>"; };
+		7338F3462745309F0038C370 /* PictureInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureInfo.swift; sourceTree = "<group>"; };
+		7338F353274531C50038C370 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		7338F357274532A60038C370 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7338F359274532BB0038C370 /* fi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fi; path = fi.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7338F35B274534950038C370 /* Main.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Main.xcdatamodel; sourceTree = "<group>"; };
+		7338F35E274537020038C370 /* FavoriteRepositoryTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteRepositoryTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,12 +120,18 @@
 		7338F30627452FCF0038C370 /* PlanetariumApplication */ = {
 			isa = PBXGroup;
 			children = (
+				7338F353274531C50038C370 /* Info.plist */,
+				7338F33D2745309F0038C370 /* Config.xcconfig */,
+				7338F3402745309F0038C370 /* Data */,
+				7338F3452745309F0038C370 /* Models */,
+				7338F3432745309F0038C370 /* Network */,
+				7338F33E2745309F0038C370 /* Repository */,
+				7338F3362745309F0038C370 /* Views */,
 				7338F30727452FCF0038C370 /* PlanetariumApplicationApp.swift */,
-				7338F30927452FCF0038C370 /* ContentView.swift */,
 				7338F30B27452FD10038C370 /* Assets.xcassets */,
-				7338F31027452FD10038C370 /* Persistence.swift */,
-				7338F31227452FD10038C370 /* PlanetariumApplication.xcdatamodeld */,
 				7338F30D27452FD10038C370 /* Preview Content */,
+				7338F358274532A60038C370 /* Localizable.strings */,
+				7338F35A274534950038C370 /* Main.xcdatamodeld */,
 			);
 			path = PlanetariumApplication;
 			sourceTree = "<group>";
@@ -119,6 +147,7 @@
 		7338F31C27452FD10038C370 /* PlanetariumApplicationTests */ = {
 			isa = PBXGroup;
 			children = (
+				7338F35D274537020038C370 /* Repository */,
 				7338F31D27452FD10038C370 /* PlanetariumApplicationTests.swift */,
 			);
 			path = PlanetariumApplicationTests;
@@ -131,6 +160,58 @@
 				7338F32927452FD10038C370 /* PlanetariumApplicationUITestsLaunchTests.swift */,
 			);
 			path = PlanetariumApplicationUITests;
+			sourceTree = "<group>";
+		};
+		7338F3362745309F0038C370 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7338F3372745309F0038C370 /* APODListItemView.swift */,
+				7338F3382745309F0038C370 /* APODListView.swift */,
+				7338F33A2745309F0038C370 /* MainView.swift */,
+				7338F33B2745309F0038C370 /* APODListViewModel.swift */,
+				7338F33C2745309F0038C370 /* APODItemView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7338F33E2745309F0038C370 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				7338F33F2745309F0038C370 /* FavoriteRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		7338F3402745309F0038C370 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				7338F3412745309F0038C370 /* Persistence.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		7338F3432745309F0038C370 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				7338F3442745309F0038C370 /* APODRequest.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		7338F3452745309F0038C370 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7338F3462745309F0038C370 /* PictureInfo.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7338F35D274537020038C370 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				7338F35E274537020038C370 /* FavoriteRepositoryTest.swift */,
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,6 +300,7 @@
 			knownRegions = (
 				en,
 				Base,
+				fi,
 			);
 			mainGroup = 7338F2FB27452FCF0038C370;
 			productRefGroup = 7338F30527452FCF0038C370 /* Products */;
@@ -238,6 +320,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7338F30F27452FD10038C370 /* Preview Assets.xcassets in Resources */,
+				7338F356274532A60038C370 /* Localizable.strings in Resources */,
+				7338F34D2745309F0038C370 /* Config.xcconfig in Resources */,
 				7338F30C27452FD10038C370 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,10 +347,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7338F31127452FD10038C370 /* Persistence.swift in Sources */,
-				7338F31427452FD10038C370 /* PlanetariumApplication.xcdatamodeld in Sources */,
-				7338F30A27452FCF0038C370 /* ContentView.swift in Sources */,
+				7338F34A2745309F0038C370 /* MainView.swift in Sources */,
+				7338F3512745309F0038C370 /* APODRequest.swift in Sources */,
+				7338F3472745309F0038C370 /* APODListItemView.swift in Sources */,
+				7338F34B2745309F0038C370 /* APODListViewModel.swift in Sources */,
+				7338F3522745309F0038C370 /* PictureInfo.swift in Sources */,
+				7338F34E2745309F0038C370 /* FavoriteRepository.swift in Sources */,
+				7338F3482745309F0038C370 /* APODListView.swift in Sources */,
+				7338F34F2745309F0038C370 /* Persistence.swift in Sources */,
 				7338F30827452FCF0038C370 /* PlanetariumApplicationApp.swift in Sources */,
+				7338F35C274534950038C370 /* Main.xcdatamodeld in Sources */,
+				7338F34C2745309F0038C370 /* APODItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +366,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7338F31E27452FD10038C370 /* PlanetariumApplicationTests.swift in Sources */,
+				7338F35F274537020038C370 /* FavoriteRepositoryTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,11 +394,25 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		7338F358274532A60038C370 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7338F357274532A60038C370 /* en */,
+				7338F359274532BB0038C370 /* fi */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		7338F32B27452FD10038C370 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7338F33D2745309F0038C370 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -366,8 +472,10 @@
 		};
 		7338F32C27452FD10038C370 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7338F33D2745309F0038C370 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -429,6 +537,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"PlanetariumApplication/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PlanetariumApplication/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -457,6 +566,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"PlanetariumApplication/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PlanetariumApplication/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -609,13 +719,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		7338F31227452FD10038C370 /* PlanetariumApplication.xcdatamodeld */ = {
+		7338F35A274534950038C370 /* Main.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				7338F31327452FD10038C370 /* PlanetariumApplication.xcdatamodel */,
+				7338F35B274534950038C370 /* Main.xcdatamodel */,
 			);
-			currentVersion = 7338F31327452FD10038C370 /* PlanetariumApplication.xcdatamodel */;
-			path = PlanetariumApplication.xcdatamodeld;
+			currentVersion = 7338F35B274534950038C370 /* Main.xcdatamodel */;
+			path = Main.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

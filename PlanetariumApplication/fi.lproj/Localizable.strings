@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  PlanetariumApplication
+
+  Created by Mikael Holm on 17.11.2021.
+  
+*/
+"Pictures" = "Kuvat";
+"Astronomical Pictures" = "Avaruuskuvat";
+"Picture %@" = "Kuva ajalta %@";
+"Video" = "Tähän kuvaan liittyy video";
