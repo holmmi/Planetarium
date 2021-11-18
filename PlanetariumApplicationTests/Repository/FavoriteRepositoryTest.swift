@@ -16,6 +16,10 @@ class FavoriteRepositoryTest: XCTestCase {
         favoriteRepository = FavoriteRepository(context: persistenceController.container.viewContext)
     }
     
+    override func tearDown() {
+        favoriteRepository = nil
+    }
+    
     func testFavoritesCanBeAdded() {
         let pictureInfo1 = PictureInfo(copyright: nil, date: "2021-11-15", explanation: "This is an example.", hdUrl: nil, mediaType: "image", thumbnailUrl: nil, title: "Test 1", url: "https://example.com/pictures/1")
         let pictureInfo2 = PictureInfo(copyright: nil, date: "2021-11-16", explanation: "This is the second example.", hdUrl: nil, mediaType: "video", thumbnailUrl: "https://example.com/thumbnails/2", title: "Test 2", url: "https://example.com/videos/2")
@@ -38,5 +42,29 @@ class FavoriteRepositoryTest: XCTestCase {
         XCTAssertEqual("Test 1", favorites[1].title)
         XCTAssertEqual("https://example.com/pictures/1", favorites[1].url)
         XCTAssertEqual("2021-11-15", favorites[1].date)
+    }
+    
+    func testFavoriteIsFound() {
+        let pictureInfo = PictureInfo(copyright: nil, date: "2021-11-18", explanation: "This is an example.", hdUrl: nil, mediaType: "image", thumbnailUrl: nil, title: "Test", url: "https://example.com")
+        
+        favoriteRepository.addFavorite(pictureInfo: pictureInfo)
+        
+        XCTAssertTrue(favoriteRepository.favoriteExists(date: "2021-11-18"))
+        XCTAssertFalse(favoriteRepository.favoriteExists(date: "2021-11-19"))
+    }
+    
+    func testFavoriteIsRemoved() {
+        let pictureInfo1 = PictureInfo(copyright: nil, date: "2021-11-15", explanation: "This is an example.", hdUrl: nil, mediaType: "image", thumbnailUrl: nil, title: "Test 1", url: "https://example.com/pictures/1")
+        let pictureInfo2 = PictureInfo(copyright: nil, date: "2021-11-16", explanation: "This is the second example.", hdUrl: nil, mediaType: "video", thumbnailUrl: "https://example.com/thumbnails/2", title: "Test 2", url: "https://example.com/videos/2")
+        
+        favoriteRepository.addFavorite(pictureInfo: pictureInfo1)
+        favoriteRepository.addFavorite(pictureInfo: pictureInfo2)
+        var favorites = favoriteRepository.getFavorites()
+        favoriteRepository.deleteFavorite(favorite: favorites[0])
+        favorites = favoriteRepository.getFavorites()
+        
+        XCTAssertEqual(1, favorites.count)
+        XCTAssertEqual("2021-11-15", favorites[0].date)
+        XCTAssertEqual("Test 1", favorites[0].title)
     }
 }
