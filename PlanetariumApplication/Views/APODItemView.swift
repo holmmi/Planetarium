@@ -9,6 +9,7 @@ import SwiftUI
 
 struct APODItemView: View {
     let pictureInfo: PictureInfo
+    @StateObject var apodItemViewModel: APODItemViewModel = APODItemViewModel()
     
     var body: some View {
         ScrollView {
@@ -35,12 +36,15 @@ struct APODItemView: View {
         }
         .toolbar {
             Button(action: addToFavorite) {
-                Image(systemName: "heart")
+                Image(systemName: apodItemViewModel.isFavorite ? "heart.fill" : "heart")
             }
+        }.onAppear() {
+            apodItemViewModel.updateIsFavorite(date: pictureInfo.date)
         }
     }
     
     func addToFavorite() {
+        apodItemViewModel.toggleFavorite(pictureInfo: pictureInfo)
     }
 }
 

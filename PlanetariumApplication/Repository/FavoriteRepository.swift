@@ -16,11 +16,22 @@ struct FavoriteRepository {
     }
     
     func getFavorites() -> [Favorite] {
-        let favoritesFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Favorite")
+        let favoritesFetch = Favorite.fetchRequest()
         let sort = NSSortDescriptor(key: "date", ascending: false)
         favoritesFetch.sortDescriptors = [sort]
         do {
-            return try context.fetch(favoritesFetch) as! [Favorite]
+            return try context.fetch(favoritesFetch)
+        } catch {
+            fatalError("Failed to fetch favorites: \(error)")
+        }
+    }
+    
+    private func getFavoriteByDate(date: String) -> Favorite? {
+        let favoriteFetch = Favorite.fetchRequest()
+        favoriteFetch.predicate = NSPredicate(format: "date == %@", date)
+        do {
+            let favorites = try context.fetch(favoriteFetch)
+            return favorites.first
         } catch {
             fatalError("Failed to fetch favorites: \(error)")
         }
@@ -42,8 +53,14 @@ struct FavoriteRepository {
         PersistenceController.save(viewContext: context)
     }
     
+    func deleteFavoriteByDate(date: String) {
+        if let favorite = getFavoriteByDate(date: date) {
+            deleteFavorite(favorite: favorite)
+        }
+    }
+    
     func favoriteExists(date: String) -> Bool {
-        let favoritesFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Favorite")
+        let favoritesFetch = Favorite.fetchRequest()
         favoritesFetch.predicate = NSPredicate(format: "date == %@", date)
         do {
             return try context.count(for: favoritesFetch) > 0

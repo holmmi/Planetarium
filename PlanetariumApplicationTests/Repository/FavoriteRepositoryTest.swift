@@ -53,7 +53,7 @@ class FavoriteRepositoryTest: XCTestCase {
         XCTAssertFalse(favoriteRepository.favoriteExists(date: "2021-11-19"))
     }
     
-    func testFavoriteIsRemoved() {
+    func testFavoriteIsDeleted() {
         let pictureInfo1 = PictureInfo(copyright: nil, date: "2021-11-15", explanation: "This is an example.", hdUrl: nil, mediaType: "image", thumbnailUrl: nil, title: "Test 1", url: "https://example.com/pictures/1")
         let pictureInfo2 = PictureInfo(copyright: nil, date: "2021-11-16", explanation: "This is the second example.", hdUrl: nil, mediaType: "video", thumbnailUrl: "https://example.com/thumbnails/2", title: "Test 2", url: "https://example.com/videos/2")
         
@@ -66,5 +66,15 @@ class FavoriteRepositoryTest: XCTestCase {
         XCTAssertEqual(1, favorites.count)
         XCTAssertEqual("2021-11-15", favorites[0].date)
         XCTAssertEqual("Test 1", favorites[0].title)
+    }
+    
+    func testFavoriteIsDeletedByDate() {
+        let pictureInfo = PictureInfo(copyright: nil, date: "2021-11-18", explanation: "This is an example.", hdUrl: nil, mediaType: "image", thumbnailUrl: nil, title: "Test", url: "https://example.com")
+        
+        favoriteRepository.addFavorite(pictureInfo: pictureInfo)
+        favoriteRepository.deleteFavoriteByDate(date: "2021-11-18")
+        let favorites = favoriteRepository.getFavorites()
+        
+        XCTAssertEqual(0, favorites.count)
     }
 }
