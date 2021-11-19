@@ -9,13 +9,15 @@ import Foundation
 
 struct APODRequest {
     private let apiKey: String
+    private let urlSession: URLSession
     
-    init() {
+    init(urlSession: URLSession = .shared) {
         if let unwrappedApiKey = Bundle.main.infoDictionary?["NASA_API_KEY"] as? String {
             self.apiKey = unwrappedApiKey
         } else {
             self.apiKey = "DEMO_KEY"
         }
+        self.urlSession = urlSession
     }
     
     func getPictureInfos(startDate: Date, endDate: Date, completion: @escaping (Result<[PictureInfo], Error>) -> Void) -> Void {
@@ -30,7 +32,7 @@ struct APODRequest {
             "thumbs": "true"
         ].map { URLQueryItem(name: $0.key, value: $0.value) }
         
-        let task = URLSession.shared.dataTask(with: urlComponents.url!) { (data, response, error) in
+        let task = urlSession.dataTask(with: urlComponents.url!) { (data, response, error) in
             let jsonDecoder = JSONDecoder()
             if let data = data {
                 do {

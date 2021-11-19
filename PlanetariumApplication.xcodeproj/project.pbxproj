@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7322C0D02746B91900C3E1C5 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7322C0CF2746B91900C3E1C5 /* MockURLProtocol.swift */; };
+		7322C0D22746B9D600C3E1C5 /* APODRequestTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7322C0D12746B9D600C3E1C5 /* APODRequestTest.swift */; };
+		7322C0D52747658200C3E1C5 /* FileUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7322C0D42747658200C3E1C5 /* FileUtil.swift */; };
+		7322C0D72747684400C3E1C5 /* testAPOD.json in Resources */ = {isa = PBXBuildFile; fileRef = 7322C0D62747684400C3E1C5 /* testAPOD.json */; };
+		7322C0D827476B6400C3E1C5 /* testAPOD.json in Resources */ = {isa = PBXBuildFile; fileRef = 7322C0D62747684400C3E1C5 /* testAPOD.json */; };
+		7322C0DA27476FB300C3E1C5 /* APODItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7322C0D927476FB300C3E1C5 /* APODItemViewModel.swift */; };
 		7338F30827452FCF0038C370 /* PlanetariumApplicationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7338F30727452FCF0038C370 /* PlanetariumApplicationApp.swift */; };
 		7338F30C27452FD10038C370 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7338F30B27452FD10038C370 /* Assets.xcassets */; };
 		7338F30F27452FD10038C370 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7338F30E27452FD10038C370 /* Preview Assets.xcassets */; };
@@ -46,6 +52,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7322C0CF2746B91900C3E1C5 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
+		7322C0D12746B9D600C3E1C5 /* APODRequestTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODRequestTest.swift; sourceTree = "<group>"; };
+		7322C0D42747658200C3E1C5 /* FileUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileUtil.swift; sourceTree = "<group>"; };
+		7322C0D62747684400C3E1C5 /* testAPOD.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = testAPOD.json; sourceTree = "<group>"; };
+		7322C0D927476FB300C3E1C5 /* APODItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODItemViewModel.swift; sourceTree = "<group>"; };
 		7338F30427452FCF0038C370 /* PlanetariumApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlanetariumApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7338F30727452FCF0038C370 /* PlanetariumApplicationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetariumApplicationApp.swift; sourceTree = "<group>"; };
 		7338F30B27452FD10038C370 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -97,6 +108,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7322C0CE2746B88D00C3E1C5 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				7322C0CF2746B91900C3E1C5 /* MockURLProtocol.swift */,
+				7322C0D12746B9D600C3E1C5 /* APODRequestTest.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		7322C0D32747655F00C3E1C5 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				7322C0D42747658200C3E1C5 /* FileUtil.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 		7338F2FB27452FCF0038C370 = {
 			isa = PBXGroup;
 			children = (
@@ -147,8 +175,11 @@
 		7338F31C27452FD10038C370 /* PlanetariumApplicationTests */ = {
 			isa = PBXGroup;
 			children = (
+				7322C0D32747655F00C3E1C5 /* Util */,
+				7322C0CE2746B88D00C3E1C5 /* Network */,
 				7338F35D274537020038C370 /* Repository */,
 				7338F31D27452FD10038C370 /* PlanetariumApplicationTests.swift */,
+				7322C0D62747684400C3E1C5 /* testAPOD.json */,
 			);
 			path = PlanetariumApplicationTests;
 			sourceTree = "<group>";
@@ -170,6 +201,7 @@
 				7338F33A2745309F0038C370 /* MainView.swift */,
 				7338F33B2745309F0038C370 /* APODListViewModel.swift */,
 				7338F33C2745309F0038C370 /* APODItemView.swift */,
+				7322C0D927476FB300C3E1C5 /* APODItemViewModel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -322,6 +354,7 @@
 				7338F30F27452FD10038C370 /* Preview Assets.xcassets in Resources */,
 				7338F356274532A60038C370 /* Localizable.strings in Resources */,
 				7338F34D2745309F0038C370 /* Config.xcconfig in Resources */,
+				7322C0D827476B6400C3E1C5 /* testAPOD.json in Resources */,
 				7338F30C27452FD10038C370 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -330,6 +363,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7322C0D72747684400C3E1C5 /* testAPOD.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,6 +382,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7338F34A2745309F0038C370 /* MainView.swift in Sources */,
+				7322C0DA27476FB300C3E1C5 /* APODItemViewModel.swift in Sources */,
 				7338F3512745309F0038C370 /* APODRequest.swift in Sources */,
 				7338F3472745309F0038C370 /* APODListItemView.swift in Sources */,
 				7338F34B2745309F0038C370 /* APODListViewModel.swift in Sources */,
@@ -365,8 +400,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7322C0D02746B91900C3E1C5 /* MockURLProtocol.swift in Sources */,
+				7322C0D22746B9D600C3E1C5 /* APODRequestTest.swift in Sources */,
 				7338F31E27452FD10038C370 /* PlanetariumApplicationTests.swift in Sources */,
 				7338F35F274537020038C370 /* FavoriteRepositoryTest.swift in Sources */,
+				7322C0D52747658200C3E1C5 /* FileUtil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
