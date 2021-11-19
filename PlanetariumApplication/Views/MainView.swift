@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MainView: View {
     @StateObject var apodListViewModel = APODListViewModel()
+    @StateObject var apodSearchViewModel = APODSearchViewModel()
     
     var body: some View {
         TabView {
@@ -16,6 +17,10 @@ struct MainView: View {
                 .environmentObject(apodListViewModel)
                 .tabItem({
                     Label("Pictures", systemImage: "photo.fill")
+                })
+            APODSearchView()
+                .tabItem({
+                    Label("Search", systemImage: "search.fill")
                 })
         }
     }
