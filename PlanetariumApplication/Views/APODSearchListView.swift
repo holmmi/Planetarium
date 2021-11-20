@@ -1,14 +1,15 @@
 //
-//  SwiftUIView.swift
+//  APODSearchListView.swift
 //  PlanetariumApplication
 //
-//  Created by iosdev on 19.11.2021.
+//  Created by Tiitus Telke on 19.11.2021.
 //
 
 import SwiftUI
 
 struct APODSearchListView: View {
-    @EnvironmentObject var apodSearchViewModel: APODSearchViewModel
+    @EnvironmentObject var searchData: SearchData
+    @StateObject var apodSearchViewModel: APODSearchViewModel = APODSearchViewModel()
     
     var body: some View {
         NavigationView {
@@ -18,12 +19,15 @@ struct APODSearchListView: View {
                 }
             }
         }
+        .onAppear(perform: {
+            apodSearchViewModel.getSearchData(searchData: searchData)
+        })
     }
 }
-
 
 struct APODSearchListView_Previews: PreviewProvider {
     static var previews: some View {
         APODSearchListView()
+            .environmentObject(SearchData())
     }
 }

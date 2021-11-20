@@ -7,8 +7,14 @@
 
 import SwiftUI
 
+class SearchData: ObservableObject {
+    @Published var startDate = Date()
+    @Published var endDate = Date()
+    @Published var picAmount: String = "25"
+}
+
 struct APODSearchView: View {
-    @StateObject var apodSearchViewModel: APODSearchViewModel = APODSearchViewModel()
+    @StateObject var searchData: SearchData = SearchData()
     
     
     var body: some View {
@@ -16,43 +22,32 @@ struct APODSearchView: View {
             Form {
                 Section(header: Text("Start Date")) {
                     DatePicker("Start Date",
-                               selection: $apodSearchViewModel.startDate,
+                               selection: $searchData.startDate,
                                displayedComponents: [.date]
                     )
                 }
                 
                 Section(header: Text("End Date")) {
                     DatePicker("End Date",
-                               selection: $apodSearchViewModel.endDate,
+                               selection: $searchData.endDate,
                                displayedComponents: [.date]
                     )
                     
                 }
                 
                 Section(header: Text("Amount of pictures")) {
-                    TextField("Amount of pictures", text: $apodSearchViewModel.picAmount)
+                    TextField("Amount of pictures", text: $searchData.picAmount)
                         .keyboardType(.numberPad)
                 }
                 
                 Section {
-                    
-                    NavigationLink(destination: APODSearchListView().environmentObject(apodSearchViewModel)) {
+                    NavigationLink(destination: APODSearchListView().environmentObject(searchData)) {
                         Text("Search")
-                    }.simultaneousGesture(TapGesture().onEnded{
-                        search()
-                    })
-                    
-                    
-                    
-                    
+                    }
                 }
             }
         }
         .navigationBarTitle("Search")
-    }
-    
-    private func search() {
-        apodSearchViewModel.getPictures()
     }
     
 }
