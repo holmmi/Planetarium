@@ -12,17 +12,15 @@ struct APODSearchListView: View {
     @StateObject var apodSearchViewModel: APODSearchViewModel = APODSearchViewModel()
     
     var body: some View {
-        NavigationView {
             List (apodSearchViewModel.pictureInfos) { pictureInfo in
                 NavigationLink(destination: APODItemView(pictureInfo: pictureInfo).navigationTitle("Picture \(pictureInfo.date)")) {
                     APODListItemView(pictureInfo: pictureInfo)
                 }
             }
+            .onAppear(perform: {
+                apodSearchViewModel.getSearchData(searchData: searchData)
+            })
         }
-        .onAppear(perform: {
-            apodSearchViewModel.getSearchData(searchData: searchData)
-        })
-    }
 }
 
 struct APODSearchListView_Previews: PreviewProvider {
