@@ -13,14 +13,32 @@ struct SatelliteView: View {
     
     var body: some View {
         ZStack {
-            Map(coordinateRegion: $satelliteViewModel.region)
+            Map(coordinateRegion: $satelliteViewModel.region, annotationItems: [satelliteViewModel.mapMarker])
+            { place in
+                MapMarker(coordinate: place.location, tint: .red)
+            }
             VStack {
                 MapSearchBarView(satelliteViewModel: satelliteViewModel)
                     .padding(.top, 50.0)
                 Spacer()
+                HStack {
+                    Button(action: {
+                        satelliteViewModel.setRegionByUserLocation()
+                    }) {
+                        Image(systemName: "location")
+                    }
+                    Spacer()
+                }
+                .padding([.leading, .bottom, .trailing], 25.0)
             }
         }
         .edgesIgnoringSafeArea(.top)
+        .onAppear(perform: {
+            satelliteViewModel.locationManager.startUpdating()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                satelliteViewModel.setRegionByUserLocation()
+            }
+        })
     }
 }
 

@@ -27,7 +27,7 @@ struct MapSearchBarView: View {
             if isSearching && !satelliteViewModel.mapItems.isEmpty {
                 List(satelliteViewModel.getMapInfo()) { mapInfo in
                     Button(action: {
-                        satelliteViewModel.setPlacemark(mkPlacemark: mapInfo.placemark)
+                        satelliteViewModel.setRegionByPlacemark(mkPlacemark: mapInfo.placemark)
                         isSearching.toggle()
                     }) {
                         VStack {

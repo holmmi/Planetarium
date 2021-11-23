@@ -35,7 +35,8 @@
 		7338F356274532A60038C370 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7338F358274532A60038C370 /* Localizable.strings */; };
 		7338F35C274534950038C370 /* Main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7338F35A274534950038C370 /* Main.xcdatamodeld */; };
 		7338F35F274537020038C370 /* FavoriteRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7338F35E274537020038C370 /* FavoriteRepositoryTest.swift */; };
-		7346AE42274BDC1E0042DBF7 /* MapInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7346AE41274BDC1E0042DBF7 /* MapInfo.swift */; };
+		7346AE42274BDC1E0042DBF7 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7346AE41274BDC1E0042DBF7 /* Map.swift */; };
+		73B1545E274D2DA60015AF00 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B1545D274D2DA60015AF00 /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,7 +89,8 @@
 		7338F359274532BB0038C370 /* fi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fi; path = fi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		7338F35B274534950038C370 /* Main.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Main.xcdatamodel; sourceTree = "<group>"; };
 		7338F35E274537020038C370 /* FavoriteRepositoryTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteRepositoryTest.swift; sourceTree = "<group>"; };
-		7346AE41274BDC1E0042DBF7 /* MapInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInfo.swift; sourceTree = "<group>"; };
+		7346AE41274BDC1E0042DBF7 /* Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
+		73B1545D274D2DA60015AF00 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				730E767B27493BC800AA756D /* MapSearch.swift */,
+				73B1545D274D2DA60015AF00 /* LocationManager.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -253,7 +256,7 @@
 			isa = PBXGroup;
 			children = (
 				7338F3462745309F0038C370 /* PictureInfo.swift */,
-				7346AE41274BDC1E0042DBF7 /* MapInfo.swift */,
+				7346AE41274BDC1E0042DBF7 /* Map.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -409,7 +412,8 @@
 				730E767C27493BC800AA756D /* MapSearch.swift in Sources */,
 				7338F3472745309F0038C370 /* APODListItemView.swift in Sources */,
 				7338F34B2745309F0038C370 /* APODListViewModel.swift in Sources */,
-				7346AE42274BDC1E0042DBF7 /* MapInfo.swift in Sources */,
+				73B1545E274D2DA60015AF00 /* LocationManager.swift in Sources */,
+				7346AE42274BDC1E0042DBF7 /* Map.swift in Sources */,
 				7338F3522745309F0038C370 /* PictureInfo.swift in Sources */,
 				7338F34E2745309F0038C370 /* FavoriteRepository.swift in Sources */,
 				7338F3482745309F0038C370 /* APODListView.swift in Sources */,

@@ -8,14 +8,16 @@
 import MapKit
 
 class SatelliteViewModel: ObservableObject {
+    private(set) var locationManager = LocationManager()
     @Published private(set) var mapItems: [MKMapItem] = []
-    @Published private(set) var placemark: MKPlacemark? = nil
     @Published var region = MKCoordinateRegion(
         center: CLLocationCoordinate2D(latitude: 37.334_900,
                                        longitude: -122.009_020),
         latitudinalMeters: 750,
         longitudinalMeters: 750
     )
+   private(set) var mapMarker: IdentifiablePlace = IdentifiablePlace(location: CLLocationCoordinate2D(latitude: 37.334_900,
+                                                                                                         longitude: -122.009_020))
     
     func search(query: String) {
         MapSearch.search(query: query, completion: { (result) in
@@ -32,8 +34,15 @@ class SatelliteViewModel: ObservableObject {
         return mapItems.map { MapInfo(placemark: $0.placemark) }
     }
     
-    func setPlacemark(mkPlacemark: MKPlacemark) {
-        placemark = mkPlacemark
+    func setRegionByPlacemark(mkPlacemark: MKPlacemark) {
         region = MKCoordinateRegion(center: mkPlacemark.coordinate, latitudinalMeters: 750, longitudinalMeters: 750)
+        mapMarker = IdentifiablePlace(location: mkPlacemark.coordinate)
+    }
+    
+    func setRegionByUserLocation() {
+        if let coordinate = locationManager.lastKnownLocation?.coordinate {
+            region = MKCoordinateRegion(center: coordinate, latitudinalMeters: 500, longitudinalMeters: 500)
+            mapMarker = IdentifiablePlace(location: coordinate)
+        }
     }
 }
