@@ -8,22 +8,39 @@ import Foundation
 
 class APODSearchViewModel: ObservableObject {
     @Published var pictureInfos: [PictureInfo] = [PictureInfo]()
-    private var searchData: SearchData? = nil
+    private var searchData: SearchData!
     private let apodRequest = APODRequest()
-    
     
     func getSearchData(searchData: SearchData) {
         self.searchData = searchData
+        if let picAmount = Int(searchData.picAmount) {
+            if picAmount > 0 {
+                apodRequest.getRandomPictures(picAmount: picAmount) { (result) in
+                    switch result {
+                    case .success(let infos):
+                        DispatchQueue.main.async {
+                            self.pictureInfos = infos
+                        }
+                        print("Successfuly loaded pictures.")
+                    case .failure(let error):
+                        print("There was an error loading pictures: \(error)")
+                    }
+                }
+            }
+            else {
+                getApodFromDates()
+            }
+        } else {
+            getApodFromDates()
+        }
+    }
+    
+    private func getApodFromDates() {
         apodRequest.getPictureInfos(startDate: searchData.startDate, endDate: searchData.endDate) { (result) in
             switch result {
             case .success(let infos):
                 DispatchQueue.main.async {
-                    if infos.count > Int(searchData.picAmount) ?? 25 {
-                        self.pictureInfos = Array(infos[0..<(Int(searchData.picAmount) ?? 50)])
-                    } else {
-                        self.pictureInfos = infos
-                    }
-                    
+                    self.pictureInfos = infos
                 }
                 print("Successfuly loaded pictures.")
             case .failure(let error):
@@ -32,3 +49,7 @@ class APODSearchViewModel: ObservableObject {
         }
     }
 }
+
+
+
+

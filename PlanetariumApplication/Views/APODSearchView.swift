@@ -10,12 +10,11 @@ import SwiftUI
 class SearchData: ObservableObject {
     @Published var startDate = Date()
     @Published var endDate = Date()
-    @Published var picAmount: String = "25"
+    @Published var picAmount: String = ""
 }
 
 struct APODSearchView: View {
     @StateObject var searchData: SearchData = SearchData()
-    
     
     var body: some View {
         NavigationView {
@@ -32,22 +31,31 @@ struct APODSearchView: View {
                                selection: $searchData.endDate,
                                displayedComponents: [.date]
                     )
-                    
                 }
                 
-                Section(header: Text("Amount of pictures")) {
+                Section(header: Text("Random pictures")) {
                     TextField("Amount of pictures", text: $searchData.picAmount)
                         .keyboardType(.numberPad)
                 }
                 
+                
                 Section {
+                    Button(action: {
+                        searchData.startDate = Date()
+                        searchData.endDate = Date()
+                        searchData.picAmount = ""
+                    }) {
+                        Text("Reset")
+                    }
                     NavigationLink(destination: APODSearchListView().environmentObject(searchData)) {
                         Text("Search")
                     }
                 }
             }
+            .navigationBarTitle("Find")
+            .navigationBarTitleDisplayMode(.inline)
         }
-        .navigationBarTitle("Search")
+        
     }
     
 }

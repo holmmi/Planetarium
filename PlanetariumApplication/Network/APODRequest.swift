@@ -47,4 +47,28 @@ struct APODRequest {
         }
         task.resume()
     }
+    
+    func getRandomPictures(picAmount: Int, completion: @escaping (Result<[PictureInfo], Error>) -> Void) -> Void {
+        var urlComponents = URLComponents(string: "https://api.nasa.gov/planetary/apod")!
+        urlComponents.queryItems = [
+            "api_key": self.apiKey,
+            "count": String(picAmount),
+            "thumbs": "true"
+        ].map { URLQueryItem(name: $0.key, value: $0.value) }
+        
+        let task = urlSession.dataTask(with: urlComponents.url!) { (data, response, error) in
+            let jsonDecoder = JSONDecoder()
+            if let data = data {
+                do {
+                    let pictureInfos = try jsonDecoder.decode([PictureInfo].self, from: data)
+                    completion(.success(pictureInfos.sorted { (a, b) -> Bool in
+                        return a.date > b.date
+                    }))
+                } catch {
+                    completion(.failure(error))
+                }
+            }
+        }
+        task.resume()
+    }
 }
