@@ -14,23 +14,35 @@ struct MapSearchBarView: View {
     
     var body: some View {
         VStack {
-            TextField("Location Search", text: $searchText)
-                .disableAutocorrection(true)
-                .padding(10)
-                .background(.white)
-                .cornerRadius(10)
-                .focused($isSearching)
-                .onChange(of: searchText) {newValue in
-                    satelliteViewModel.search(query: newValue)
+            HStack {
+                TextField("Location Search", text: $searchText)
+                    .disableAutocorrection(true)
+                    .textFieldStyle(.roundedBorder)
+                    .focused($isSearching)
+                    .onChange(of: searchText) {newValue in
+                        satelliteViewModel.search(query: newValue)
+                    }
+                    .modifier(ClearButton(text: $searchText))
+                
+                if isSearching {
+                    Button(action: {
+                        isSearching.toggle()
+                        searchText = ""
+                    }) {
+                        Text("Cancel")
+                    }
+                    .padding(.leading, 10)
                 }
+            }
             
             if isSearching && !satelliteViewModel.mapItems.isEmpty {
                 List(satelliteViewModel.getMapInfo()) { mapInfo in
                     Button(action: {
                         satelliteViewModel.setRegionByPlacemark(mkPlacemark: mapInfo.placemark)
                         isSearching.toggle()
+                        searchText = ""
                     }) {
-                        VStack {
+                        VStack(alignment: .leading) {
                             HStack {
                                 Text(mapInfo.placemark.name ?? "-")
                                 Spacer()
@@ -42,7 +54,9 @@ struct MapSearchBarView: View {
                             }
                         }
                     }
-                }.listStyle(.inset)
+                }
+                .listStyle(.plain)
+                .frame(maxHeight: 250)
             }
             
         }.padding()
