@@ -91,3 +91,5 @@ iOSInjectionProject/
 
 # Config files
 *.xcconfig
+
+.DS_Store
