@@ -21,6 +21,10 @@ struct MainView: View {
                 .tabItem({
                     Label("Search", systemImage: "magnifyingglass")
                 })
+            SpeechToTextView()
+                .tabItem({
+                    Label("SpeechToText", systemImage: "mic")
+                })
         }
     }
 }
