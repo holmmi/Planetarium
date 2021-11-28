@@ -27,4 +27,8 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
             manager.startUpdatingLocation()
         }
     }
+    
+    func getAuthorizationStatus() -> CLAuthorizationStatus {
+        return manager.authorizationStatus
+    }
 }

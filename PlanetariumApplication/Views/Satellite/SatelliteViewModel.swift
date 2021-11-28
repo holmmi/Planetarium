@@ -16,8 +16,9 @@ class SatelliteViewModel: ObservableObject {
         latitudinalMeters: 750,
         longitudinalMeters: 750
     )
-   private(set) var mapMarker: IdentifiablePlace = IdentifiablePlace(location: CLLocationCoordinate2D(latitude: 37.334_900,
-                                                                                                         longitude: -122.009_020))
+    private(set) var mapMarker: IdentifiablePlace = IdentifiablePlace(
+        location: CLLocationCoordinate2D(latitude: 37.334_900, longitude: -122.009_020)
+    )
     
     func search(query: String) {
         MapSearch.search(query: query, completion: { (result) in

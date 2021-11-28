@@ -1,0 +1,8 @@
+/* 
+  InfoPlist.strings
+  PlanetariumApplication
+
+  Created by Mikael Holm on 26.11.2021.
+  
+*/
+"NSLocationWhenInUseUsageDescription" = "Location services are used to locate the device to take satellite picture from the current position.";

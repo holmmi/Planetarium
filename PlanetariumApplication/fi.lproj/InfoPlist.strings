@@ -1,0 +1,8 @@
+/* 
+  InfoPlist.strings
+  PlanetariumApplication
+
+  Created by Mikael Holm on 26.11.2021.
+  
+*/
+"NSLocationWhenInUseUsageDescription" = "Sijaintipalveluita käytetään laitteen sijainnin paikantamiseksi, jotta nykyisestä sijainnista voidaan ottaa satelliittikuva.";

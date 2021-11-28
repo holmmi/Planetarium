@@ -10,6 +10,7 @@ import MapKit
 
 struct SatelliteView: View {
     @StateObject private var satelliteViewModel = SatelliteViewModel()
+    @State private var isAlertShowing = false
     
     var body: some View {
         ZStack {
@@ -23,9 +24,16 @@ struct SatelliteView: View {
                 Spacer()
                 HStack {
                     Button(action: {
-                        satelliteViewModel.setRegionByUserLocation()
+                        if satelliteViewModel.locationManager.getAuthorizationStatus() == .denied {
+                            isAlertShowing.toggle()
+                        } else {
+                            satelliteViewModel.setRegionByUserLocation()
+                        }
                     }) {
                         Image(systemName: "location")
+                    }
+                    .alert(isPresented: $isAlertShowing) {
+                        Alert(title: Text("Notice"), message: Text("Location Authorization Is Missing"), dismissButton: .cancel())
                     }
                     Spacer()
                 }
