@@ -9,3 +9,8 @@
 "Astronomical Pictures" = "Astronomical pictures";
 "Picture %@" = "Picture of %@";
 "Video" = "There is a video available";
+"Sattelite" = "Satellite";
+"Location Search" = "Search for locations and places";
+"Cancel" = "Cancel";
+"Notice" = "Notice";
+"Location Authorization Is Missing" = "Your device cannot be located because the location services for this app are denied. Please check your settings.";
