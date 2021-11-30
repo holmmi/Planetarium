@@ -19,11 +19,10 @@ struct SpeechRecognizer {
         let speechRecognizer = SFSpeechRecognizer()
         var timer: Timer?
         
-
         deinit {
             reset()
         }
-
+        
         func reset() {
             recognitionTask?.cancel()
             audioEngine?.stop()
@@ -34,10 +33,13 @@ struct SpeechRecognizer {
         }
     }
     
-
     private let assistant = SpeechAssist()
     
-    @State var store = stateStore()
+    @Binding var clr: Color
+    
+    init(clr: Binding<Color>) {
+        self._clr = clr
+    }
     
     func record(to speech: Binding<String>) {
         relay(speech, message: "Requesting access")
@@ -46,9 +48,9 @@ struct SpeechRecognizer {
                 relay(speech, message: "Access denied")
                 return
             }
-
+            
             relay(speech, message: "Access granted")
-
+            
             assistant.audioEngine = AVAudioEngine()
             guard let audioEngine = assistant.audioEngine else {
                 fatalError("Unable to create audio engine")
@@ -58,31 +60,34 @@ struct SpeechRecognizer {
                 fatalError("Unable to create request")
             }
             recognitionRequest.shouldReportPartialResults = true
-
+            
             do {
                 relay(speech, message: "Booting audio subsystem")
-
+                
                 let audioSession = AVAudioSession.sharedInstance()
                 try audioSession.setCategory(.record, mode: .measurement, options: .duckOthers)
                 try audioSession.setActive(true, options: .notifyOthersOnDeactivation)
                 let inputNode = audioEngine.inputNode
                 relay(speech, message: "Found input node")
-
+                
                 let recordingFormat = inputNode.outputFormat(forBus: 0)
                 inputNode.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat) { (buffer: AVAudioPCMBuffer, when: AVAudioTime) in
                     recognitionRequest.append(buffer)
                 }
+                let beginRecordingId: SystemSoundID = 1113
                 relay(speech, message: "Preparing audio engine")
+                changeColor($clr, newColor: Color(.red))
+                AudioServicesPlaySystemSound(beginRecordingId)
                 audioEngine.prepare()
                 try audioEngine.start()
                 assistant.recognitionTask = assistant.speechRecognizer?.recognitionTask(with: recognitionRequest) { (result, error) in
                     var isFinal = false
-                    store.isRecording = true
+                    
                     if let result = result {
                         relay(speech, message: result.bestTranscription.formattedString)
                         isFinal = result.isFinal
                     }
-
+                    
                     if error != nil || isFinal {
                         audioEngine.stop()
                         inputNode.removeTap(onBus: 0)
@@ -98,17 +103,14 @@ struct SpeechRecognizer {
             }
         }
     }
+    
     func stopRecording() {
-        store.isRecording = false
+        let endRecordingId: SystemSoundID = 1114
+        AudioServicesPlaySystemSound(endRecordingId)
+        changeColor($clr, newColor: Color(.blue))
         assistant.reset()
     }
     
-    private func restartSpeechTimer() {
-        assistant.timer?.invalidate()
-        assistant.timer = Timer.scheduledTimer(withTimeInterval: 3, repeats: false, block: { (timer) in
-            stopRecording()
-        })
-    }
     private func canAccess(withHandler handler: @escaping (Bool) -> Void) {
         SFSpeechRecognizer.requestAuthorization { status in
             if status == .authorized {
@@ -120,14 +122,24 @@ struct SpeechRecognizer {
             }
         }
     }
+    // timer from this stackoverflow answer: https://stackoverflow.com/a/45195741 thank you nuvaryan
+    private func restartSpeechTimer() {
+        assistant.timer?.invalidate()
+        assistant.timer = Timer.scheduledTimer(withTimeInterval: 1.5, repeats: false, block: { (timer) in
+            stopRecording()
+        })
+    }
+    
     private func relay(_ binding: Binding<String>, message: String) {
         DispatchQueue.main.async {
             binding.wrappedValue = message
         }
     }
     
-    class stateStore: ObservableObject {
-        @State var isRecording: Bool = false
+    private func changeColor(_ binding: Binding<Color>, newColor: Color) {
+        DispatchQueue.main.async {
+            binding.wrappedValue = newColor
+        }
     }
 }
 
