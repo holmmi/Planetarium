@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A5294E7275644E400804BBA /* APODSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5294E4275644E400804BBA /* APODSearchView.swift */; };
+		6A5294E8275644E400804BBA /* APODSearchListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5294E5275644E400804BBA /* APODSearchListView.swift */; };
+		6A5294E9275644E400804BBA /* APODSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5294E6275644E400804BBA /* APODSearchViewModel.swift */; };
+		6A5294EB275644ED00804BBA /* SpeechToTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5294EA275644ED00804BBA /* SpeechToTextView.swift */; };
+		6A5294ED2756452200804BBA /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5294EC2756452200804BBA /* SpeechRecognizer.swift */; };
 		730E767C27493BC800AA756D /* MapSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730E767B27493BC800AA756D /* MapSearch.swift */; };
 		730E7680274945B300AA756D /* MapSearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730E767F274945B300AA756D /* MapSearchBarView.swift */; };
 		730E768227494BF900AA756D /* SatelliteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730E768127494BF900AA756D /* SatelliteViewModel.swift */; };
@@ -58,6 +63,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6A5294E4275644E400804BBA /* APODSearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APODSearchView.swift; sourceTree = "<group>"; };
+		6A5294E5275644E400804BBA /* APODSearchListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APODSearchListView.swift; sourceTree = "<group>"; };
+		6A5294E6275644E400804BBA /* APODSearchViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APODSearchViewModel.swift; sourceTree = "<group>"; };
+		6A5294EA275644ED00804BBA /* SpeechToTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechToTextView.swift; sourceTree = "<group>"; };
+		6A5294EC2756452200804BBA /* SpeechRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
 		730E767B27493BC800AA756D /* MapSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSearch.swift; sourceTree = "<group>"; };
 		730E767F274945B300AA756D /* MapSearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSearchBarView.swift; sourceTree = "<group>"; };
 		730E768127494BF900AA756D /* SatelliteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatelliteViewModel.swift; sourceTree = "<group>"; };
@@ -172,7 +182,6 @@
 				730E767A27493BB400AA756D /* Map */,
 				7338F353274531C50038C370 /* Info.plist */,
 				7338F33D2745309F0038C370 /* Config.xcconfig */,
-				6A6628742747BDF600FFFB32 /* Config.xcconfig */,
 				7338F3402745309F0038C370 /* Data */,
 				7338F3452745309F0038C370 /* Models */,
 				7338F3432745309F0038C370 /* Network */,
@@ -218,6 +227,10 @@
 		7338F3362745309F0038C370 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6A5294EA275644ED00804BBA /* SpeechToTextView.swift */,
+				6A5294E5275644E400804BBA /* APODSearchListView.swift */,
+				6A5294E4275644E400804BBA /* APODSearchView.swift */,
+				6A5294E6275644E400804BBA /* APODSearchViewModel.swift */,
 				7345895C2750ADC200C2C6CD /* APOD */,
 				73458959274FEAED00C2C6CD /* Common */,
 				73458958274FEABE00C2C6CD /* Satellite */,
@@ -253,6 +266,7 @@
 		7338F3452745309F0038C370 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				6A5294EC2756452200804BBA /* SpeechRecognizer.swift */,
 				7338F3462745309F0038C370 /* PictureInfo.swift */,
 				7346AE41274BDC1E0042DBF7 /* Map.swift */,
 			);
@@ -406,7 +420,6 @@
 				7338F356274532A60038C370 /* Localizable.strings in Resources */,
 				7338F34D2745309F0038C370 /* Config.xcconfig in Resources */,
 				7322C0D827476B6400C3E1C5 /* testAPOD.json in Resources */,
-				6A6628752747BDF600FFFB32 /* Config.xcconfig in Resources */,
 				7338F30C27452FD10038C370 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -434,11 +447,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7322C0DE2747F74C00C3E1C5 /* SatelliteView.swift in Sources */,
+				6A5294EB275644ED00804BBA /* SpeechToTextView.swift in Sources */,
 				7338F34A2745309F0038C370 /* MainView.swift in Sources */,
 				730E7680274945B300AA756D /* MapSearchBarView.swift in Sources */,
 				7322C0DA27476FB300C3E1C5 /* APODItemViewModel.swift in Sources */,
-				6AD791F22750F13E00614231 /* SpeechRecognizer.swift in Sources */,
-				6A66287B2747D3C400FFFB32 /* APODSearchViewModel.swift in Sources */,
 				7338F3512745309F0038C370 /* APODRequest.swift in Sources */,
 				730E767C27493BC800AA756D /* MapSearch.swift in Sources */,
 				7338F3472745309F0038C370 /* APODListItemView.swift in Sources */,
@@ -447,12 +459,14 @@
 				7346AE42274BDC1E0042DBF7 /* Map.swift in Sources */,
 				7338F3522745309F0038C370 /* PictureInfo.swift in Sources */,
 				7338F34E2745309F0038C370 /* FavoriteRepository.swift in Sources */,
-				6A6628792747D19700FFFB32 /* APODSearchListView.swift in Sources */,
+				6A5294E7275644E400804BBA /* APODSearchView.swift in Sources */,
+				6A5294E8275644E400804BBA /* APODSearchListView.swift in Sources */,
+				6A5294E9275644E400804BBA /* APODSearchViewModel.swift in Sources */,
 				7338F3482745309F0038C370 /* APODListView.swift in Sources */,
+				6A5294ED2756452200804BBA /* SpeechRecognizer.swift in Sources */,
 				730E768227494BF900AA756D /* SatelliteViewModel.swift in Sources */,
 				7345895B274FEB0E00C2C6CD /* ClearButton.swift in Sources */,
 				7338F34F2745309F0038C370 /* Persistence.swift in Sources */,
-				6AD791F02750EBD400614231 /* SpeechToTextView.swift in Sources */,
 				7338F30827452FCF0038C370 /* PlanetariumApplicationApp.swift in Sources */,
 				7338F35C274534950038C370 /* Main.xcdatamodeld in Sources */,
 				7338F34C2745309F0038C370 /* APODItemView.swift in Sources */,
