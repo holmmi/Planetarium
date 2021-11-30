@@ -36,20 +36,22 @@ struct SpeechRecognizer {
     private let assistant = SpeechAssist()
     
     @Binding var clr: Color
+    @Binding var isRecording: Bool
     
-    init(clr: Binding<Color>) {
+    init(clr: Binding<Color>, isRecording: Binding<Bool>) {
         self._clr = clr
+        self._isRecording = isRecording
     }
     
     func record(to speech: Binding<String>) {
-        relay(speech, message: "Requesting access")
+        //relay(speech, message: "Requesting access")
         canAccess { authorized in
             guard authorized else {
-                relay(speech, message: "Access denied")
+                //relay(speech, message: "Access denied")
                 return
             }
             
-            relay(speech, message: "Access granted")
+            //relay(speech, message: "Access granted")
             
             assistant.audioEngine = AVAudioEngine()
             guard let audioEngine = assistant.audioEngine else {
@@ -62,24 +64,24 @@ struct SpeechRecognizer {
             recognitionRequest.shouldReportPartialResults = true
             
             do {
-                relay(speech, message: "Booting audio subsystem")
+                //relay(speech, message: "Booting audio subsystem")
                 
                 let audioSession = AVAudioSession.sharedInstance()
                 try audioSession.setCategory(.record, mode: .measurement, options: .duckOthers)
                 try audioSession.setActive(true, options: .notifyOthersOnDeactivation)
                 let inputNode = audioEngine.inputNode
-                relay(speech, message: "Found input node")
+                //relay(speech, message: "Found input node")
                 
                 let recordingFormat = inputNode.outputFormat(forBus: 0)
                 inputNode.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat) { (buffer: AVAudioPCMBuffer, when: AVAudioTime) in
                     recognitionRequest.append(buffer)
                 }
                 let beginRecordingId: SystemSoundID = 1113
-                relay(speech, message: "Preparing audio engine")
-                changeColor($clr, newColor: Color(.red))
-                AudioServicesPlaySystemSound(beginRecordingId)
+                //relay(speech, message: "Preparing audio engine")
                 audioEngine.prepare()
                 try audioEngine.start()
+                changeColor($clr, newColor: Color(.red))
+                AudioServicesPlaySystemSound(beginRecordingId)
                 assistant.recognitionTask = assistant.speechRecognizer?.recognitionTask(with: recognitionRequest) { (result, error) in
                     var isFinal = false
                     
@@ -105,10 +107,10 @@ struct SpeechRecognizer {
     }
     
     func stopRecording() {
+        assistant.reset()
         let endRecordingId: SystemSoundID = 1114
         AudioServicesPlaySystemSound(endRecordingId)
         changeColor($clr, newColor: Color(.blue))
-        assistant.reset()
     }
     
     private func canAccess(withHandler handler: @escaping (Bool) -> Void) {

@@ -4,7 +4,6 @@
 //
 //  Created by Mikael Holm on 19.11.2021.
 //
-
 import Foundation
 
 class APODItemViewModel: ObservableObject {

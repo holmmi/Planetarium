@@ -10,7 +10,6 @@
 		6A5294E7275644E400804BBA /* APODSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5294E4275644E400804BBA /* APODSearchView.swift */; };
 		6A5294E8275644E400804BBA /* APODSearchListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5294E5275644E400804BBA /* APODSearchListView.swift */; };
 		6A5294E9275644E400804BBA /* APODSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5294E6275644E400804BBA /* APODSearchViewModel.swift */; };
-		6A5294EB275644ED00804BBA /* SpeechToTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5294EA275644ED00804BBA /* SpeechToTextView.swift */; };
 		6A5294ED2756452200804BBA /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5294EC2756452200804BBA /* SpeechRecognizer.swift */; };
 		730E767C27493BC800AA756D /* MapSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730E767B27493BC800AA756D /* MapSearch.swift */; };
 		730E7680274945B300AA756D /* MapSearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730E767F274945B300AA756D /* MapSearchBarView.swift */; };
@@ -66,7 +65,6 @@
 		6A5294E4275644E400804BBA /* APODSearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APODSearchView.swift; sourceTree = "<group>"; };
 		6A5294E5275644E400804BBA /* APODSearchListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APODSearchListView.swift; sourceTree = "<group>"; };
 		6A5294E6275644E400804BBA /* APODSearchViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APODSearchViewModel.swift; sourceTree = "<group>"; };
-		6A5294EA275644ED00804BBA /* SpeechToTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechToTextView.swift; sourceTree = "<group>"; };
 		6A5294EC2756452200804BBA /* SpeechRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
 		730E767B27493BC800AA756D /* MapSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSearch.swift; sourceTree = "<group>"; };
 		730E767F274945B300AA756D /* MapSearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSearchBarView.swift; sourceTree = "<group>"; };
@@ -130,6 +128,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6A5294EE275655A400804BBA /* APODSearch */ = {
+			isa = PBXGroup;
+			children = (
+				6A5294E5275644E400804BBA /* APODSearchListView.swift */,
+				6A5294E4275644E400804BBA /* APODSearchView.swift */,
+				6A5294E6275644E400804BBA /* APODSearchViewModel.swift */,
+			);
+			path = APODSearch;
+			sourceTree = "<group>";
+		};
 		730E767A27493BB400AA756D /* Map */ = {
 			isa = PBXGroup;
 			children = (
@@ -227,10 +235,7 @@
 		7338F3362745309F0038C370 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				6A5294EA275644ED00804BBA /* SpeechToTextView.swift */,
-				6A5294E5275644E400804BBA /* APODSearchListView.swift */,
-				6A5294E4275644E400804BBA /* APODSearchView.swift */,
-				6A5294E6275644E400804BBA /* APODSearchViewModel.swift */,
+				6A5294EE275655A400804BBA /* APODSearch */,
 				7345895C2750ADC200C2C6CD /* APOD */,
 				73458959274FEAED00C2C6CD /* Common */,
 				73458958274FEABE00C2C6CD /* Satellite */,
@@ -447,7 +452,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7322C0DE2747F74C00C3E1C5 /* SatelliteView.swift in Sources */,
-				6A5294EB275644ED00804BBA /* SpeechToTextView.swift in Sources */,
 				7338F34A2745309F0038C370 /* MainView.swift in Sources */,
 				730E7680274945B300AA756D /* MapSearchBarView.swift in Sources */,
 				7322C0DA27476FB300C3E1C5 /* APODItemViewModel.swift in Sources */,
