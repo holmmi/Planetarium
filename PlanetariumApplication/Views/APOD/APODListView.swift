@@ -4,7 +4,6 @@
 //
 //  Created by Mikael Holm on 3.11.2021.
 //
-
 import SwiftUI
 
 struct APODListView: View {

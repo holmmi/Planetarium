@@ -17,10 +17,15 @@ struct MainView: View {
                 .tabItem({
                     Label("Pictures", systemImage: "photo.fill")
                 })
+            APODSearchView()
+                .tabItem({
+                    Label("Search", systemImage: "magnifyingglass")
+                })
             SatelliteView()
                 .tabItem {
                     Label("Satellite", systemImage: "livephoto")
                 }
+            
         }
     }
 }

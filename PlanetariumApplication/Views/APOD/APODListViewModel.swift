@@ -4,7 +4,6 @@
 //
 //  Created by Mikael Holm on 4.11.2021.
 //
-
 import Foundation
 
 class APODListViewModel: ObservableObject {

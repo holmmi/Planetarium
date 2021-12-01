@@ -11,6 +11,10 @@ struct MapSearchBarView: View {
     @FocusState private var isSearching: Bool
     @State private var searchText = ""
     @ObservedObject var satelliteViewModel: SatelliteViewModel
+    @State private var speechRecognizer: SpeechRecognizer!
+    @State private var btnColor = Color(.blue)
+    @State private var isRecording: Bool = false
+    @State private var clr = Color(.blue)
     
     var body: some View {
         VStack {
@@ -23,7 +27,7 @@ struct MapSearchBarView: View {
                         satelliteViewModel.search(query: newValue)
                     }
                     .modifier(ClearButton(text: $searchText))
-                
+
                 if isSearching {
                     Button(action: {
                         isSearching.toggle()
@@ -33,8 +37,13 @@ struct MapSearchBarView: View {
                     }
                     .padding(.leading, 10)
                 }
+                Button(action: initTextToSpeech) {
+                    Image(systemName: "mic")
+                        .foregroundColor(clr)
+                }
             }
             
+           
             if isSearching && !satelliteViewModel.mapItems.isEmpty {
                 List(satelliteViewModel.getMapInfo()) { mapInfo in
                     Button(action: {
@@ -60,6 +69,22 @@ struct MapSearchBarView: View {
             }
             
         }.padding()
+            .onAppear() {
+                speechRecognizer = SpeechRecognizer(clr: $clr, isRecording: $isRecording)
+            }
+    }
+    
+    
+    private func initTextToSpeech() {
+        //print("type:", type(of: speechRecognizer.store.isRecording))
+        if !isRecording {
+            isSearching = true
+            speechRecognizer.record(to: $searchText)
+        }
+        else {
+            isSearching = false
+            speechRecognizer.stopRecording()
+        }
     }
 }
 

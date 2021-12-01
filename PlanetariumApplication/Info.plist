@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Audio is recorded to search satellite locations. Audio recordings are discarded after search.</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>You can use speech recognition to search a satellite location</string>
 	<key>NASA_API_KEY</key>
 	<string>$(NASA_API_KEY)</string>
 </dict>

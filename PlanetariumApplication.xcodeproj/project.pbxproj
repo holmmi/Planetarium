@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A5294E7275644E400804BBA /* APODSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5294E4275644E400804BBA /* APODSearchView.swift */; };
+		6A5294E8275644E400804BBA /* APODSearchListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5294E5275644E400804BBA /* APODSearchListView.swift */; };
+		6A5294E9275644E400804BBA /* APODSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5294E6275644E400804BBA /* APODSearchViewModel.swift */; };
+		6A5294ED2756452200804BBA /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5294EC2756452200804BBA /* SpeechRecognizer.swift */; };
 		730E767C27493BC800AA756D /* MapSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730E767B27493BC800AA756D /* MapSearch.swift */; };
 		730E7680274945B300AA756D /* MapSearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730E767F274945B300AA756D /* MapSearchBarView.swift */; };
 		730E768227494BF900AA756D /* SatelliteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730E768127494BF900AA756D /* SatelliteViewModel.swift */; };
@@ -63,6 +67,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6A5294E4275644E400804BBA /* APODSearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APODSearchView.swift; sourceTree = "<group>"; };
+		6A5294E5275644E400804BBA /* APODSearchListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APODSearchListView.swift; sourceTree = "<group>"; };
+		6A5294E6275644E400804BBA /* APODSearchViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APODSearchViewModel.swift; sourceTree = "<group>"; };
+		6A5294EC2756452200804BBA /* SpeechRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
 		730E767B27493BC800AA756D /* MapSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSearch.swift; sourceTree = "<group>"; };
 		730E767F274945B300AA756D /* MapSearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSearchBarView.swift; sourceTree = "<group>"; };
 		730E768127494BF900AA756D /* SatelliteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatelliteViewModel.swift; sourceTree = "<group>"; };
@@ -130,6 +138,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6A5294EE275655A400804BBA /* APODSearch */ = {
+			isa = PBXGroup;
+			children = (
+				6A5294E5275644E400804BBA /* APODSearchListView.swift */,
+				6A5294E4275644E400804BBA /* APODSearchView.swift */,
+				6A5294E6275644E400804BBA /* APODSearchViewModel.swift */,
+			);
+			path = APODSearch;
+			sourceTree = "<group>";
+		};
 		730E767A27493BB400AA756D /* Map */ = {
 			isa = PBXGroup;
 			children = (
@@ -227,6 +245,7 @@
 		7338F3362745309F0038C370 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6A5294EE275655A400804BBA /* APODSearch */,
 				7345895C2750ADC200C2C6CD /* APOD */,
 				73458959274FEAED00C2C6CD /* Common */,
 				73458958274FEABE00C2C6CD /* Satellite */,
@@ -263,6 +282,7 @@
 		7338F3452745309F0038C370 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				6A5294EC2756452200804BBA /* SpeechRecognizer.swift */,
 				7338F3462745309F0038C370 /* PictureInfo.swift */,
 				7346AE41274BDC1E0042DBF7 /* Map.swift */,
 				7385111B2755E35400206077 /* EarthAsset.swift */,
@@ -459,8 +479,12 @@
 				7338F3522745309F0038C370 /* PictureInfo.swift in Sources */,
 				7385111C2755E35400206077 /* EarthAsset.swift in Sources */,
 				7338F34E2745309F0038C370 /* FavoriteRepository.swift in Sources */,
+				6A5294E7275644E400804BBA /* APODSearchView.swift in Sources */,
+				6A5294E8275644E400804BBA /* APODSearchListView.swift in Sources */,
+				6A5294E9275644E400804BBA /* APODSearchViewModel.swift in Sources */,
 				7338F3482745309F0038C370 /* APODListView.swift in Sources */,
 				73851118275525F700206077 /* SatellitePictureViewModel.swift in Sources */,
+				6A5294ED2756452200804BBA /* SpeechRecognizer.swift in Sources */,
 				730E768227494BF900AA756D /* SatelliteViewModel.swift in Sources */,
 				7345895B274FEB0E00C2C6CD /* ClearButton.swift in Sources */,
 				7385111627550E6C00206077 /* SatellitePictureView.swift in Sources */,
