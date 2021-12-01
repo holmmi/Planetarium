@@ -21,9 +21,7 @@ struct EarthAssetsRequest {
     }
     
     func getEarthAssets(latitude: Float, longitude: Float, completion: @escaping (Result<EarthAsset, Error>) -> Void) {
-        let calendar = Calendar(identifier: .gregorian)
-        let components = calendar.dateComponents([.year, .month], from: Date())
-        let date = calendar.date(from: components)!
+        let date = Calendar.current.date(byAdding: .day, value: -30, to: Date())!
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
         

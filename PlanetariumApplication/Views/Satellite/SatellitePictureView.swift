@@ -25,6 +25,11 @@ struct SatellitePictureView: View {
                     }
                     .frame(width: 300, height: 300)
                 }
+            } else {
+                VStack {
+                    Text("Satellite Picture Loading Failed")
+                }
+                .padding()
             }
         }
         .onAppear(perform: {

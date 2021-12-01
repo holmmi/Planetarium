@@ -10,6 +10,7 @@ import MapKit
 
 class SatellitePictureViewModel: ObservableObject {
     private let earthAssetsRequest = EarthAssetsRequest()
+    
     @Published var earthAsset: EarthAsset?
     @Published var requestFailed: Bool = false
     
@@ -22,7 +23,9 @@ class SatellitePictureViewModel: ObservableObject {
                 }
             case .failure(let error):
                 print("getEarthAssets request failed: \(error)")
-                self.requestFailed = true
+                DispatchQueue.main.async {
+                    self.requestFailed = true
+                }
             }
         })
     }
