@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		373F3C372757599800BF815D /* FavoritesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373F3C362757599800BF815D /* FavoritesListView.swift */; };
+		373F3C3A27575CC600BF815D /* FavoritesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373F3C3927575CC600BF815D /* FavoritesListViewModel.swift */; };
+		373F3C3C27575D0700BF815D /* FavoritesItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373F3C3B27575D0700BF815D /* FavoritesItemView.swift */; };
+		373F3C3E27575D3100BF815D /* FavoritesItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373F3C3D27575D3100BF815D /* FavoritesItemViewModel.swift */; };
 		6A5294E7275644E400804BBA /* APODSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5294E4275644E400804BBA /* APODSearchView.swift */; };
 		6A5294E8275644E400804BBA /* APODSearchListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5294E5275644E400804BBA /* APODSearchListView.swift */; };
 		6A5294E9275644E400804BBA /* APODSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5294E6275644E400804BBA /* APODSearchViewModel.swift */; };
@@ -32,7 +35,6 @@
 		7338F34A2745309F0038C370 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7338F33A2745309F0038C370 /* MainView.swift */; };
 		7338F34B2745309F0038C370 /* APODListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7338F33B2745309F0038C370 /* APODListViewModel.swift */; };
 		7338F34C2745309F0038C370 /* APODItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7338F33C2745309F0038C370 /* APODItemView.swift */; };
-		7338F34D2745309F0038C370 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 7338F33D2745309F0038C370 /* Config.xcconfig */; };
 		7338F34E2745309F0038C370 /* FavoriteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7338F33F2745309F0038C370 /* FavoriteRepository.swift */; };
 		7338F34F2745309F0038C370 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7338F3412745309F0038C370 /* Persistence.swift */; };
 		7338F3512745309F0038C370 /* APODRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7338F3442745309F0038C370 /* APODRequest.swift */; };
@@ -64,6 +66,10 @@
 
 /* Begin PBXFileReference section */
 		373F3C362757599800BF815D /* FavoritesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListView.swift; sourceTree = "<group>"; };
+		373F3C3827575B1900BF815D /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		373F3C3927575CC600BF815D /* FavoritesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListViewModel.swift; sourceTree = "<group>"; };
+		373F3C3B27575D0700BF815D /* FavoritesItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesItemView.swift; sourceTree = "<group>"; };
+		373F3C3D27575D3100BF815D /* FavoritesItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesItemViewModel.swift; sourceTree = "<group>"; };
 		6A5294E4275644E400804BBA /* APODSearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APODSearchView.swift; sourceTree = "<group>"; };
 		6A5294E5275644E400804BBA /* APODSearchListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APODSearchListView.swift; sourceTree = "<group>"; };
 		6A5294E6275644E400804BBA /* APODSearchViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APODSearchViewModel.swift; sourceTree = "<group>"; };
@@ -90,7 +96,6 @@
 		7338F33A2745309F0038C370 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		7338F33B2745309F0038C370 /* APODListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APODListViewModel.swift; sourceTree = "<group>"; };
 		7338F33C2745309F0038C370 /* APODItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APODItemView.swift; sourceTree = "<group>"; };
-		7338F33D2745309F0038C370 /* Config.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		7338F33F2745309F0038C370 /* FavoriteRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteRepository.swift; sourceTree = "<group>"; };
 		7338F3412745309F0038C370 /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		7338F3442745309F0038C370 /* APODRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APODRequest.swift; sourceTree = "<group>"; };
@@ -134,6 +139,9 @@
 			isa = PBXGroup;
 			children = (
 				373F3C362757599800BF815D /* FavoritesListView.swift */,
+				373F3C3927575CC600BF815D /* FavoritesListViewModel.swift */,
+				373F3C3B27575D0700BF815D /* FavoritesItemView.swift */,
+				373F3C3D27575D3100BF815D /* FavoritesItemViewModel.swift */,
 			);
 			path = Favorites;
 			sourceTree = "<group>";
@@ -199,7 +207,6 @@
 			children = (
 				730E767A27493BB400AA756D /* Map */,
 				7338F353274531C50038C370 /* Info.plist */,
-				7338F33D2745309F0038C370 /* Config.xcconfig */,
 				7338F3402745309F0038C370 /* Data */,
 				7338F3452745309F0038C370 /* Models */,
 				7338F3432745309F0038C370 /* Network */,
@@ -210,6 +217,7 @@
 				7338F30D27452FD10038C370 /* Preview Content */,
 				7338F358274532A60038C370 /* Localizable.strings */,
 				7338F35A274534950038C370 /* Main.xcdatamodeld */,
+				373F3C3827575B1900BF815D /* Config.xcconfig */,
 			);
 			path = PlanetariumApplication;
 			sourceTree = "<group>";
@@ -434,7 +442,6 @@
 			files = (
 				7338F30F27452FD10038C370 /* Preview Assets.xcassets in Resources */,
 				7338F356274532A60038C370 /* Localizable.strings in Resources */,
-				7338F34D2745309F0038C370 /* Config.xcconfig in Resources */,
 				7322C0D827476B6400C3E1C5 /* testAPOD.json in Resources */,
 				7338F30C27452FD10038C370 /* Assets.xcassets in Resources */,
 			);
@@ -469,6 +476,7 @@
 				7338F3512745309F0038C370 /* APODRequest.swift in Sources */,
 				730E767C27493BC800AA756D /* MapSearch.swift in Sources */,
 				7338F3472745309F0038C370 /* APODListItemView.swift in Sources */,
+				373F3C3E27575D3100BF815D /* FavoritesItemViewModel.swift in Sources */,
 				7338F34B2745309F0038C370 /* APODListViewModel.swift in Sources */,
 				73B1545E274D2DA60015AF00 /* LocationManager.swift in Sources */,
 				7346AE42274BDC1E0042DBF7 /* Map.swift in Sources */,
@@ -484,8 +492,10 @@
 				7338F34F2745309F0038C370 /* Persistence.swift in Sources */,
 				373F3C372757599800BF815D /* FavoritesListView.swift in Sources */,
 				7338F30827452FCF0038C370 /* PlanetariumApplicationApp.swift in Sources */,
+				373F3C3A27575CC600BF815D /* FavoritesListViewModel.swift in Sources */,
 				7338F35C274534950038C370 /* Main.xcdatamodeld in Sources */,
 				7338F34C2745309F0038C370 /* APODItemView.swift in Sources */,
+				373F3C3C27575D0700BF815D /* FavoritesItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -539,7 +549,7 @@
 /* Begin XCBuildConfiguration section */
 		7338F32B27452FD10038C370 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7338F33D2745309F0038C370 /* Config.xcconfig */;
+			baseConfigurationReference = 373F3C3827575B1900BF815D /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
@@ -602,7 +612,7 @@
 		};
 		7338F32C27452FD10038C370 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7338F33D2745309F0038C370 /* Config.xcconfig */;
+			baseConfigurationReference = 373F3C3827575B1900BF815D /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
