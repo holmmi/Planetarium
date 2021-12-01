@@ -9,3 +9,20 @@
 "Astronomical Pictures" = "Avaruuskuvat";
 "Picture %@" = "Kuva ajalta %@";
 "Video" = "Tähän kuvaan liittyy video";
+"Satellite" = "Satelliitti";
+"Location Search" = "Hae sijainteja ja kiinnostavia paikkoja";
+"Cancel" = "Peruuta";
+"Notice" = "Huomaa";
+"Location Authorization Is Missing" = "Laitetteesi sijaintia ei saatu sillä laitteesi asetukset estävät tätä sovellusta saamasta sijaintiasi. Ole hyvä ja tarkista asetukset.";
+//Search form
+"find" = "Avaruuskuvien haku";
+"amount-of-pictures" = "Kuvien määrä";
+"start-date" = "Aloituspäivä";
+"end-date" = "Lopetuspäivä";
+"random-pictures" = "Satunnaiset kuvat";
+"search" = "Hae";
+"reset" = "Nollaa";
+"cancel" = "Peruuta";
+"done" = "Valmis";
+//Search results
+"search-results" = "Hakutulokset";

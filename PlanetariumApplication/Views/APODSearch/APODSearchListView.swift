@@ -20,7 +20,7 @@ struct APODSearchListView: View {
         .onAppear(perform: {
             apodSearchViewModel.getSearchData(searchData: searchData)
         })
-        .navigationBarTitle("Search results")
+        .navigationBarTitle("search-results")
         .navigationBarTitleDisplayMode(.inline)
     }
         

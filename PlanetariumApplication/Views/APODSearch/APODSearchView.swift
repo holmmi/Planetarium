@@ -15,53 +15,71 @@ class SearchData: ObservableObject {
 
 struct APODSearchView: View {
     @StateObject var searchData: SearchData = SearchData()
+    @FocusState private var isFocused: Bool
     
     var body: some View {
         NavigationView {
             Form {
-                Section(header: Text("Start Date")) {
-                    DatePicker("Start Date",
+                Section(header: Text("start-date")) {
+                    DatePicker("start-date",
                                selection: $searchData.startDate,
                                displayedComponents: [.date]
                     )
                 }
                 
-                Section(header: Text("End Date")) {
-                    DatePicker("End Date",
+                Section(header: Text("end-date")) {
+                    DatePicker("end-date",
                                selection: $searchData.endDate,
                                displayedComponents: [.date]
                     )
                 }
                 
-                Section(header: Text("Random pictures")) {
-                    TextField("Amount of pictures", text: $searchData.picAmount)
-                        .keyboardType(.numberPad)
+                Section(header: Text("random-pictures")) {
+                    HStack {
+                        TextField("amount-of-pictures", text: $searchData.picAmount)
+                            .keyboardType(.numberPad)
+                            .focused($isFocused)
+                            
+                        if isFocused {
+                            Button(action: {
+                                isFocused.toggle()
+                                searchData.picAmount = ""
+                            }) {
+                                Text("cancel")
+                            }
+                            .padding(.leading, 10)
+                            
+                        }
+                    }
                 }
-                
-                
+
                 Section {
                     Button(action: {
                         searchData.startDate = Date()
                         searchData.endDate = Date()
                         searchData.picAmount = ""
                     }) {
-                        Text("Reset")
+                        Text("reset")
                     }
                     NavigationLink(destination: APODSearchListView().environmentObject(searchData)) {
-                        Text("Search")
+                        Text("search")
                     }
                 }
+                
             }
-            .navigationBarTitle("Find")
+            .toolbar {
+                    ToolbarItem(placement: .keyboard) {
+                        Button("done") {
+                            isFocused = false
+                        }
+                }
+            }
+            .navigationBarTitle("find")
             .navigationBarTitleDisplayMode(.inline)
+            
         }
-        
     }
-    
 }
-
-
-
 
 struct APODSearchView_Previews: PreviewProvider {
     static var previews: some View {

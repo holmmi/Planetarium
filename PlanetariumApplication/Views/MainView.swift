@@ -19,13 +19,12 @@ struct MainView: View {
                 })
             APODSearchView()
                 .tabItem({
-                    Label("Search", systemImage: "magnifyingglass")
+                    Label("search", systemImage: "magnifyingglass")
                 })
             SatelliteView()
                 .tabItem {
                     Label("Satellite", systemImage: "livephoto")
                 }
-            
         }
     }
 }
@@ -33,6 +32,6 @@ struct MainView: View {
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
         MainView()
-.previewInterfaceOrientation(.portrait)
+            .previewInterfaceOrientation(.portrait)
     }
 }

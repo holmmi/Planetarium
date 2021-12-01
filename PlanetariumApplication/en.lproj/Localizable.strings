@@ -14,3 +14,15 @@
 "Cancel" = "Cancel";
 "Notice" = "Notice";
 "Location Authorization Is Missing" = "Your device cannot be located because the location services for this app are denied. Please check your settings.";
+//Search form
+"find" = "Astronomical picture search";
+"amount-of-pictures" = "Amount of pictures";
+"start-date" = "Start date";
+"end-date" = "End date";
+"random-pictures" = "Random pictures";
+"search" = "Search";
+"reset" = "Reset";
+"cancel" = "Cancel";
+"done" = "Done";
+//Search results
+"search-results" = "Search results";
