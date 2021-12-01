@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		373F3C372757599800BF815D /* FavoritesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373F3C362757599800BF815D /* FavoritesListView.swift */; };
 		6A5294E7275644E400804BBA /* APODSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5294E4275644E400804BBA /* APODSearchView.swift */; };
 		6A5294E8275644E400804BBA /* APODSearchListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5294E5275644E400804BBA /* APODSearchListView.swift */; };
 		6A5294E9275644E400804BBA /* APODSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5294E6275644E400804BBA /* APODSearchViewModel.swift */; };
@@ -62,6 +63,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		373F3C362757599800BF815D /* FavoritesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListView.swift; sourceTree = "<group>"; };
 		6A5294E4275644E400804BBA /* APODSearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APODSearchView.swift; sourceTree = "<group>"; };
 		6A5294E5275644E400804BBA /* APODSearchListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APODSearchListView.swift; sourceTree = "<group>"; };
 		6A5294E6275644E400804BBA /* APODSearchViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APODSearchViewModel.swift; sourceTree = "<group>"; };
@@ -128,6 +130,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		373F3C352757595D00BF815D /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				373F3C362757599800BF815D /* FavoritesListView.swift */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
 		6A5294EE275655A400804BBA /* APODSearch */ = {
 			isa = PBXGroup;
 			children = (
@@ -235,6 +245,7 @@
 		7338F3362745309F0038C370 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				373F3C352757595D00BF815D /* Favorites */,
 				6A5294EE275655A400804BBA /* APODSearch */,
 				7345895C2750ADC200C2C6CD /* APOD */,
 				73458959274FEAED00C2C6CD /* Common */,
@@ -471,6 +482,7 @@
 				730E768227494BF900AA756D /* SatelliteViewModel.swift in Sources */,
 				7345895B274FEB0E00C2C6CD /* ClearButton.swift in Sources */,
 				7338F34F2745309F0038C370 /* Persistence.swift in Sources */,
+				373F3C372757599800BF815D /* FavoritesListView.swift in Sources */,
 				7338F30827452FCF0038C370 /* PlanetariumApplicationApp.swift in Sources */,
 				7338F35C274534950038C370 /* Main.xcdatamodeld in Sources */,
 				7338F34C2745309F0038C370 /* APODItemView.swift in Sources */,
