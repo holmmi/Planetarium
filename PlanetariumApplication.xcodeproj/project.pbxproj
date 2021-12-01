@@ -197,6 +197,7 @@
 		7338F30627452FCF0038C370 /* PlanetariumApplication */ = {
 			isa = PBXGroup;
 			children = (
+				7385111D2757AF7700206077 /* Speech */,
 				730E767A27493BB400AA756D /* Map */,
 				7338F33D2745309F0038C370 /* Config.xcconfig */,
 				7338F3402745309F0038C370 /* Data */,
@@ -282,7 +283,6 @@
 		7338F3452745309F0038C370 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				6A5294EC2756452200804BBA /* SpeechRecognizer.swift */,
 				7338F3462745309F0038C370 /* PictureInfo.swift */,
 				7346AE41274BDC1E0042DBF7 /* Map.swift */,
 				7385111B2755E35400206077 /* EarthAsset.swift */,
@@ -328,6 +328,14 @@
 				7322C0D927476FB300C3E1C5 /* APODItemViewModel.swift */,
 			);
 			path = APOD;
+			sourceTree = "<group>";
+		};
+		7385111D2757AF7700206077 /* Speech */ = {
+			isa = PBXGroup;
+			children = (
+				6A5294EC2756452200804BBA /* SpeechRecognizer.swift */,
+			);
+			path = Speech;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
