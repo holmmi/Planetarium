@@ -17,6 +17,7 @@ class SpeechRecognizer: ObservableObject {
         var recognitionRequest: SFSpeechAudioBufferRecognitionRequest?
         var recognitionTask: SFSpeechRecognitionTask?
         let speechRecognizer = SFSpeechRecognizer()
+        var defaultTaskHint: SFSpeechRecognitionTaskHint?
         var timer: Timer?
         
         deinit {
@@ -42,7 +43,7 @@ class SpeechRecognizer: ObservableObject {
             guard authorized else {
                 return
             }
-            
+            self.assistant.defaultTaskHint = .search
             self.assistant.audioEngine = AVAudioEngine()
             guard let audioEngine = self.assistant.audioEngine else {
                 fatalError("Unable to create audio engine")
@@ -75,11 +76,20 @@ class SpeechRecognizer: ObservableObject {
                     self.isRecording = true
                 }
                 
+                let formatter = NumberFormatter()
+                formatter.numberStyle = .spellOut
+                
                 self.assistant.recognitionTask = self.assistant.speechRecognizer?.recognitionTask(with: recognitionRequest) { (result, error) in
                     var isFinal = false
                     
+                    //convert spelled number to number
                     if let result = result {
-                        self.relay(speech, message: result.bestTranscription.formattedString)
+                        if let number = formatter.number(from: result.bestTranscription.formattedString.lowercased())?.stringValue {
+                            self.relay(speech, message: number)
+                        }
+                        else {
+                            self.relay(speech, message: result.bestTranscription.formattedString)
+                        }
                         isFinal = result.isFinal
                     }
                     
@@ -87,9 +97,6 @@ class SpeechRecognizer: ObservableObject {
                         audioEngine.stop()
                         inputNode.removeTap(onBus: 0)
                         self.assistant.recognitionRequest = nil
-                        self.isRecording = false
-                        let endRecordingId: SystemSoundID = 1114
-                        AudioServicesPlaySystemSound(endRecordingId)
                     }
                     
                     if error == nil && !isFinal {
