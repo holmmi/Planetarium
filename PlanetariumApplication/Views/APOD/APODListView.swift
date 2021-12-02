@@ -12,11 +12,11 @@ struct APODListView: View {
     var body: some View {
         NavigationView {
             List (apodListViewModel.pictureInfos) { pictureInfo in
-                NavigationLink(destination: APODItemView(pictureInfo: pictureInfo).navigationTitle("Picture \(pictureInfo.date)")) {
+                NavigationLink(destination: APODItemView(pictureInfo: pictureInfo).navigationTitle("picture \(pictureInfo.date)")) {
                     APODListItemView(pictureInfo: pictureInfo)
                 }
             }
-            .navigationTitle("Astronomical Pictures")
+            .navigationTitle("astronomical-pictures")
             .navigationBarTitleDisplayMode(.inline)
         }
         

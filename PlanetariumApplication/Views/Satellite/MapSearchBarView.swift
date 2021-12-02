@@ -16,30 +16,33 @@ struct MapSearchBarView: View {
     var body: some View {
         VStack {
             HStack {
-                TextField("Location Search", text: $searchText)
+                TextField("location-search", text: $searchText)
                     .disableAutocorrection(true)
-                    .textFieldStyle(.roundedBorder)
                     .focused($isSearching)
                     .onChange(of: searchText) {newValue in
                         satelliteViewModel.search(query: newValue)
                     }
                     .modifier(ClearButton(text: $searchText))
+                    .padding(10)
                 
-                if isSearching {
-                    Button(action: {
-                        isSearching.toggle()
-                        searchText = ""
-                    }) {
-                        Text("Cancel")
-                    }
-                    .padding(.leading, 10)
-                }
+                /* TODO: Maybe delete this because there is already the clearbutton? Also try to fix text getting under the clearbutton.
+                 if isSearching {
+                 Button(action: {
+                 isSearching.toggle()
+                 searchText = ""
+                 if speechRecognizer.isRecording { speechRecognizer.stopRecording() }
+                 }) {
+                 Text("cancel")
+                 }*/
+                
                 Button(action: initTextToSpeech) {
                     Image(systemName: "mic")
                         .foregroundColor(speechRecognizer.isRecording ? .red : .secondary)
                 }
+                .padding(10)
             }
-            
+            .background(RoundedRectangle(cornerRadius: 5, style: .continuous).fill(.background))
+            .padding()
             
             if isSearching && !satelliteViewModel.mapItems.isEmpty {
                 List(satelliteViewModel.getMapInfo()) { mapInfo in
@@ -64,7 +67,6 @@ struct MapSearchBarView: View {
                 .listStyle(.plain)
                 .frame(maxHeight: 250)
             }
-            
         }
         .padding()
     }

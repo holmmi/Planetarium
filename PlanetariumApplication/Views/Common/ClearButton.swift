@@ -24,7 +24,7 @@ struct ClearButton: ViewModifier {
                     Image(systemName: "xmark.circle.fill")
                         .foregroundColor(.secondary)
                 }
-                .padding(.trailing, 8)
+               // .padding(.trailing, 8)
             }
         }
     }

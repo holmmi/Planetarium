@@ -5,16 +5,20 @@
   Created by Mikael Holm on 17.11.2021.
   
 */
-"Pictures" = "Kuvat";
-"Astronomical Pictures" = "Avaruuskuvat";
-"Picture %@" = "Kuva ajalta %@";
-"Video" = "Tähän kuvaan liittyy video";
-"Satellite Picture Loading Failed" = "Satelliittikuvan lataaminen valitulle sijainnille epäonnistui. Kuvaa ei ole saatavilla. Yritä myöhemmin uudelleen.";
-"Satellite" = "Satelliitti";
-"Location Search" = "Hae sijainteja ja kiinnostavia paikkoja";
-"Cancel" = "Peruuta";
-"Notice" = "Huomaa";
-"Location Authorization Is Missing" = "Laitetteesi sijaintia ei saatu sillä laitteesi asetukset estävät tätä sovellusta saamasta sijaintiasi. Ole hyvä ja tarkista asetukset.";
+//Common
+"cancel" = "Peruuta";
+"done" = "Valmis";
+"notice" = "Huomaa";
+//APOD
+"pictures" = "Kuvat";
+"astronomical-pictures" = "Avaruuskuvat";
+"picture %@" = "Kuva ajalta %@";
+"video" = "Tähän kuvaan liittyy video";
+//Satellite view
+"satellite-picture-loading-failed" = "Satelliittikuvan lataaminen valitulle sijainnille epäonnistui. Kuvaa ei ole saatavilla. Yritä myöhemmin uudelleen.";
+"satellite" = "Satelliitti";
+"location-search" = "Hae sijainteja ja kiinnostavia paikkoja";
+"location-authorization-is-missing" = "Laitetteesi sijaintia ei saatu sillä laitteesi asetukset estävät tätä sovellusta saamasta sijaintiasi. Ole hyvä ja tarkista asetukset.";
 //Search form
 "find" = "Avaruuskuvien haku";
 "amount-of-pictures" = "Kuvien määrä";
@@ -23,7 +27,5 @@
 "random-pictures" = "Satunnaiset kuvat";
 "search" = "Hae";
 "reset" = "Nollaa";
-"cancel" = "Peruuta";
-"done" = "Valmis";
 //Search results
 "search-results" = "Hakutulokset";

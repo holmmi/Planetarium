@@ -5,17 +5,21 @@
   Created by Mikael Holm on 17.11.2021.
   
 */
-"Pictures" = "Pictures";
-"Astronomical Pictures" = "Astronomical pictures";
-"Picture %@" = "Picture of %@";
-"Video" = "There is a video available";
-"Sattelite" = "Satellite";
-"Location Search" = "Search for locations and places";
-"Cancel" = "Cancel";
-"Notice" = "Notice";
-"Location Authorization Is Missing" = "Your device cannot be located because the location services for this app are denied. Please check your settings.";
-"Satellite Picture Loading Failed" = "Loading the satellite picture for the selected location has failed. There is no picture available. Please try again later.";
-//Search form
+//Common
+"notice" = "Notice";
+"cancel" = "Cancel";
+"done" = "Done";
+//APOD
+"pictures" = "Pictures";
+"astronomical-pictures" = "Astronomical pictures";
+"picture %@" = "Picture of %@";
+"video" = "There is a video available";
+//Satellite view
+"satellite" = "Satellite";
+"location-search" = "Search for locations and places";
+"location-authorization-is-missing" = "Your device cannot be located because the location services for this app are denied. Please check your settings.";
+"satellite-picture-loading-failed" = "Loading the satellite picture for the selected location has failed. There is no picture available. Please try again later.";
+//Search view
 "find" = "Astronomical picture search";
 "amount-of-pictures" = "Amount of pictures";
 "start-date" = "Start date";
@@ -23,7 +27,5 @@
 "random-pictures" = "Random pictures";
 "search" = "Search";
 "reset" = "Reset";
-"cancel" = "Cancel";
-"done" = "Done";
 //Search results
 "search-results" = "Search results";

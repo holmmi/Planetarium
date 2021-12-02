@@ -15,7 +15,7 @@ struct MainView: View {
             APODListView()
                 .environmentObject(apodListViewModel)
                 .tabItem({
-                    Label("Pictures", systemImage: "photo.fill")
+                    Label("pictures", systemImage: "photo.fill")
                 })
             APODSearchView()
                 .tabItem({
@@ -23,7 +23,7 @@ struct MainView: View {
                 })
             SatelliteView()
                 .tabItem {
-                    Label("Satellite", systemImage: "livephoto")
+                    Label("satellite", systemImage: "livephoto")
                 }
         }
     }

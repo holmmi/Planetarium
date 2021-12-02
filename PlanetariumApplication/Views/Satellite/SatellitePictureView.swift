@@ -27,7 +27,7 @@ struct SatellitePictureView: View {
                 }
             } else {
                 VStack {
-                    Text("Satellite Picture Loading Failed")
+                    Text("satellite-Picture-loading-failed")
                 }
                 .padding()
             }

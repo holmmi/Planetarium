@@ -87,6 +87,9 @@ class SpeechRecognizer: ObservableObject {
                         audioEngine.stop()
                         inputNode.removeTap(onBus: 0)
                         self.assistant.recognitionRequest = nil
+                        self.isRecording = false
+                        let endRecordingId: SystemSoundID = 1114
+                        AudioServicesPlaySystemSound(endRecordingId)
                     }
                     
                     if error == nil && !isFinal {

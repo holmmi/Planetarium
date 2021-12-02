@@ -13,7 +13,7 @@ struct APODSearchListView: View {
     
     var body: some View {
         List (apodSearchViewModel.pictureInfos) { pictureInfo in
-            NavigationLink(destination: APODItemView(pictureInfo: pictureInfo).navigationTitle("Picture \(pictureInfo.date)")) {
+            NavigationLink(destination: APODItemView(pictureInfo: pictureInfo).navigationTitle("picture \(pictureInfo.date)")) {
                 APODListItemView(pictureInfo: pictureInfo)
             }
         }
