@@ -41,6 +41,11 @@
 		7338F35F274537020038C370 /* FavoriteRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7338F35E274537020038C370 /* FavoriteRepositoryTest.swift */; };
 		7345895B274FEB0E00C2C6CD /* ClearButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7345895A274FEB0E00C2C6CD /* ClearButton.swift */; };
 		7346AE42274BDC1E0042DBF7 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7346AE41274BDC1E0042DBF7 /* Map.swift */; };
+		7385111127514CBB00206077 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7385111327514CBB00206077 /* InfoPlist.strings */; };
+		7385111627550E6C00206077 /* SatellitePictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7385111527550E6C00206077 /* SatellitePictureView.swift */; };
+		73851118275525F700206077 /* SatellitePictureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73851117275525F700206077 /* SatellitePictureViewModel.swift */; };
+		7385111A2755E1FF00206077 /* EarthAssetsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738511192755E1FF00206077 /* EarthAssetsRequest.swift */; };
+		7385111C2755E35400206077 /* EarthAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7385111B2755E35400206077 /* EarthAsset.swift */; };
 		73B1545E274D2DA60015AF00 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B1545D274D2DA60015AF00 /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -93,13 +98,18 @@
 		7338F3412745309F0038C370 /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		7338F3442745309F0038C370 /* APODRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APODRequest.swift; sourceTree = "<group>"; };
 		7338F3462745309F0038C370 /* PictureInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureInfo.swift; sourceTree = "<group>"; };
-		7338F353274531C50038C370 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		7338F357274532A60038C370 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		7338F359274532BB0038C370 /* fi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fi; path = fi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		7338F35B274534950038C370 /* Main.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Main.xcdatamodel; sourceTree = "<group>"; };
 		7338F35E274537020038C370 /* FavoriteRepositoryTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteRepositoryTest.swift; sourceTree = "<group>"; };
 		7345895A274FEB0E00C2C6CD /* ClearButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearButton.swift; sourceTree = "<group>"; };
 		7346AE41274BDC1E0042DBF7 /* Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
+		7385111227514CBB00206077 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7385111427514CBD00206077 /* fi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fi; path = fi.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7385111527550E6C00206077 /* SatellitePictureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatellitePictureView.swift; sourceTree = "<group>"; };
+		73851117275525F700206077 /* SatellitePictureViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatellitePictureViewModel.swift; sourceTree = "<group>"; };
+		738511192755E1FF00206077 /* EarthAssetsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthAssetsRequest.swift; sourceTree = "<group>"; };
+		7385111B2755E35400206077 /* EarthAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthAsset.swift; sourceTree = "<group>"; };
 		73B1545D274D2DA60015AF00 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -187,8 +197,8 @@
 		7338F30627452FCF0038C370 /* PlanetariumApplication */ = {
 			isa = PBXGroup;
 			children = (
+				7385111D2757AF7700206077 /* Speech */,
 				730E767A27493BB400AA756D /* Map */,
-				7338F353274531C50038C370 /* Info.plist */,
 				7338F33D2745309F0038C370 /* Config.xcconfig */,
 				7338F3402745309F0038C370 /* Data */,
 				7338F3452745309F0038C370 /* Models */,
@@ -200,6 +210,7 @@
 				7338F30D27452FD10038C370 /* Preview Content */,
 				7338F358274532A60038C370 /* Localizable.strings */,
 				7338F35A274534950038C370 /* Main.xcdatamodeld */,
+				7385111327514CBB00206077 /* InfoPlist.strings */,
 			);
 			path = PlanetariumApplication;
 			sourceTree = "<group>";
@@ -264,6 +275,7 @@
 			isa = PBXGroup;
 			children = (
 				7338F3442745309F0038C370 /* APODRequest.swift */,
+				738511192755E1FF00206077 /* EarthAssetsRequest.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -271,9 +283,9 @@
 		7338F3452745309F0038C370 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				6A5294EC2756452200804BBA /* SpeechRecognizer.swift */,
 				7338F3462745309F0038C370 /* PictureInfo.swift */,
 				7346AE41274BDC1E0042DBF7 /* Map.swift */,
+				7385111B2755E35400206077 /* EarthAsset.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -292,6 +304,8 @@
 				7322C0DD2747F74C00C3E1C5 /* SatelliteView.swift */,
 				730E767F274945B300AA756D /* MapSearchBarView.swift */,
 				730E768127494BF900AA756D /* SatelliteViewModel.swift */,
+				7385111527550E6C00206077 /* SatellitePictureView.swift */,
+				73851117275525F700206077 /* SatellitePictureViewModel.swift */,
 			);
 			path = Satellite;
 			sourceTree = "<group>";
@@ -314,6 +328,14 @@
 				7322C0D927476FB300C3E1C5 /* APODItemViewModel.swift */,
 			);
 			path = APOD;
+			sourceTree = "<group>";
+		};
+		7385111D2757AF7700206077 /* Speech */ = {
+			isa = PBXGroup;
+			children = (
+				6A5294EC2756452200804BBA /* SpeechRecognizer.swift */,
+			);
+			path = Speech;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -422,6 +444,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7338F30F27452FD10038C370 /* Preview Assets.xcassets in Resources */,
+				7385111127514CBB00206077 /* InfoPlist.strings in Resources */,
 				7338F356274532A60038C370 /* Localizable.strings in Resources */,
 				7338F34D2745309F0038C370 /* Config.xcconfig in Resources */,
 				7322C0D827476B6400C3E1C5 /* testAPOD.json in Resources */,
@@ -462,14 +485,18 @@
 				73B1545E274D2DA60015AF00 /* LocationManager.swift in Sources */,
 				7346AE42274BDC1E0042DBF7 /* Map.swift in Sources */,
 				7338F3522745309F0038C370 /* PictureInfo.swift in Sources */,
+				7385111C2755E35400206077 /* EarthAsset.swift in Sources */,
 				7338F34E2745309F0038C370 /* FavoriteRepository.swift in Sources */,
 				6A5294E7275644E400804BBA /* APODSearchView.swift in Sources */,
 				6A5294E8275644E400804BBA /* APODSearchListView.swift in Sources */,
 				6A5294E9275644E400804BBA /* APODSearchViewModel.swift in Sources */,
 				7338F3482745309F0038C370 /* APODListView.swift in Sources */,
+				73851118275525F700206077 /* SatellitePictureViewModel.swift in Sources */,
 				6A5294ED2756452200804BBA /* SpeechRecognizer.swift in Sources */,
 				730E768227494BF900AA756D /* SatelliteViewModel.swift in Sources */,
 				7345895B274FEB0E00C2C6CD /* ClearButton.swift in Sources */,
+				7385111627550E6C00206077 /* SatellitePictureView.swift in Sources */,
+				7385111A2755E1FF00206077 /* EarthAssetsRequest.swift in Sources */,
 				7338F34F2745309F0038C370 /* Persistence.swift in Sources */,
 				7338F30827452FCF0038C370 /* PlanetariumApplicationApp.swift in Sources */,
 				7338F35C274534950038C370 /* Main.xcdatamodeld in Sources */,
@@ -520,6 +547,15 @@
 				7338F359274532BB0038C370 /* fi */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		7385111327514CBB00206077 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7385111227514CBB00206077 /* en */,
+				7385111427514CBD00206077 /* fi */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -656,6 +692,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PlanetariumApplication/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Location Authorization";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -685,6 +722,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PlanetariumApplication/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Location Authorization";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
