@@ -18,18 +18,18 @@ struct SatellitePictureView: View {
         VStack {
             if !satellitePictureViewModel.requestFailed {
                 if let earthAsset = satellitePictureViewModel.earthAsset {
-                    AsyncImage(url: URL(string: earthAsset.url)!) { image in
-                        image.resizable()
-                    } placeholder: {
-                        ProgressView()
+                    VStack {
+                        AsyncImage(url: URL(string: earthAsset.url)!) { image in
+                            image.resizable()
+                        } placeholder: {
+                            ProgressView()
+                        }
+                        .frame(width: 300, height: 300)
+                        Text("Satellite Picture Date \(satellitePictureViewModel.getEarthAssetDate())")
                     }
-                    .frame(width: 300, height: 300)
                 }
             } else {
-                VStack {
-                    Text("Satellite Picture Loading Failed")
-                }
-                .padding()
+                Text("Satellite Picture Loading Failed")
             }
         }
         .onAppear(perform: {

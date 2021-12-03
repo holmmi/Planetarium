@@ -15,3 +15,4 @@
 "Notice" = "Notice";
 "Location Authorization Is Missing" = "Your device cannot be located because the location services for this app are denied. Please check your settings.";
 "Satellite Picture Loading Failed" = "Loading the satellite picture for the selected location has failed. There is no picture available. Please try again later.";
+"Satellite Picture Date %@" = "This picture was taken %@.";

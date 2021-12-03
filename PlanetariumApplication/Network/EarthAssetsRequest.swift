@@ -26,8 +26,8 @@ struct EarthAssetsRequest {
         dateFormatter.dateFormat = "yyyy-MM-dd"
         
         let queryItems = [
-            URLQueryItem(name: "lat", value: latitude.formatted()),
-            URLQueryItem(name: "lon", value: longitude.formatted()),
+            URLQueryItem(name: "lat", value: "\(latitude)"),
+            URLQueryItem(name: "lon", value: "\(longitude)"),
             URLQueryItem(name: "date", value: dateFormatter.string(from: date)),
             URLQueryItem(name: "dim", value: "0.15"),
             URLQueryItem(name: "api_key", value: apiKey)

@@ -29,4 +29,16 @@ class SatellitePictureViewModel: ObservableObject {
             }
         })
     }
+    
+    func getEarthAssetDate() -> String {
+        let df1 = DateFormatter()
+        df1.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSS"
+        guard let dateString = earthAsset?.date else {
+            return "Unknown"
+        }
+        let date = df1.date(from: dateString)!
+        let df2 = DateFormatter()
+        df2.dateFormat = "yyyy-MM-dd"
+        return df2.string(from: date)
+    }
 }

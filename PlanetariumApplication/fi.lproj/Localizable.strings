@@ -10,3 +10,4 @@
 "Picture %@" = "Kuva ajalta %@";
 "Video" = "Tähän kuvaan liittyy video";
 "Satellite Picture Loading Failed" = "Satelliittikuvan lataaminen valitulle sijainnille epäonnistui. Kuvaa ei ole saatavilla. Yritä myöhemmin uudelleen.";
+"Satellite Picture Date %@" = "Tämä kuva on otettu %@.";
