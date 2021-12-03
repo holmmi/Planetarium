@@ -9,5 +9,11 @@
 "Astronomical Pictures" = "Avaruuskuvat";
 "Picture %@" = "Kuva ajalta %@";
 "Video" = "Tähän kuvaan liittyy video";
+"Satellite" = "Satelliitti";
+"Location Search" = "Hae sijainteja";
+"Cancel" = "Peruuta";
+"Notice" = "Huomautus";
+"Location Authorization Is Missing" = "Laitetta ei voida paikantaa, koska sijaintipalvelut ovat estetty tässä sovelluksessa. Ole hyvä ja tarkista asetukset.";
 "Satellite Picture Loading Failed" = "Satelliittikuvan lataaminen valitulle sijainnille epäonnistui. Kuvaa ei ole saatavilla. Yritä myöhemmin uudelleen.";
 "Satellite Picture Date %@" = "Tämä kuva on otettu %@.";
+"Search" = "Haku";

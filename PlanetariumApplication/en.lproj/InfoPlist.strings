@@ -6,3 +6,5 @@
   
 */
 "NSLocationWhenInUseUsageDescription" = "Location services are used to locate the device to take satellite picture from the current position.";
+"NSSpeechRecognitionUsageDescription" = "Speech recognition may be used when searching for different locations on map.";
+"NSMicrophoneUsageDescription" = "Microphone is used for speech recognition.";
