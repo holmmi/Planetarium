@@ -6,19 +6,19 @@
   
 */
 //Common
+"notice" = "Huomaa";
 "cancel" = "Peruuta";
 "done" = "Valmis";
-"notice" = "Huomaa";
 //APOD
 "pictures" = "Kuvat";
 "astronomical-pictures" = "Avaruuskuvat";
 "picture %@" = "Kuva ajalta %@";
 "video" = "Tähän kuvaan liittyy video";
 //Satellite view
-"satellite-picture-loading-failed" = "Satelliittikuvan lataaminen valitulle sijainnille epäonnistui. Kuvaa ei ole saatavilla. Yritä myöhemmin uudelleen.";
 "satellite" = "Satelliitti";
-"location-search" = "Hae sijainteja ja kiinnostavia paikkoja";
-"location-authorization-is-missing" = "Laitetteesi sijaintia ei saatu sillä laitteesi asetukset estävät tätä sovellusta saamasta sijaintiasi. Ole hyvä ja tarkista asetukset.";
+"location-search" = "Hae osoitteita tai paikkoja";
+"location-authorization-is-missing" = "Laitteesi sijaintia ei saatu koska asetuksesi estävät tätä sovellusta saamasta sijaintiasi. Ole hyvä ja tarkista asetukset.";
+"satellite-picture-loading-failed" = "Satelliittikuvan lataaminen valitulle sijainnille epäonnistui. Kuvaa ei ole saatavilla. Yritä myöhemmin uudelleen.";
 //Search form
 "find" = "Avaruuskuvien haku";
 "amount-of-pictures" = "Kuvien määrä";

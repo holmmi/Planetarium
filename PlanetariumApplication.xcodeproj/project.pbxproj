@@ -11,6 +11,7 @@
 		6A5294E8275644E400804BBA /* APODSearchListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5294E5275644E400804BBA /* APODSearchListView.swift */; };
 		6A5294E9275644E400804BBA /* APODSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5294E6275644E400804BBA /* APODSearchViewModel.swift */; };
 		6A5294ED2756452200804BBA /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5294EC2756452200804BBA /* SpeechRecognizer.swift */; };
+		6AB9D0DE275A3FA200DFE72B /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AB9D0DD275A3FA200DFE72B /* Launch Screen.storyboard */; };
 		730E767C27493BC800AA756D /* MapSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730E767B27493BC800AA756D /* MapSearch.swift */; };
 		730E7680274945B300AA756D /* MapSearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730E767F274945B300AA756D /* MapSearchBarView.swift */; };
 		730E768227494BF900AA756D /* SatelliteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730E768127494BF900AA756D /* SatelliteViewModel.swift */; };
@@ -71,6 +72,7 @@
 		6A5294E5275644E400804BBA /* APODSearchListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APODSearchListView.swift; sourceTree = "<group>"; };
 		6A5294E6275644E400804BBA /* APODSearchViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APODSearchViewModel.swift; sourceTree = "<group>"; };
 		6A5294EC2756452200804BBA /* SpeechRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
+		6AB9D0DD275A3FA200DFE72B /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		730E767B27493BC800AA756D /* MapSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSearch.swift; sourceTree = "<group>"; };
 		730E767F274945B300AA756D /* MapSearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSearchBarView.swift; sourceTree = "<group>"; };
 		730E768127494BF900AA756D /* SatelliteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatelliteViewModel.swift; sourceTree = "<group>"; };
@@ -146,6 +148,14 @@
 				6A5294E6275644E400804BBA /* APODSearchViewModel.swift */,
 			);
 			path = APODSearch;
+			sourceTree = "<group>";
+		};
+		6AB9D0DC275A3F9100DFE72B /* Launchscreen */ = {
+			isa = PBXGroup;
+			children = (
+				6AB9D0DD275A3FA200DFE72B /* Launch Screen.storyboard */,
+			);
+			path = Launchscreen;
 			sourceTree = "<group>";
 		};
 		730E767A27493BB400AA756D /* Map */ = {
@@ -246,6 +256,7 @@
 		7338F3362745309F0038C370 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6AB9D0DC275A3F9100DFE72B /* Launchscreen */,
 				6A5294EE275655A400804BBA /* APODSearch */,
 				7345895C2750ADC200C2C6CD /* APOD */,
 				73458959274FEAED00C2C6CD /* Common */,
@@ -449,6 +460,7 @@
 				7338F34D2745309F0038C370 /* Config.xcconfig in Resources */,
 				7322C0D827476B6400C3E1C5 /* testAPOD.json in Resources */,
 				7338F30C27452FD10038C370 /* Assets.xcassets in Resources */,
+				6AB9D0DE275A3FA200DFE72B /* Launch Screen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -686,6 +698,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PlanetariumApplication/Preview Content\"";
@@ -693,9 +706,11 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PlanetariumApplication/Info.plist;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Location Authorization";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Audio is recorded to search satellite locations. Audio recordings are discarded after search.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "You can use speech recognition to search a satellite location";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -716,6 +731,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PlanetariumApplication/Preview Content\"";
@@ -723,9 +739,11 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PlanetariumApplication/Info.plist;
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Location Authorization";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Audio is recorded to search satellite locations. Audio recordings are discarded after search.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "You can use speech recognition to search a satellite location";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

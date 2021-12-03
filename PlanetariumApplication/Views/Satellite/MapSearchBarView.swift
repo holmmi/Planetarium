@@ -22,19 +22,11 @@ struct MapSearchBarView: View {
                     .onChange(of: searchText) {newValue in
                         satelliteViewModel.search(query: newValue)
                     }
-                    .modifier(ClearButton(text: $searchText))
+                    .modifier( ClearButton(text: $searchText, isSearching: $isSearching) )
                     .padding(10)
                 
-                /* TODO: Maybe delete this because there is already the clearbutton? Also try to fix text getting under the clearbutton.
-                 if isSearching {
-                 Button(action: {
-                 isSearching.toggle()
-                 searchText = ""
-                 if speechRecognizer.isRecording { speechRecognizer.stopRecording() }
-                 }) {
-                 Text("cancel")
-                 }*/
-                
+                 //TODO: Try to fix text getting under the clearbutton.
+
                 Button(action: initTextToSpeech) {
                     Image(systemName: "mic")
                         .foregroundColor(speechRecognizer.isRecording ? .red : .secondary)
@@ -42,7 +34,7 @@ struct MapSearchBarView: View {
                 .padding(10)
             }
             .background(RoundedRectangle(cornerRadius: 5, style: .continuous).fill(.background))
-            .padding()
+            //.padding()
             
             if isSearching && !satelliteViewModel.mapItems.isEmpty {
                 List(satelliteViewModel.getMapInfo()) { mapInfo in
