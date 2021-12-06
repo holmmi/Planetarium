@@ -17,3 +17,6 @@
 "Satellite Picture Loading Failed" = "Loading the satellite picture for the selected location has failed. There is no picture available. Please try again later.";
 "Satellite Picture Date %@" = "This picture was taken %@.";
 "Search" = "Search";
+"Ok" = "OK";
+"Satellite Picture Saved" = "Satellite picture has been saved to photo library.";
+"Photo Library Permission Denied" = "Cannot access photo library. Authorize this application to add photos in settings.";

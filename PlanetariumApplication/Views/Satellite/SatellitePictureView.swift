@@ -35,6 +35,30 @@ struct SatellitePictureView: View {
         .onAppear(perform: {
             satellitePictureViewModel.getEarthAssets(latitude: Float(latitude), longitude: Float(longitude))
         })
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button(action: {
+                    satellitePictureViewModel.saveSatellitePicture()
+                }) {
+                    Image(systemName: "square.and.arrow.up")
+                }
+                .disabled(satellitePictureViewModel.uiImage == nil)
+                .alert("Notice", isPresented: $satellitePictureViewModel.imageIsSaved, actions: ({
+                    Button("Ok") {
+                        
+                    }
+                }), message: {
+                    Text("Satellite Picture Saved")
+                })
+                .alert("Notice", isPresented: $satellitePictureViewModel.permissionIsDenied, actions: ({
+                    Button("Ok") {
+                        
+                    }
+                }), message: ({
+                    Text("Photo Library Permission Denied")
+                }))
+            }
+        }
     }
 }
 
