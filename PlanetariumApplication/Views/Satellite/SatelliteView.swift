@@ -36,7 +36,7 @@ struct SatelliteView: View {
                             }) {
                                 Image(systemName: "location")
                             }
-                            .alert("Notice", isPresented: $isAlertShowing, actions: ({
+                            .alert("notice", isPresented: $isAlertShowing, actions: ({
                                 Button("ok") {
                                     
                                 }

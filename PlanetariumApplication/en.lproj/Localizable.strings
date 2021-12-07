@@ -36,3 +36,9 @@
 "reset" = "Reset";
 //Search results
 "search-results" = "Search results";
+//Settings
+"settings" = "Settings";
+"dark-mode" = "Dark Mode";
+"language" = "Language";
+"finnish" = "Finnish";
+"english" = "English";

@@ -15,11 +15,19 @@ struct APODListView: View {
                 NavigationLink(destination: APODItemView(pictureInfo: pictureInfo).navigationTitle("picture \(pictureInfo.date)")) {
                     APODListItemView(pictureInfo: pictureInfo)
                 }
+                
+            }
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    NavigationLink(destination: SettingsView()) {
+                        Label("settings", systemImage: "gear")
+                    }
+                }
             }
             .navigationTitle("astronomical-pictures")
             .navigationBarTitleDisplayMode(.inline)
+            
         }
-        
     }
 }
 

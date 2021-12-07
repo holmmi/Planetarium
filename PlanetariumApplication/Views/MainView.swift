@@ -10,7 +10,7 @@ import SwiftUI
 struct MainView: View {
     @StateObject var apodListViewModel = APODListViewModel()
     @StateObject var favoritesListViewModel = FavoritesListViewModel()
-
+    @AppStorage("DarkMode") var isDarkMode: Bool = false
     
     var body: some View {
         TabView {
@@ -33,6 +33,8 @@ struct MainView: View {
                     Label("satellite", systemImage: "livephoto")
                 }
         }
+        .environment(\.colorScheme, isDarkMode ? .dark : .light)
+        .preferredColorScheme(isDarkMode ? .dark : .light)
     }
 }
 

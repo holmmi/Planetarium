@@ -36,3 +36,9 @@
 "reset" = "Nollaa";
 //Search results
 "search-results" = "Hakutulokset";
+//Settings
+"settings" = "Asetukset";
+"dark-mode" = "Tumma tila";
+"language" = "Kieli";
+"finnish" = "suomi";
+"english" = "englanti";
