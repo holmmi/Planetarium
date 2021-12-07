@@ -9,7 +9,7 @@
 "notice" = "Notice";
 "cancel" = "Cancel";
 "done" = "Done";
-"ok" = "OK"
+"ok" = "OK";
 //APOD
 "pictures" = "Pictures";
 "astronomical-pictures" = "Astronomical pictures";
@@ -20,10 +20,10 @@
 "location-search" = "Search for locations and places";
 "location-authorization-is-missing" = "Your device cannot be located because the location services for this app are denied. Please check your settings.";
 "satellite-picture-loading-failed" = "Loading the satellite picture for the selected location has failed. There is no picture available. Please try again later.";
-"Satellite Picture Date %@" = "This picture was taken %@.";
+"satellite-picture-date %@" = "This picture was taken %@.";
 //Satellite saving
-"Satellite Picture Saved" = "Satellite picture has been saved to photo library.";
-"Photo Library Permission Denied" = "Cannot access photo library. Authorize this application to add photos in settings.";
+"satellite-picture-saved" = "Satellite picture has been saved to photo library.";
+"photo-library-permission-denied" = "Cannot access photo library. Authorize this application to add photos in settings.";
 //Search view
 "find" = "Astronomical picture search";
 "amount-of-pictures" = "Amount of pictures";
@@ -33,5 +33,4 @@
 "search" = "Search";
 "reset" = "Reset";
 //Search results
-"search-results" = "Search results";
 "search-results" = "Search results";

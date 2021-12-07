@@ -25,7 +25,7 @@ struct SatellitePictureView: View {
                             ProgressView()
                         }
                         .frame(width: 300, height: 300)
-                        Text("Satellite Picture Date \(satellitePictureViewModel.getEarthAssetDate())")
+                        Text("satellite-picture-date \(satellitePictureViewModel.getEarthAssetDate())")
                     }
                 }
             } else {
@@ -43,19 +43,19 @@ struct SatellitePictureView: View {
                     Image(systemName: "square.and.arrow.up")
                 }
                 .disabled(satellitePictureViewModel.uiImage == nil)
-                .alert("Notice", isPresented: $satellitePictureViewModel.imageIsSaved, actions: ({
-                    Button("Ok") {
+                .alert("notice", isPresented: $satellitePictureViewModel.imageIsSaved, actions: ({
+                    Button("ok") {
                         
                     }
                 }), message: {
-                    Text("Satellite Picture Saved")
+                    Text("satellite-picture-saved")
                 })
-                .alert("Notice", isPresented: $satellitePictureViewModel.permissionIsDenied, actions: ({
-                    Button("Ok") {
+                .alert("notice", isPresented: $satellitePictureViewModel.permissionIsDenied, actions: ({
+                    Button("ok") {
                         
                     }
                 }), message: ({
-                    Text("Photo Library Permission Denied")
+                    Text("photo-library-permission-denied")
                 }))
             }
         }
