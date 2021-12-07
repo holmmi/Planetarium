@@ -15,6 +15,8 @@
 "astronomical-pictures" = "Avaruuskuvat";
 "picture %@" = "Kuva ajalta %@";
 "video" = "Tähän kuvaan liittyy video";
+//Favorites
+"favorites" = "Suosikit";
 //Satellite view
 "satellite" = "Satelliitti";
 "location-search" = "Hae osoitteita tai paikkoja";
