@@ -28,7 +28,7 @@ struct FavoritesItemView: View {
                     .padding()
                 
                 if favorite.video {
-                    Link("Video", destination: URL(string: favorite.url!)!)
+                    Link("video", destination: URL(string: favorite.url!)!)
                 }
                 
                 Text(favorite.explanation!)

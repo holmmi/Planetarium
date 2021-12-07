@@ -36,7 +36,7 @@ struct FavoritesListView: View {
                 }.onDelete(perform: favoritesListViewModel.deleteFavorite)
             }
             .listStyle(GroupedListStyle())
-            .navigationTitle("Favorites")
+            .navigationTitle("favorites")
             .navigationBarTitleDisplayMode(.inline)
             .onAppear{
                 favoritesListViewModel.getFavorites()

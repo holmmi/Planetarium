@@ -26,7 +26,7 @@ struct MainView: View {
             FavoritesListView()
                 .environmentObject(favoritesListViewModel)
                 .tabItem({
-                    Label("Favorites", systemImage: "star")
+                    Label("favorites", systemImage: "star")
                 })
             SatelliteView()
                 .tabItem {
