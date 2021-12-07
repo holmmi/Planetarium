@@ -9,6 +9,7 @@
 "notice" = "Huomaa";
 "cancel" = "Peruuta";
 "done" = "Valmis";
+"ok" = "OK";
 //APOD
 "pictures" = "Kuvat";
 "astronomical-pictures" = "Avaruuskuvat";
@@ -17,8 +18,12 @@
 //Satellite view
 "satellite" = "Satelliitti";
 "location-search" = "Hae osoitteita tai paikkoja";
-"location-authorization-is-missing" = "Laitteesi sijaintia ei saatu koska asetuksesi estävät tätä sovellusta saamasta sijaintiasi. Ole hyvä ja tarkista asetukset.";
+"location-authorization-is-missing" = "Laitetta ei voida paikantaa, koska sijaintipalvelut ovat estetty tässä sovelluksessa. Ole hyvä ja tarkista asetukset.";
 "satellite-picture-loading-failed" = "Satelliittikuvan lataaminen valitulle sijainnille epäonnistui. Kuvaa ei ole saatavilla. Yritä myöhemmin uudelleen.";
+"Satellite Picture Date %@" = "Tämä kuva on otettu %@.";
+//Satellite saving
+"Satellite Picture Saved" = "Satelliittikuva on tallennettu kuvakirjastoon.";
+"Photo Library Permission Denied" = "Kuvakirjastoon pääsy on estetty. Salli tämän sovelluksen lisätä kuvia asetuksissa.";
 //Search form
 "find" = "Avaruuskuvien haku";
 "amount-of-pictures" = "Kuvien määrä";

@@ -6,6 +6,16 @@
 //
 
 import Foundation
+import UIKit
+
+struct EarthAssetsRequestError: Error {
+    enum ErrorKind {
+        case noData
+        case noImage
+    }
+    let errorMsg: String
+    let errorKind: ErrorKind
+}
 
 struct EarthAssetsRequest {
     private let apiKey: String
@@ -26,8 +36,8 @@ struct EarthAssetsRequest {
         dateFormatter.dateFormat = "yyyy-MM-dd"
         
         let queryItems = [
-            URLQueryItem(name: "lat", value: latitude.formatted()),
-            URLQueryItem(name: "lon", value: longitude.formatted()),
+            URLQueryItem(name: "lat", value: "\(latitude)"),
+            URLQueryItem(name: "lon", value: "\(longitude)"),
             URLQueryItem(name: "date", value: dateFormatter.string(from: date)),
             URLQueryItem(name: "dim", value: "0.15"),
             URLQueryItem(name: "api_key", value: apiKey)
@@ -43,7 +53,24 @@ struct EarthAssetsRequest {
                 } catch {
                     completion(.failure(error))
                 }
+            } else {
+                completion(.failure(EarthAssetsRequestError(errorMsg: "No data", errorKind: .noData)))
             }
+        }
+        task.resume()
+    }
+    
+    func getImage(url: String, completion: @escaping (Result<UIImage, Error>) -> Void) {
+        let task = urlSession.dataTask(with: URL(string: url)!) { (data, response, error) in
+            guard let data = data else {
+                completion(.failure(EarthAssetsRequestError(errorMsg: "No data", errorKind: .noData)))
+                return
+            }
+            guard let uiImage = UIImage(data: data) else {
+                completion(.failure(EarthAssetsRequestError(errorMsg: "Failed to parse image", errorKind: .noImage)))
+                return
+            }
+            completion(.success(uiImage))
         }
         task.resume()
     }

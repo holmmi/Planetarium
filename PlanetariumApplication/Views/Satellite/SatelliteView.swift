@@ -36,9 +36,13 @@ struct SatelliteView: View {
                             }) {
                                 Image(systemName: "location")
                             }
-                            .alert(isPresented: $isAlertShowing) {
-                                Alert(title: Text("notice"), message: Text("location-authorization-is-missing"), dismissButton: .cancel())
-                            }
+                            .alert("Notice", isPresented: $isAlertShowing, actions: ({
+                                Button("ok") {
+                                    
+                                }
+                            }), message: ({
+                                Text("location-authorization-is-missing")
+                            }))
                             Spacer()
                             NavigationLink("", destination: SatellitePictureView(latitude: satelliteViewModel.mapMarker.location.latitude, longitude: satelliteViewModel.mapMarker.location.longitude), isActive: $isNavigationLinkActive)
                                 .hidden()

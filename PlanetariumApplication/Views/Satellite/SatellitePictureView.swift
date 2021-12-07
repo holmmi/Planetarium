@@ -18,23 +18,47 @@ struct SatellitePictureView: View {
         VStack {
             if !satellitePictureViewModel.requestFailed {
                 if let earthAsset = satellitePictureViewModel.earthAsset {
-                    AsyncImage(url: URL(string: earthAsset.url)!) { image in
-                        image.resizable()
-                    } placeholder: {
-                        ProgressView()
+                    VStack {
+                        AsyncImage(url: URL(string: earthAsset.url)!) { image in
+                            image.resizable()
+                        } placeholder: {
+                            ProgressView()
+                        }
+                        .frame(width: 300, height: 300)
+                        Text("Satellite Picture Date \(satellitePictureViewModel.getEarthAssetDate())")
                     }
-                    .frame(width: 300, height: 300)
                 }
             } else {
-                VStack {
-                    Text("satellite-picture-loading-failed")
-                }
-                .padding()
+                Text("satellite-picture-loading-failed")
             }
         }
         .onAppear(perform: {
             satellitePictureViewModel.getEarthAssets(latitude: Float(latitude), longitude: Float(longitude))
         })
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button(action: {
+                    satellitePictureViewModel.saveSatellitePicture()
+                }) {
+                    Image(systemName: "square.and.arrow.up")
+                }
+                .disabled(satellitePictureViewModel.uiImage == nil)
+                .alert("Notice", isPresented: $satellitePictureViewModel.imageIsSaved, actions: ({
+                    Button("Ok") {
+                        
+                    }
+                }), message: {
+                    Text("Satellite Picture Saved")
+                })
+                .alert("Notice", isPresented: $satellitePictureViewModel.permissionIsDenied, actions: ({
+                    Button("Ok") {
+                        
+                    }
+                }), message: ({
+                    Text("Photo Library Permission Denied")
+                }))
+            }
+        }
     }
 }
 
