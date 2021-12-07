@@ -15,6 +15,7 @@
 		6A5294E8275644E400804BBA /* APODSearchListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5294E5275644E400804BBA /* APODSearchListView.swift */; };
 		6A5294E9275644E400804BBA /* APODSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5294E6275644E400804BBA /* APODSearchViewModel.swift */; };
 		6A5294ED2756452200804BBA /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5294EC2756452200804BBA /* SpeechRecognizer.swift */; };
+		6A7A2332275F6F6E0095B937 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 6A7A2331275F6F6E0095B937 /* Config.xcconfig */; };
 		6AB9D0DE275A3FA200DFE72B /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AB9D0DD275A3FA200DFE72B /* Launch Screen.storyboard */; };
 		730E767C27493BC800AA756D /* MapSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730E767B27493BC800AA756D /* MapSearch.swift */; };
 		730E7680274945B300AA756D /* MapSearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730E767F274945B300AA756D /* MapSearchBarView.swift */; };
@@ -72,7 +73,7 @@
 
 /* Begin PBXFileReference section */
 		373F3C362757599800BF815D /* FavoritesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListView.swift; sourceTree = "<group>"; };
-		373F3C3827575B1900BF815D /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		373F3C3827575B1900BF815D /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = SOURCE_ROOT; };
 		373F3C3927575CC600BF815D /* FavoritesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListViewModel.swift; sourceTree = "<group>"; };
 		373F3C3B27575D0700BF815D /* FavoritesItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesItemView.swift; sourceTree = "<group>"; };
 		373F3C3D27575D3100BF815D /* FavoritesItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesItemViewModel.swift; sourceTree = "<group>"; };
@@ -80,6 +81,7 @@
 		6A5294E5275644E400804BBA /* APODSearchListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APODSearchListView.swift; sourceTree = "<group>"; };
 		6A5294E6275644E400804BBA /* APODSearchViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APODSearchViewModel.swift; sourceTree = "<group>"; };
 		6A5294EC2756452200804BBA /* SpeechRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
+		6A7A2331275F6F6E0095B937 /* Config.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		6AB9D0DD275A3FA200DFE72B /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		730E767B27493BC800AA756D /* MapSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSearch.swift; sourceTree = "<group>"; };
 		730E767F274945B300AA756D /* MapSearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSearchBarView.swift; sourceTree = "<group>"; };
@@ -168,6 +170,14 @@
 			path = APODSearch;
 			sourceTree = "<group>";
 		};
+		6A7A2330275F6F050095B937 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				373F3C3827575B1900BF815D /* Config.xcconfig */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 		6AB9D0DC275A3F9100DFE72B /* Launchscreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -209,6 +219,7 @@
 				7338F31C27452FD10038C370 /* PlanetariumApplicationTests */,
 				7338F32627452FD10038C370 /* PlanetariumApplicationUITests */,
 				7338F30527452FCF0038C370 /* Products */,
+				6A7A2330275F6F050095B937 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -225,9 +236,9 @@
 		7338F30627452FCF0038C370 /* PlanetariumApplication */ = {
 			isa = PBXGroup;
 			children = (
+				6A7A2331275F6F6E0095B937 /* Config.xcconfig */,
 				7385111D2757AF7700206077 /* Speech */,
 				730E767A27493BB400AA756D /* Map */,
-				7338F33D2745309F0038C370 /* Config.xcconfig */,
 				7338F3402745309F0038C370 /* Data */,
 				7338F3452745309F0038C370 /* Models */,
 				7338F3432745309F0038C370 /* Network */,
@@ -478,6 +489,7 @@
 				7338F356274532A60038C370 /* Localizable.strings in Resources */,
 				7322C0D827476B6400C3E1C5 /* testAPOD.json in Resources */,
 				7338F30C27452FD10038C370 /* Assets.xcassets in Resources */,
+				6A7A2332275F6F6E0095B937 /* Config.xcconfig in Resources */,
 				6AB9D0DE275A3FA200DFE72B /* Launch Screen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -597,7 +609,7 @@
 /* Begin XCBuildConfiguration section */
 		7338F32B27452FD10038C370 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 373F3C3827575B1900BF815D /* Config.xcconfig */;
+			baseConfigurationReference = 6A7A2331275F6F6E0095B937 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
