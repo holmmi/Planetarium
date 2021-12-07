@@ -9,6 +9,8 @@ import SwiftUI
 
 struct MainView: View {
     @StateObject var apodListViewModel = APODListViewModel()
+    @StateObject var favoritesListViewModel = FavoritesListViewModel()
+
     
     var body: some View {
         TabView {
@@ -20,6 +22,11 @@ struct MainView: View {
             APODSearchView()
                 .tabItem({
                     Label("search", systemImage: "magnifyingglass")
+                })
+            FavoritesListView()
+                .environmentObject(favoritesListViewModel)
+                .tabItem({
+                    Label("Favorites", systemImage: "star")
                 })
             SatelliteView()
                 .tabItem {
