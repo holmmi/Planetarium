@@ -12,20 +12,19 @@ struct APODListView: View {
     var body: some View {
         NavigationView {
             List (apodListViewModel.pictureInfos) { pictureInfo in
-                NavigationLink(destination: APODItemView(pictureInfo: pictureInfo).navigationTitle("picture \(pictureInfo.date)")) {
+                NavigationLink(destination: APODItemView(pictureInfo: pictureInfo).navigationTitle("picture \(pictureInfo.date)").navigationBarColor(backgroundColor: .planetariumPrimary, titleColor: .white)) {
                     APODListItemView(pictureInfo: pictureInfo)
                 }
             }
+            .listStyle(.grouped)
             .navigationTitle("astronomical-pictures")
             .navigationBarTitleDisplayMode(.inline)
+            .navigationBarColor(backgroundColor: .planetariumPrimary, titleColor: .white)
         }
-        
     }
 }
 
 struct APODListView_Previews: PreviewProvider {
-    
-    
     static var previews: some View {
         APODListView()
             .environmentObject(APODListViewModel())

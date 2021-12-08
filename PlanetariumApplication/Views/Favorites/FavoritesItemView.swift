@@ -8,11 +8,9 @@
 import SwiftUI
 
 struct FavoritesItemView: View {
-    
     var favorite: Favorite
     
     @StateObject var favoritesItemViewModel: FavoritesItemViewModel = FavoritesItemViewModel()
-    
     
     var body: some View {
         ScrollView {
@@ -22,6 +20,7 @@ struct FavoritesItemView: View {
                 } placeholder: {
                     ProgressView()
                 }.frame(height: 400)
+                
                 Text(favorite.title!)
                     .font(.title)
                     .multilineTextAlignment(.center)
@@ -37,11 +36,13 @@ struct FavoritesItemView: View {
                 Spacer()
             }.padding()
         }
-
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading, content: ({
+                NavigationBackButton()
+            }))
+        }
+        .navigationBarBackButtonHidden(true)
     }
-    
-
-    
     
     struct FavoritesItemView_Previews: PreviewProvider {
         static var previews: some View {

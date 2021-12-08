@@ -9,12 +9,13 @@ import SwiftUI
 
 struct FavoritesListView: View {
     @EnvironmentObject var favoritesListViewModel: FavoritesListViewModel
-        
+    
     var body: some View {
         NavigationView {
             List {
                 ForEach(favoritesListViewModel.favorites) { favorite in
-                    NavigationLink(destination: FavoritesItemView(favorite: favorite), label:{
+                    NavigationLink(destination: FavoritesItemView(favorite: favorite)
+                                    .navigationBarColor(backgroundColor: .planetariumPrimary, titleColor: .white), label:{
                         HStack {
                             AsyncImage(url: URL(string: !favorite.video ? favorite.url! : favorite.thumbnailUrl!)) { image in
                                 image.resizable()
@@ -32,23 +33,24 @@ struct FavoritesListView: View {
                         }
                         
                     })
-
-                }.onDelete(perform: favoritesListViewModel.deleteFavorite)
+                    
+                }
+                .onDelete(perform: favoritesListViewModel.deleteFavorite)
             }
-            .listStyle(GroupedListStyle())
+            .listStyle(.grouped)
             .navigationTitle("favorites")
             .navigationBarTitleDisplayMode(.inline)
+            .navigationBarColor(backgroundColor: .planetariumPrimary, titleColor: .white)
             .onAppear{
                 favoritesListViewModel.getFavorites()
             }
         }
         
-}
-struct FavoritesListView_Previews: PreviewProvider {
-    
-    
-    static var previews: some View {
-        FavoritesListView()
     }
-}
+    
+    struct FavoritesListView_Previews: PreviewProvider {
+        static var previews: some View {
+            FavoritesListView()
+        }
+    }
 }

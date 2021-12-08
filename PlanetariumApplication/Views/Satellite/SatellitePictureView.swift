@@ -36,11 +36,15 @@ struct SatellitePictureView: View {
             satellitePictureViewModel.getEarthAssets(latitude: Float(latitude), longitude: Float(longitude))
         })
         .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                NavigationBackButton()
+            }
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button(action: {
                     satellitePictureViewModel.saveSatellitePicture()
                 }) {
                     Image(systemName: "square.and.arrow.up")
+                        .foregroundColor(satellitePictureViewModel.uiImage == nil ? .red : .white)
                 }
                 .disabled(satellitePictureViewModel.uiImage == nil)
                 .alert("notice", isPresented: $satellitePictureViewModel.imageIsSaved, actions: ({
@@ -59,6 +63,9 @@ struct SatellitePictureView: View {
                 }))
             }
         }
+        .navigationBarBackButtonHidden(true)
+        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarColor(backgroundColor: .planetariumPrimary, titleColor: .white)
     }
 }
 

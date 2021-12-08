@@ -10,7 +10,6 @@ import SwiftUI
 struct MainView: View {
     @StateObject var apodListViewModel = APODListViewModel()
     @StateObject var favoritesListViewModel = FavoritesListViewModel()
-
     
     var body: some View {
         TabView {
@@ -33,6 +32,7 @@ struct MainView: View {
                     Label("satellite", systemImage: "livephoto")
                 }
         }
+        .accentColor(.planetariumPrimary)
     }
 }
 

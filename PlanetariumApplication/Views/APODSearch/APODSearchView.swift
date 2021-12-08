@@ -76,7 +76,7 @@ struct APODSearchView: View {
             }
             .navigationBarTitle("find")
             .navigationBarTitleDisplayMode(.inline)
-            
+            .navigationBarColor(backgroundColor: .planetariumPrimary, titleColor: .white)
         }
     }
 }
