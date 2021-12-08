@@ -12,11 +12,12 @@ struct MapSearchBarView: View {
     @State private var searchText = ""
     @ObservedObject var satelliteViewModel: SatelliteViewModel
     @StateObject private var speechRecognizer = SpeechRecognizer()
+    @EnvironmentObject var settingsModel: SettingsModel
     
     var body: some View {
         VStack {
             HStack {
-                TextField("location-search", text: $searchText)
+                TextField("location-search".localized(), text: $searchText)
                     .disableAutocorrection(true)
                     .focused($isSearching)
                     .onChange(of: searchText) {newValue in
@@ -72,5 +73,6 @@ struct MapSearchBarView: View {
 struct MapSearchBarView_Previews: PreviewProvider {
     static var previews: some View {
         MapSearchBarView(satelliteViewModel: SatelliteViewModel())
+            .environmentObject(SettingsModel())
     }
 }

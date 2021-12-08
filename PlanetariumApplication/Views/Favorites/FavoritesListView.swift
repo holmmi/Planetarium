@@ -9,7 +9,8 @@ import SwiftUI
 
 struct FavoritesListView: View {
     @EnvironmentObject var favoritesListViewModel: FavoritesListViewModel
-        
+    @EnvironmentObject var settingsModel: SettingsModel
+    
     var body: some View {
         NavigationView {
             List {
@@ -32,23 +33,21 @@ struct FavoritesListView: View {
                         }
                         
                     })
-
                 }.onDelete(perform: favoritesListViewModel.deleteFavorite)
             }
             .listStyle(GroupedListStyle())
-            .navigationTitle("favorites")
+            .navigationTitle("favorites".localized())
             .navigationBarTitleDisplayMode(.inline)
             .onAppear{
                 favoritesListViewModel.getFavorites()
             }
         }
-        
-}
-struct FavoritesListView_Previews: PreviewProvider {
-    
-    
-    static var previews: some View {
-        FavoritesListView()
     }
-}
+    
+    struct FavoritesListView_Previews: PreviewProvider {
+        static var previews: some View {
+            FavoritesListView()
+                .environmentObject(SettingsModel())
+        }
+    }
 }

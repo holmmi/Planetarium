@@ -11,8 +11,6 @@ class FavoritesListViewModel: ObservableObject {
     @Published var favorites: [Favorite] = [Favorite]()
     
     private var favoriteRepository = FavoriteRepository()
-     
-
     
     func deleteFavorite(index: IndexSet){
         for i in index {
@@ -24,5 +22,5 @@ class FavoritesListViewModel: ObservableObject {
     func getFavorites(){
         favorites = favoriteRepository.getFavorites()
     }
-    }
+}
 

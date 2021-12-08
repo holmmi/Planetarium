@@ -2,7 +2,7 @@
 //  SettingsView.swift
 //  PlanetariumApplication
 //
-//  Created by iosdev on 7.12.2021.
+//  Created by Tiitus Telke on 7.12.2021.
 //
 
 import SwiftUI
@@ -13,43 +13,38 @@ enum Language: String, CaseIterable {
 }
 
 struct SettingsView: View {
-    //@StateObject var settingsModel: SettingsModel = SettingsModel()
+    @EnvironmentObject var settingsModel: SettingsModel
     @AppStorage("DarkMode") var isDarkMode: Bool = false
-    
-    @State private var selectedLang = Language.english
-    @State private var willRestart: Bool = false
+    @AppStorage("i18n_language") var selectedLang: Language = Language.english
     
     var body: some View {
         NavigationView {
             Form {
                 Section {
-                    Toggle("dark-mode", isOn: $isDarkMode)
+                    Toggle("dark-mode".localized(), isOn: $isDarkMode)
                         .toggleStyle(.switch)
                 }
-                Section {
-                    Picker("language", selection: $selectedLang) {
-                        Text("finnish").tag(Language.finnish)
-                        Text("english").tag(Language.english)
+                Section(footer: Text("localization-notice".localized())) {
+                    Picker("language".localized(), selection: $selectedLang) {
+                        Text("finnish".localized()).tag(Language.finnish)
+                        Text("english".localized()).tag(Language.english)
                     }
+                    .pickerStyle(SegmentedPickerStyle())
                     .onChange(of: selectedLang) { newValue in
                         UserDefaults.standard.set([newValue.rawValue], forKey: "AppleLanguages")
+                        settingsModel.languageChanged = true
                     }
                 }
-                
             }
-            
-            
         }
-        
-        .navigationBarTitle("settings")
+        .navigationBarTitle("settings".localized())
         .navigationBarTitleDisplayMode(.inline)
-        
     }
-    
 }
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
         SettingsView()
+            .environmentObject(SettingsModel())
     }
 }

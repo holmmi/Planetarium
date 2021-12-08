@@ -25,11 +25,11 @@ struct SatellitePictureView: View {
                             ProgressView()
                         }
                         .frame(width: 300, height: 300)
-                        Text("satellite-picture-date \(satellitePictureViewModel.getEarthAssetDate())")
+                        Text("satellite-picture-date \(satellitePictureViewModel.getEarthAssetDate())".localized())
                     }
                 }
             } else {
-                Text("satellite-picture-loading-failed")
+                Text("satellite-picture-loading-failed".localized())
             }
         }
         .onAppear(perform: {
@@ -40,22 +40,22 @@ struct SatellitePictureView: View {
                 Button(action: {
                     satellitePictureViewModel.saveSatellitePicture()
                 }) {
-                    Image(systemName: "square.and.arrow.up")
+                    Image(systemName: "square.and.arrow.up".localized())
                 }
                 .disabled(satellitePictureViewModel.uiImage == nil)
-                .alert("notice", isPresented: $satellitePictureViewModel.imageIsSaved, actions: ({
-                    Button("ok") {
+                .alert("notice".localized(), isPresented: $satellitePictureViewModel.imageIsSaved, actions: ({
+                    Button("ok".localized()) {
                         
                     }
                 }), message: {
-                    Text("satellite-picture-saved")
+                    Text("satellite-picture-saved".localized())
                 })
-                .alert("notice", isPresented: $satellitePictureViewModel.permissionIsDenied, actions: ({
-                    Button("ok") {
+                .alert("notice".localized(), isPresented: $satellitePictureViewModel.permissionIsDenied, actions: ({
+                    Button("ok".localized()) {
                         
                     }
                 }), message: ({
-                    Text("photo-library-permission-denied")
+                    Text("photo-library-permission-denied".localized())
                 }))
             }
         }

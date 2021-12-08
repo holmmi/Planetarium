@@ -42,3 +42,4 @@
 "language" = "Kieli";
 "finnish" = "suomi";
 "english" = "englanti";
+"localization-notice" = "Huomaa, että jotkin muutokset tulevat voimaan vasta käynnistettyäsi sovelluksen uudestaan.";

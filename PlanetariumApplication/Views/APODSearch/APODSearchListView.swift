@@ -13,14 +13,14 @@ struct APODSearchListView: View {
     
     var body: some View {
         List (apodSearchViewModel.pictureInfos) { pictureInfo in
-            NavigationLink(destination: APODItemView(pictureInfo: pictureInfo).navigationTitle("picture \(pictureInfo.date)")) {
+            NavigationLink(destination: APODItemView(pictureInfo: pictureInfo).navigationTitle("picture \(pictureInfo.date)".localized())) {
                 APODListItemView(pictureInfo: pictureInfo)
             }
         }
         .onAppear(perform: {
             apodSearchViewModel.getSearchData(searchData: searchData)
         })
-        .navigationBarTitle("search-results")
+        .navigationBarTitle("search-results".localized())
         .navigationBarTitleDisplayMode(.inline)
     }
         

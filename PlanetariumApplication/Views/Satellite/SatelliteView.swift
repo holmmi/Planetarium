@@ -13,6 +13,7 @@ struct SatelliteView: View {
     @State private var isAlertShowing = false
     @State private var isNavigationLinkActive = false
     @State private var isLoadedFirstTime = false
+    @EnvironmentObject var settingsModel: SettingsModel
     
     var body: some View {
         NavigationView {
@@ -36,12 +37,12 @@ struct SatelliteView: View {
                             }) {
                                 Image(systemName: "location")
                             }
-                            .alert("notice", isPresented: $isAlertShowing, actions: ({
-                                Button("ok") {
+                            .alert("notice".localized(), isPresented: $isAlertShowing, actions: ({
+                                Button("ok".localized()) {
                                     
                                 }
                             }), message: ({
-                                Text("location-authorization-is-missing")
+                                Text("location-authorization-is-missing".localized())
                             }))
                             Spacer()
                             NavigationLink("", destination: SatellitePictureView(latitude: satelliteViewModel.mapMarker.location.latitude, longitude: satelliteViewModel.mapMarker.location.longitude), isActive: $isNavigationLinkActive)
@@ -74,5 +75,6 @@ struct SatelliteView: View {
 struct SatelliteView_Previews: PreviewProvider {
     static var previews: some View {
         SatelliteView()
+            .environmentObject(SettingsModel())
     }
 }

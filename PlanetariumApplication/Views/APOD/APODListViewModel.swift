@@ -17,7 +17,7 @@ class APODListViewModel: ObservableObject {
                 DispatchQueue.main.async {
                     self.pictureInfos = infos
                 }
-                print("Successfuly loaded pictures.")
+                print("Successfully loaded pictures.")
             case .failure(let error):
                 print("There was an error loading pictures: \(error)")
             }

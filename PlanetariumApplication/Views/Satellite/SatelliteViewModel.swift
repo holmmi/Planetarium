@@ -26,7 +26,7 @@ class SatelliteViewModel: ObservableObject {
             case .success(let mapItems):
                 self.mapItems = mapItems
             case .failure(let error):
-                print("There was an error searching locations and places: \(error)")
+                print("There was an error searching locations and places: \(error)".localized())
             }
         })
     }

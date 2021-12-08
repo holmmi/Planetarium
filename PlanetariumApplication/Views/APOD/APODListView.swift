@@ -8,11 +8,12 @@ import SwiftUI
 
 struct APODListView: View {
     @EnvironmentObject var apodListViewModel: APODListViewModel
+    @EnvironmentObject var settingsModel: SettingsModel
     
     var body: some View {
         NavigationView {
             List (apodListViewModel.pictureInfos) { pictureInfo in
-                NavigationLink(destination: APODItemView(pictureInfo: pictureInfo).navigationTitle("picture \(pictureInfo.date)")) {
+                NavigationLink(destination: APODItemView(pictureInfo: pictureInfo).navigationTitle("picture \(pictureInfo.date)".localized())) {
                     APODListItemView(pictureInfo: pictureInfo)
                 }
                 
@@ -20,22 +21,20 @@ struct APODListView: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     NavigationLink(destination: SettingsView()) {
-                        Label("settings", systemImage: "gear")
+                        Label("settings".localized(), systemImage: "gear")
                     }
                 }
             }
-            .navigationTitle("astronomical-pictures")
+            .navigationTitle("astronomical-pictures".localized())
             .navigationBarTitleDisplayMode(.inline)
-            
         }
     }
 }
 
 struct APODListView_Previews: PreviewProvider {
-    
-    
     static var previews: some View {
         APODListView()
             .environmentObject(APODListViewModel())
+            .environmentObject(SettingsModel())
     }
 }
