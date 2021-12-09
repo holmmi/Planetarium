@@ -77,7 +77,7 @@ struct APODSearchView: View {
             }
             .navigationBarTitle("find".localized())
             .navigationBarTitleDisplayMode(.inline)
-            
+            .navigationBarColor(backgroundColor: .planetariumPrimary, titleColor: .white)
         }
     }
 }

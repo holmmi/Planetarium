@@ -40,6 +40,7 @@ struct MainView: View {
         }
         .environment(\.colorScheme, isDarkMode ? .dark : .light)
         .preferredColorScheme(isDarkMode ? .dark : .light)
+        .accentColor(.planetariumPrimary)
     }
 }
 

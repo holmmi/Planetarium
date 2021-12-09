@@ -15,7 +15,8 @@ struct FavoritesListView: View {
         NavigationView {
             List {
                 ForEach(favoritesListViewModel.favorites) { favorite in
-                    NavigationLink(destination: FavoritesItemView(favorite: favorite), label:{
+                    NavigationLink(destination: FavoritesItemView(favorite: favorite)
+                                    .navigationBarColor(backgroundColor: .planetariumPrimary, titleColor: .white), label:{
                         HStack {
                             AsyncImage(url: URL(string: !favorite.video ? favorite.url! : favorite.thumbnailUrl!)) { image in
                                 image.resizable()
@@ -30,14 +31,15 @@ struct FavoritesListView: View {
                                 Spacer()
                             }
                             Spacer()
-                        }
-                        
+                        } 
                     })
-                }.onDelete(perform: favoritesListViewModel.deleteFavorite)
+                }
+                .onDelete(perform: favoritesListViewModel.deleteFavorite)
             }
             .listStyle(GroupedListStyle())
             .navigationTitle("favorites".localized())
-            .navigationBarTitleDisplayMode(.inline)
+            .listStyle(.grouped)
+            .navigationBarColor(backgroundColor: .planetariumPrimary, titleColor: .white)
             .onAppear{
                 favoritesListViewModel.getFavorites()
             }

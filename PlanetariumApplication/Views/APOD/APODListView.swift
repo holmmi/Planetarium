@@ -13,7 +13,7 @@ struct APODListView: View {
     var body: some View {
         NavigationView {
             List (apodListViewModel.pictureInfos) { pictureInfo in
-                NavigationLink(destination: APODItemView(pictureInfo: pictureInfo).navigationTitle("picture \(pictureInfo.date)")) {    // TODO: find a way to localize this on the fly with localize() or similar
+                NavigationLink(destination: APODItemView(pictureInfo: pictureInfo).navigationTitle("picture \(pictureInfo.date)").navigationBarColor(backgroundColor: .planetariumPrimary, titleColor: .white)) { // TODO: find a way to localize this on the fly with localize() or similar
                     APODListItemView(pictureInfo: pictureInfo)
                 }
             }
@@ -24,8 +24,10 @@ struct APODListView: View {
                     }
                 }
             }
+            .listStyle(.grouped)
             .navigationTitle("astronomical-pictures".localized())
             .navigationBarTitleDisplayMode(.inline)
+            .navigationBarColor(backgroundColor: .planetariumPrimary, titleColor: .white)
         }
     }
 }
