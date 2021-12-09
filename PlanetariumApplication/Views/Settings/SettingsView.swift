@@ -24,7 +24,7 @@ struct SettingsView: View {
                     Toggle("dark-mode".localized(), isOn: $isDarkMode)
                         .toggleStyle(.switch)
                 }
-                Section(footer: Text("localization-notice".localized())) {
+                Section(header: Text("language".localized()), footer: Text("localization-notice".localized())) {
                     Picker("language".localized(), selection: $selectedLang) {
                         Text("finnish".localized()).tag(Language.finnish)
                         Text("english".localized()).tag(Language.english)

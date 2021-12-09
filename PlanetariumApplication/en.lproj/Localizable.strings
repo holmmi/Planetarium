@@ -42,4 +42,4 @@
 "language" = "Language";
 "finnish" = "Finnish";
 "english" = "English";
-"localization-notice" = "Note that some changes will take effect after reloading the application";
+"localization-notice" = "Note that some changes will take effect after reloading the application.";

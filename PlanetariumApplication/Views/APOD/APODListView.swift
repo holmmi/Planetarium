@@ -13,10 +13,9 @@ struct APODListView: View {
     var body: some View {
         NavigationView {
             List (apodListViewModel.pictureInfos) { pictureInfo in
-                NavigationLink(destination: APODItemView(pictureInfo: pictureInfo).navigationTitle("picture \(pictureInfo.date)".localized())) {
+                NavigationLink(destination: APODItemView(pictureInfo: pictureInfo).navigationTitle("picture \(pictureInfo.date)")) {    // TODO: find a way to localize this on the fly with localize() or similar
                     APODListItemView(pictureInfo: pictureInfo)
                 }
-                
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {

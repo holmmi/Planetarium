@@ -19,6 +19,7 @@
 		6A7A2336275FBEEF0095B937 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7A2335275FBEEF0095B937 /* SettingsView.swift */; };
 		6A7A2338275FC8D70095B937 /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7A2337275FC8D70095B937 /* SettingsModel.swift */; };
 		6AB9D0DE275A3FA200DFE72B /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AB9D0DD275A3FA200DFE72B /* Launch Screen.storyboard */; };
+		6AEAF1A42761422A00E52A3B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEAF1A32761422A00E52A3B /* Extensions.swift */; };
 		730E767C27493BC800AA756D /* MapSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730E767B27493BC800AA756D /* MapSearch.swift */; };
 		730E7680274945B300AA756D /* MapSearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730E767F274945B300AA756D /* MapSearchBarView.swift */; };
 		730E768227494BF900AA756D /* SatelliteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730E768127494BF900AA756D /* SatelliteViewModel.swift */; };
@@ -87,6 +88,7 @@
 		6A7A2335275FBEEF0095B937 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		6A7A2337275FC8D70095B937 /* SettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
 		6AB9D0DD275A3FA200DFE72B /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		6AEAF1A32761422A00E52A3B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		730E767B27493BC800AA756D /* MapSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSearch.swift; sourceTree = "<group>"; };
 		730E767F274945B300AA756D /* MapSearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSearchBarView.swift; sourceTree = "<group>"; };
 		730E768127494BF900AA756D /* SatelliteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatelliteViewModel.swift; sourceTree = "<group>"; };
@@ -199,6 +201,14 @@
 			path = Launchscreen;
 			sourceTree = "<group>";
 		};
+		6AEAF1A2276141F900E52A3B /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				6AEAF1A32761422A00E52A3B /* Extensions.swift */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
 		730E767A27493BB400AA756D /* Map */ = {
 			isa = PBXGroup;
 			children = (
@@ -249,6 +259,7 @@
 		7338F30627452FCF0038C370 /* PlanetariumApplication */ = {
 			isa = PBXGroup;
 			children = (
+				6AEAF1A2276141F900E52A3B /* Localization */,
 				6A7A2331275F6F6E0095B937 /* Config.xcconfig */,
 				7385111D2757AF7700206077 /* Speech */,
 				730E767A27493BB400AA756D /* Map */,
@@ -561,6 +572,7 @@
 				7338F30827452FCF0038C370 /* PlanetariumApplicationApp.swift in Sources */,
 				373F3C3A27575CC600BF815D /* FavoritesListViewModel.swift in Sources */,
 				7338F35C274534950038C370 /* Main.xcdatamodeld in Sources */,
+				6AEAF1A42761422A00E52A3B /* Extensions.swift in Sources */,
 				7338F34C2745309F0038C370 /* APODItemView.swift in Sources */,
 				373F3C3C27575D0700BF815D /* FavoritesItemView.swift in Sources */,
 			);
