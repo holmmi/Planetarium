@@ -38,6 +38,7 @@ struct SettingsView: View {
             }
         }
         .navigationBarTitle("settings".localized())
+        .navigationBarColor(backgroundColor: .planetariumPrimary, titleColor: .white)
         .navigationBarTitleDisplayMode(.inline)
     }
 }

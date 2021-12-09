@@ -16,7 +16,7 @@ class SpeechRecognizer: ObservableObject {
         var audioEngine: AVAudioEngine?
         var recognitionRequest: SFSpeechAudioBufferRecognitionRequest?
         var recognitionTask: SFSpeechRecognitionTask?
-        let speechRecognizer = SFSpeechRecognizer()
+        var speechRecognizer = SFSpeechRecognizer()
         var defaultTaskHint: SFSpeechRecognitionTaskHint?
         var timer: Timer?
         
@@ -37,6 +37,7 @@ class SpeechRecognizer: ObservableObject {
     private let assistant = SpeechAssist()
     
     @Published private(set) var isRecording: Bool = false
+    @AppStorage("i18n_language") var lang: Language = Language.english
     
     func record(to speech: Binding<String>) {
         canAccess { authorized in
@@ -45,6 +46,7 @@ class SpeechRecognizer: ObservableObject {
             }
             self.assistant.defaultTaskHint = .search
             self.assistant.audioEngine = AVAudioEngine()
+            self.assistant.speechRecognizer = SFSpeechRecognizer(locale: Locale.init(identifier: self.lang.rawValue))       // change speech recognizer language according to current user selected language
             guard let audioEngine = self.assistant.audioEngine else {
                 fatalError("Unable to create audio engine")
             }
@@ -56,6 +58,7 @@ class SpeechRecognizer: ObservableObject {
             recognitionRequest.shouldReportPartialResults = true
             
             do {
+                
                 let audioSession = AVAudioSession.sharedInstance()
                 try audioSession.setCategory(.record, mode: .measurement, options: .duckOthers)
                 try audioSession.setActive(true, options: .notifyOthersOnDeactivation)

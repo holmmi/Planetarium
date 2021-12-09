@@ -21,6 +21,7 @@ struct APODListView: View {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     NavigationLink(destination: SettingsView()) {
                         Label("settings".localized(), systemImage: "gear")
+                            .foregroundColor(.white)
                     }
                 }
             }

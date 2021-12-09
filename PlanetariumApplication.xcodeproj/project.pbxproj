@@ -11,6 +11,7 @@
 		373F3C3A27575CC600BF815D /* FavoritesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373F3C3927575CC600BF815D /* FavoritesListViewModel.swift */; };
 		373F3C3C27575D0700BF815D /* FavoritesItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373F3C3B27575D0700BF815D /* FavoritesItemView.swift */; };
 		373F3C3E27575D3100BF815D /* FavoritesItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373F3C3D27575D3100BF815D /* FavoritesItemViewModel.swift */; };
+		6A29DCC327621F9A003FDFDD /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A29DCC227621F9A003FDFDD /* String.swift */; };
 		6A5294E7275644E400804BBA /* APODSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5294E4275644E400804BBA /* APODSearchView.swift */; };
 		6A5294E8275644E400804BBA /* APODSearchListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5294E5275644E400804BBA /* APODSearchListView.swift */; };
 		6A5294E9275644E400804BBA /* APODSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5294E6275644E400804BBA /* APODSearchViewModel.swift */; };
@@ -19,7 +20,6 @@
 		6A7A2336275FBEEF0095B937 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7A2335275FBEEF0095B937 /* SettingsView.swift */; };
 		6A7A2338275FC8D70095B937 /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7A2337275FC8D70095B937 /* SettingsModel.swift */; };
 		6AB9D0DE275A3FA200DFE72B /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AB9D0DD275A3FA200DFE72B /* Launch Screen.storyboard */; };
-		6AEAF1A42761422A00E52A3B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AEAF1A32761422A00E52A3B /* Extensions.swift */; };
 		730E767C27493BC800AA756D /* MapSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730E767B27493BC800AA756D /* MapSearch.swift */; };
 		730E7680274945B300AA756D /* MapSearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730E767F274945B300AA756D /* MapSearchBarView.swift */; };
 		730E768227494BF900AA756D /* SatelliteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730E768127494BF900AA756D /* SatelliteViewModel.swift */; };
@@ -84,6 +84,7 @@
 		373F3C3927575CC600BF815D /* FavoritesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListViewModel.swift; sourceTree = "<group>"; };
 		373F3C3B27575D0700BF815D /* FavoritesItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesItemView.swift; sourceTree = "<group>"; };
 		373F3C3D27575D3100BF815D /* FavoritesItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesItemViewModel.swift; sourceTree = "<group>"; };
+		6A29DCC227621F9A003FDFDD /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		6A5294E4275644E400804BBA /* APODSearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APODSearchView.swift; sourceTree = "<group>"; };
 		6A5294E5275644E400804BBA /* APODSearchListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APODSearchListView.swift; sourceTree = "<group>"; };
 		6A5294E6275644E400804BBA /* APODSearchViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APODSearchViewModel.swift; sourceTree = "<group>"; };
@@ -92,7 +93,6 @@
 		6A7A2335275FBEEF0095B937 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		6A7A2337275FC8D70095B937 /* SettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
 		6AB9D0DD275A3FA200DFE72B /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
-		6AEAF1A32761422A00E52A3B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		730E767B27493BC800AA756D /* MapSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSearch.swift; sourceTree = "<group>"; };
 		730E767F274945B300AA756D /* MapSearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSearchBarView.swift; sourceTree = "<group>"; };
 		730E768127494BF900AA756D /* SatelliteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatelliteViewModel.swift; sourceTree = "<group>"; };
@@ -209,14 +209,6 @@
 			path = Launchscreen;
 			sourceTree = "<group>";
 		};
-		6AEAF1A2276141F900E52A3B /* Localization */ = {
-			isa = PBXGroup;
-			children = (
-				6AEAF1A32761422A00E52A3B /* Extensions.swift */,
-			);
-			path = Localization;
-			sourceTree = "<group>";
-		};
 		730E767A27493BB400AA756D /* Map */ = {
 			isa = PBXGroup;
 			children = (
@@ -267,7 +259,6 @@
 		7338F30627452FCF0038C370 /* PlanetariumApplication */ = {
 			isa = PBXGroup;
 			children = (
-				6AEAF1A2276141F900E52A3B /* Localization */,
 				735D11A4275F9AED00057528 /* Extension */,
 				6A7A2331275F6F6E0095B937 /* Config.xcconfig */,
 				7385111D2757AF7700206077 /* Speech */,
@@ -412,6 +403,7 @@
 			children = (
 				735D11A5275F9AFE00057528 /* Color.swift */,
 				735D11AB275FAA4900057528 /* View.swift */,
+				6A29DCC227621F9A003FDFDD /* String.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -569,6 +561,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A29DCC327621F9A003FDFDD /* String.swift in Sources */,
 				7322C0DE2747F74C00C3E1C5 /* SatelliteView.swift in Sources */,
 				7338F34A2745309F0038C370 /* MainView.swift in Sources */,
 				730E7680274945B300AA756D /* MapSearchBarView.swift in Sources */,
@@ -604,7 +597,6 @@
 				7338F30827452FCF0038C370 /* PlanetariumApplicationApp.swift in Sources */,
 				373F3C3A27575CC600BF815D /* FavoritesListViewModel.swift in Sources */,
 				7338F35C274534950038C370 /* Main.xcdatamodeld in Sources */,
-				6AEAF1A42761422A00E52A3B /* Extensions.swift in Sources */,
 				7338F34C2745309F0038C370 /* APODItemView.swift in Sources */,
 				373F3C3C27575D0700BF815D /* FavoritesItemView.swift in Sources */,
 			);

@@ -1,11 +1,10 @@
 //
-//  Extensions.swift
+//  String.swift
 //  PlanetariumApplication
 //
-//  Created by iosdev on 8.12.2021.
+//  Created by Tiitus Telke on 9.12.2021.
 //
 
-import Foundation
 import SwiftUI
 
 extension String {
