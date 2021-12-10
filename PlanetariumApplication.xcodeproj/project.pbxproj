@@ -50,6 +50,7 @@
 		735D11AA275FA85900057528 /* NavigationBarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735D11A9275FA85900057528 /* NavigationBarModifier.swift */; };
 		735D11AC275FAA4900057528 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735D11AB275FAA4900057528 /* View.swift */; };
 		735D11AE275FAF5A00057528 /* NavigationBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735D11AD275FAF5A00057528 /* NavigationBackButton.swift */; };
+		735D11B0276315A200057528 /* SearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735D11AF276315A200057528 /* SearchUITests.swift */; };
 		7385111127514CBB00206077 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7385111327514CBB00206077 /* InfoPlist.strings */; };
 		7385111627550E6C00206077 /* SatellitePictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7385111527550E6C00206077 /* SatellitePictureView.swift */; };
 		73851118275525F700206077 /* SatellitePictureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73851117275525F700206077 /* SatellitePictureViewModel.swift */; };
@@ -123,6 +124,7 @@
 		735D11A9275FA85900057528 /* NavigationBarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarModifier.swift; sourceTree = "<group>"; };
 		735D11AB275FAA4900057528 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		735D11AD275FAF5A00057528 /* NavigationBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBackButton.swift; sourceTree = "<group>"; };
+		735D11AF276315A200057528 /* SearchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUITests.swift; sourceTree = "<group>"; };
 		7385111227514CBB00206077 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7385111427514CBD00206077 /* fi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fi; path = fi.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7385111527550E6C00206077 /* SatellitePictureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatellitePictureView.swift; sourceTree = "<group>"; };
@@ -287,6 +289,7 @@
 			children = (
 				7338F32727452FD10038C370 /* PlanetariumApplicationUITests.swift */,
 				7338F32927452FD10038C370 /* PlanetariumApplicationUITestsLaunchTests.swift */,
+				735D11AF276315A200057528 /* SearchUITests.swift */,
 			);
 			path = PlanetariumApplicationUITests;
 			sourceTree = "<group>";
@@ -597,6 +600,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				735D11B0276315A200057528 /* SearchUITests.swift in Sources */,
 				7338F32A27452FD10038C370 /* PlanetariumApplicationUITestsLaunchTests.swift in Sources */,
 				7338F32827452FD10038C370 /* PlanetariumApplicationUITests.swift in Sources */,
 			);
