@@ -85,7 +85,7 @@ class SpeechRecognizer: ObservableObject {
                 self.assistant.recognitionTask = self.assistant.speechRecognizer?.recognitionTask(with: recognitionRequest) { (result, error) in
                     var isFinal = false
                     
-                    //convert spelled number to number
+                    //convert spelled number to number, only working in english
                     if let result = result {
                         if let number = formatter.number(from: result.bestTranscription.formattedString.lowercased())?.stringValue {
                             self.relay(speech, message: number)

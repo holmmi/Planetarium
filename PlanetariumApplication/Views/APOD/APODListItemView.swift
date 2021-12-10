@@ -8,6 +8,8 @@ import SwiftUI
 
 struct APODListItemView: View {
     var pictureInfo: PictureInfo
+    @State var isFavorite: Bool
+    @StateObject var apodListItemViewModel = APODListItemViewModel()
     
     var body: some View {
         HStack {
@@ -17,19 +19,29 @@ struct APODListItemView: View {
                 ProgressView()
             }.frame(width: 120, height: 120)
             VStack(alignment: .leading) {
-                Text(pictureInfo.title)
-                    .font(.title2)
+                HStack {
+                    Text(pictureInfo.title)
+                        .font(.title2)
+                    if isFavorite {
+                        Spacer()
+                        Image(systemName: "heart.fill")
+                    }
+                }
                 Text(pictureInfo.date)
                     .padding(.top)
                 Spacer()
             }
             Spacer()
         }
+        .onAppear {
+            apodListItemViewModel.updateIsFavorite(date: pictureInfo.date)
+        }
     }
+       
 }
 
 struct APODListItem_Previews: PreviewProvider {
     static var previews: some View {
-        APODListItemView(pictureInfo: PictureInfo(copyright: nil, date: "2021-11-04", explanation: "This is a cool photo.", hdUrl: nil, mediaType: "image", thumbnailUrl: nil, title: "Example", url: "https://apod.nasa.gov/apod/image/2111/MilkyWayWaterfall_XieJie_960.jpg"))
+        APODListItemView(pictureInfo: PictureInfo(copyright: nil, date: "2021-11-04", explanation: "This is a cool photo.", hdUrl: nil, mediaType: "image", thumbnailUrl: nil, title: "Example", url: "https://apod.nasa.gov/apod/image/2111/MilkyWayWaterfall_XieJie_960.jpg"), isFavorite: false)
     }
 }

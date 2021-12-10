@@ -10,5 +10,10 @@ import Foundation
 import SwiftUI
 
 class SettingsModel: ObservableObject {
-    @Published var languageChanged: Bool = false
+    @Published private(set) var languageChanged: Bool = false
+    
+    func changeLanguage(_ newLang: String) {
+        UserDefaults.standard.set([newLang], forKey: "AppleLanguages")
+        self.languageChanged = true
+    }
 }

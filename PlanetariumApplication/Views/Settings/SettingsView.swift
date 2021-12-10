@@ -31,8 +31,7 @@ struct SettingsView: View {
                     }
                     .pickerStyle(SegmentedPickerStyle())
                     .onChange(of: selectedLang) { newValue in
-                        UserDefaults.standard.set([newValue.rawValue], forKey: "AppleLanguages")
-                        settingsModel.languageChanged = true
+                        settingsModel.changeLanguage(newValue.rawValue)
                     }
                 }
             }

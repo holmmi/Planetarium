@@ -10,6 +10,7 @@
 "cancel" = "Peruuta";
 "done" = "Valmis";
 "ok" = "OK";
+"loading" = "Kuvat latautuvat. Ole hyvä ja odota...";
 //APOD
 "pictures" = "Kuvat";
 "astronomical-pictures" = "Avaruuskuvat";

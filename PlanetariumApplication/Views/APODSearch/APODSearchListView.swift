@@ -12,25 +12,32 @@ struct APODSearchListView: View {
     @StateObject var apodSearchViewModel: APODSearchViewModel = APODSearchViewModel()
     
     var body: some View {
-        List (apodSearchViewModel.pictureInfos) { pictureInfo in
-            NavigationLink(destination: APODItemView(pictureInfo: pictureInfo).navigationTitle("picture \(pictureInfo.date)").navigationBarColor(backgroundColor: .planetariumPrimary, titleColor: .white)) { //TODO: find a way to localize this on the fly with localize() or similar
-                APODListItemView(pictureInfo: pictureInfo)
+        if apodSearchViewModel.pictureInfos.isEmpty {
+            Text("loading".localized())
+                .onAppear(perform: {
+                    apodSearchViewModel.getSearchData(searchData: searchData)
+                })
+        }
+        else {
+            List (apodSearchViewModel.pictureInfos) { pictureInfo in
+                NavigationLink(destination: APODItemView(pictureInfo: pictureInfo).navigationTitle("picture \(pictureInfo.date)").navigationBarColor(backgroundColor: .planetariumPrimary, titleColor: .white)) { //TODO: find a way to localize this on the fly with localize() or similar
+                    APODListItemView(pictureInfo: pictureInfo, isFavorite: apodSearchViewModel.isInFavorites(pictureInfo.date))
+                }
             }
+            .listStyle(.grouped)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading, content: ({
+                    NavigationBackButton()
+                }))
+            }
+            .navigationBarTitle("search-results".localized())
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarBackButtonHidden(true)
+            .navigationBarColor(backgroundColor: .planetariumPrimary, titleColor: .white)
         }
-        .listStyle(.grouped)
-        .onAppear(perform: {
-            apodSearchViewModel.getSearchData(searchData: searchData)
-        })
-        .toolbar {
-            ToolbarItem(placement: .navigationBarLeading, content: ({
-                NavigationBackButton()
-            }))
-        }
-        .navigationBarTitle("search-results".localized())
-        .navigationBarTitleDisplayMode(.inline)
-        .navigationBarBackButtonHidden(true)
-        .navigationBarColor(backgroundColor: .planetariumPrimary, titleColor: .white)
+        
     }
+    
 }
 
 

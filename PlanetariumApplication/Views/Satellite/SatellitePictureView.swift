@@ -25,7 +25,7 @@ struct SatellitePictureView: View {
                             ProgressView()
                         }
                         .frame(width: 300, height: 300)
-                        Text("satellite-picture-date \(satellitePictureViewModel.getEarthAssetDate())".localized())
+                        Text("satellite-picture-date \(satellitePictureViewModel.getEarthAssetDate())")
                     }
                 }
             } else {

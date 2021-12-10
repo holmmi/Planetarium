@@ -16,6 +16,7 @@
 		6A5294E8275644E400804BBA /* APODSearchListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5294E5275644E400804BBA /* APODSearchListView.swift */; };
 		6A5294E9275644E400804BBA /* APODSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5294E6275644E400804BBA /* APODSearchViewModel.swift */; };
 		6A5294ED2756452200804BBA /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5294EC2756452200804BBA /* SpeechRecognizer.swift */; };
+		6A59BE482763834800478BC8 /* APODListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A59BE472763834800478BC8 /* APODListItemViewModel.swift */; };
 		6A7A2332275F6F6E0095B937 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 6A7A2331275F6F6E0095B937 /* Config.xcconfig */; };
 		6A7A2336275FBEEF0095B937 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7A2335275FBEEF0095B937 /* SettingsView.swift */; };
 		6A7A2338275FC8D70095B937 /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7A2337275FC8D70095B937 /* SettingsModel.swift */; };
@@ -89,6 +90,7 @@
 		6A5294E5275644E400804BBA /* APODSearchListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APODSearchListView.swift; sourceTree = "<group>"; };
 		6A5294E6275644E400804BBA /* APODSearchViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APODSearchViewModel.swift; sourceTree = "<group>"; };
 		6A5294EC2756452200804BBA /* SpeechRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
+		6A59BE472763834800478BC8 /* APODListItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODListItemViewModel.swift; sourceTree = "<group>"; };
 		6A7A2331275F6F6E0095B937 /* Config.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		6A7A2335275FBEEF0095B937 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		6A7A2337275FC8D70095B937 /* SettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
@@ -394,6 +396,7 @@
 				7338F33B2745309F0038C370 /* APODListViewModel.swift */,
 				7338F33C2745309F0038C370 /* APODItemView.swift */,
 				7322C0D927476FB300C3E1C5 /* APODItemViewModel.swift */,
+				6A59BE472763834800478BC8 /* APODListItemViewModel.swift */,
 			);
 			path = APOD;
 			sourceTree = "<group>";
@@ -594,6 +597,7 @@
 				7338F34F2745309F0038C370 /* Persistence.swift in Sources */,
 				6A7A2336275FBEEF0095B937 /* SettingsView.swift in Sources */,
 				373F3C372757599800BF815D /* FavoritesListView.swift in Sources */,
+				6A59BE482763834800478BC8 /* APODListItemViewModel.swift in Sources */,
 				7338F30827452FCF0038C370 /* PlanetariumApplicationApp.swift in Sources */,
 				373F3C3A27575CC600BF815D /* FavoritesListViewModel.swift in Sources */,
 				7338F35C274534950038C370 /* Main.xcdatamodeld in Sources */,

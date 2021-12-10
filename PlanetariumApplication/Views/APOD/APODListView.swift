@@ -12,23 +12,28 @@ struct APODListView: View {
     
     var body: some View {
         NavigationView {
-            List (apodListViewModel.pictureInfos) { pictureInfo in
-                NavigationLink(destination: APODItemView(pictureInfo: pictureInfo).navigationTitle("picture \(pictureInfo.date)").navigationBarColor(backgroundColor: .planetariumPrimary, titleColor: .white)) { // TODO: find a way to localize this on the fly with localize() or similar
-                    APODListItemView(pictureInfo: pictureInfo)
-                }
+            if apodListViewModel.pictureInfos.isEmpty {
+                Text("loading".localized())
             }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    NavigationLink(destination: SettingsView()) {
-                        Label("settings".localized(), systemImage: "gear")
-                            .foregroundColor(.white)
+            else {
+                List (apodListViewModel.pictureInfos) { pictureInfo in
+                    NavigationLink(destination: APODItemView(pictureInfo: pictureInfo).navigationTitle("picture \(pictureInfo.date)").navigationBarColor(backgroundColor: .planetariumPrimary, titleColor: .white)) { // TODO: find a way to localize this on the fly with localize() or similar
+                        APODListItemView(pictureInfo: pictureInfo, isFavorite: apodListViewModel.isInFavorites(pictureInfo.date))
                     }
                 }
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        NavigationLink(destination: SettingsView()) {
+                            Label("settings".localized(), systemImage: "gear")
+                                .foregroundColor(.white)
+                        }
+                    }
+                }
+                .listStyle(.grouped)
+                .navigationTitle("astronomical-pictures".localized())
+                .navigationBarTitleDisplayMode(.inline)
+                .navigationBarColor(backgroundColor: .planetariumPrimary, titleColor: .white)
             }
-            .listStyle(.grouped)
-            .navigationTitle("astronomical-pictures".localized())
-            .navigationBarTitleDisplayMode(.inline)
-            .navigationBarColor(backgroundColor: .planetariumPrimary, titleColor: .white)
         }
     }
 }
