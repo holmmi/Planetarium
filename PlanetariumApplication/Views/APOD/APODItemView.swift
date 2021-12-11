@@ -8,7 +8,8 @@ import SwiftUI
 
 struct APODItemView: View {
     let pictureInfo: PictureInfo
-    @StateObject var apodItemViewModel: APODItemViewModel = APODItemViewModel()
+    //@StateObject var apodItemViewModel: APODItemViewModel = APODItemViewModel()
+    @EnvironmentObject var apodItemViewModel: APODItemViewModel
     
     var body: some View {
         ScrollView {

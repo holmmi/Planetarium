@@ -8,8 +8,7 @@ import SwiftUI
 
 struct APODListItemView: View {
     var pictureInfo: PictureInfo
-    @State var isFavorite: Bool
-    @StateObject var apodListItemViewModel = APODListItemViewModel()
+    @EnvironmentObject var apodItemViewModel: APODItemViewModel
     
     var body: some View {
         HStack {
@@ -22,7 +21,7 @@ struct APODListItemView: View {
                 HStack {
                     Text(pictureInfo.title)
                         .font(.title2)
-                    if isFavorite {
+                    if apodItemViewModel.isFavorite {
                         Spacer()
                         Image(systemName: "heart.fill")
                     }
@@ -34,7 +33,7 @@ struct APODListItemView: View {
             Spacer()
         }
         .onAppear {
-            apodListItemViewModel.updateIsFavorite(date: pictureInfo.date)
+            apodItemViewModel.updateIsFavorite(date: pictureInfo.date)
         }
     }
        
@@ -42,6 +41,7 @@ struct APODListItemView: View {
 
 struct APODListItem_Previews: PreviewProvider {
     static var previews: some View {
-        APODListItemView(pictureInfo: PictureInfo(copyright: nil, date: "2021-11-04", explanation: "This is a cool photo.", hdUrl: nil, mediaType: "image", thumbnailUrl: nil, title: "Example", url: "https://apod.nasa.gov/apod/image/2111/MilkyWayWaterfall_XieJie_960.jpg"), isFavorite: false)
+        APODListItemView(pictureInfo: PictureInfo(copyright: nil, date: "2021-11-04", explanation: "This is a cool photo.", hdUrl: nil, mediaType: "image", thumbnailUrl: nil, title: "Example", url: "https://apod.nasa.gov/apod/image/2111/MilkyWayWaterfall_XieJie_960.jpg"))
+            .environmentObject(APODItemViewModel())
     }
 }

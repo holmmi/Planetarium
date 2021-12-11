@@ -17,9 +17,7 @@ struct APODListView: View {
             }
             else {
                 List (apodListViewModel.pictureInfos) { pictureInfo in
-                    NavigationLink(destination: APODItemView(pictureInfo: pictureInfo).navigationTitle("picture \(pictureInfo.date)").navigationBarColor(backgroundColor: .planetariumPrimary, titleColor: .white)) { // TODO: find a way to localize this on the fly with localize() or similar
-                        APODListItemView(pictureInfo: pictureInfo, isFavorite: apodListViewModel.isInFavorites(pictureInfo.date))
-                    }
+                    ListRow(pictureInfo: pictureInfo)
                 }
                 .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing) {
