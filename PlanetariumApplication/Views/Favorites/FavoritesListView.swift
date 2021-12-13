@@ -12,6 +12,10 @@ struct FavoritesListView: View {
         
     var body: some View {
         NavigationView {
+            if favoritesListViewModel.favorites.isEmpty {
+                Text("how to add favorites:")
+            }
+            else {
             List {
                 ForEach(favoritesListViewModel.favorites) { favorite in
                     NavigationLink(destination: FavoritesItemView(favorite: favorite), label:{
@@ -38,10 +42,9 @@ struct FavoritesListView: View {
             .listStyle(GroupedListStyle())
             .navigationTitle("Favorites")
             .navigationBarTitleDisplayMode(.inline)
-            .onAppear{
-                favoritesListViewModel.getFavorites()
             }
-        }
+        }.onAppear{                favoritesListViewModel.getFavorites()
+}
         
 }
 struct FavoritesListView_Previews: PreviewProvider {
