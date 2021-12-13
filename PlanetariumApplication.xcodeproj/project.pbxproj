@@ -10,7 +10,6 @@
 		373F3C372757599800BF815D /* FavoritesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373F3C362757599800BF815D /* FavoritesListView.swift */; };
 		373F3C3A27575CC600BF815D /* FavoritesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373F3C3927575CC600BF815D /* FavoritesListViewModel.swift */; };
 		373F3C3C27575D0700BF815D /* FavoritesItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373F3C3B27575D0700BF815D /* FavoritesItemView.swift */; };
-		373F3C3E27575D3100BF815D /* FavoritesItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373F3C3D27575D3100BF815D /* FavoritesItemViewModel.swift */; };
 		6A5294E7275644E400804BBA /* APODSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5294E4275644E400804BBA /* APODSearchView.swift */; };
 		6A5294E8275644E400804BBA /* APODSearchListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5294E5275644E400804BBA /* APODSearchListView.swift */; };
 		6A5294E9275644E400804BBA /* APODSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5294E6275644E400804BBA /* APODSearchViewModel.swift */; };
@@ -81,7 +80,6 @@
 		373F3C3827575B1900BF815D /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = SOURCE_ROOT; };
 		373F3C3927575CC600BF815D /* FavoritesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListViewModel.swift; sourceTree = "<group>"; };
 		373F3C3B27575D0700BF815D /* FavoritesItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesItemView.swift; sourceTree = "<group>"; };
-		373F3C3D27575D3100BF815D /* FavoritesItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesItemViewModel.swift; sourceTree = "<group>"; };
 		6A5294E4275644E400804BBA /* APODSearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APODSearchView.swift; sourceTree = "<group>"; };
 		6A5294E5275644E400804BBA /* APODSearchListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APODSearchListView.swift; sourceTree = "<group>"; };
 		6A5294E6275644E400804BBA /* APODSearchViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APODSearchViewModel.swift; sourceTree = "<group>"; };
@@ -165,7 +163,6 @@
 				373F3C362757599800BF815D /* FavoritesListView.swift */,
 				373F3C3927575CC600BF815D /* FavoritesListViewModel.swift */,
 				373F3C3B27575D0700BF815D /* FavoritesItemView.swift */,
-				373F3C3D27575D3100BF815D /* FavoritesItemViewModel.swift */,
 			);
 			path = Favorites;
 			sourceTree = "<group>";
@@ -556,7 +553,6 @@
 				735D11A6275F9AFE00057528 /* Color.swift in Sources */,
 				730E767C27493BC800AA756D /* MapSearch.swift in Sources */,
 				7338F3472745309F0038C370 /* APODListItemView.swift in Sources */,
-				373F3C3E27575D3100BF815D /* FavoritesItemViewModel.swift in Sources */,
 				7338F34B2745309F0038C370 /* APODListViewModel.swift in Sources */,
 				73B1545E274D2DA60015AF00 /* LocationManager.swift in Sources */,
 				735D11AA275FA85900057528 /* NavigationBarModifier.swift in Sources */,

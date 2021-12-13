@@ -17,6 +17,10 @@
 "video" = "Tähän kuvaan liittyy video";
 //Favorites
 "favorites" = "Suosikit";
+"delete-favorite-title" = "Poista suosikki";
+"delete-favorite-message" = "Oletko varma, että haluat poistaa tämän osuman suosikeista?";
+"delete-favorite-destructive" = "Poista";
+"delete-favorite-cancel" = "Peruuta";
 //Satellite view
 "satellite" = "Satelliitti";
 "location-search" = "Hae osoitteita tai paikkoja";
