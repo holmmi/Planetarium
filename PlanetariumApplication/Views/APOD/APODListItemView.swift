@@ -26,7 +26,7 @@ struct APODListItemView: View {
                         Image(systemName: "heart.fill")
                     }
                 }
-                Text(pictureInfo.date)
+                Text(pictureInfo.date.formattedDate())
                     .padding(.top)
                 Spacer()
             }
@@ -36,7 +36,6 @@ struct APODListItemView: View {
             apodItemViewModel.updateIsFavorite(date: pictureInfo.date)
         }
     }
-       
 }
 
 struct APODListItem_Previews: PreviewProvider {

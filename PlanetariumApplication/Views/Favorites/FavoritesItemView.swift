@@ -54,16 +54,16 @@ struct FavoritesItemView: View {
                 .foregroundColor(.white)
             }))
         }
-        .alert("delete-favorite-title", isPresented: $showDeleteConfirmation, actions: ({
-            Button("delete-favorite-destructive", role: .destructive, action: ({
+        .alert("delete-favorite-title".localized(), isPresented: $showDeleteConfirmation, actions: ({
+            Button("delete-favorite-destructive".localized(), role: .destructive, action: ({
                 self.presentationMode.wrappedValue.dismiss()
                 favoritesListViewModel.deleteFavorite(favorite: favorite)
             }))
-            Button("delete-favorite-cancel", role: .cancel, action: ({
+            Button("delete-favorite-cancel".localized(), role: .cancel, action: ({
                 
             }))
         }), message: ({
-            Text("delete-favorite-message")
+            Text("delete-favorite-message".localized())
         }))
         .navigationBarBackButtonHidden(true)
     }

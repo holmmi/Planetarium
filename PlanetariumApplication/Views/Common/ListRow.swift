@@ -12,7 +12,7 @@ struct ListRow: View {
     @StateObject var apodItemViewModel = APODItemViewModel()
     var body: some View {
         NavigationLink(destination: APODItemView(pictureInfo: pictureInfo)
-                        .navigationTitle("picture \(pictureInfo.date)").navigationBarColor(backgroundColor: .planetariumPrimary, titleColor: .white) // TODO: find a way to localize the title on the fly with localize() or similar
+                        .navigationTitle("picture \(pictureInfo.date.formattedDate())").navigationBarColor(backgroundColor: .planetariumPrimary, titleColor: .white) // TODO: find a way to localize the title on the fly with localize() or similar
                         .environmentObject(apodItemViewModel)) {
             APODListItemView(pictureInfo: pictureInfo).environmentObject(apodItemViewModel)
         }
