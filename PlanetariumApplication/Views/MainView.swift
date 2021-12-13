@@ -44,7 +44,11 @@ struct MainView: View {
         .preferredColorScheme(isDarkMode ? .dark : .light)
         .accentColor(.planetariumAccent)
         .onAppear {
-            print(language.rawValue)
+            if let languageCode = Locale.current.languageCode {
+                if let language = Language.init(rawValue: languageCode) {
+                    self.language = language
+                }
+            }
         }
     }
 }
