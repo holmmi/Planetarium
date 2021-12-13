@@ -10,7 +10,6 @@ class APODSearchViewModel: ObservableObject {
     @Published var pictureInfos: [PictureInfo] = [PictureInfo]()
     private var searchData: SearchData!
     private let apodRequest = APODRequest()
-    private let favoriteRepository = FavoriteRepository()
     
     func getSearchData(searchData: SearchData) {
         self.searchData = searchData
@@ -48,10 +47,6 @@ class APODSearchViewModel: ObservableObject {
                 print("There was an error loading pictures: \(error)")
             }
         }
-    }
-    
-    func isInFavorites(_ date: String) -> Bool {
-        return favoriteRepository.favoriteExists(date: date)
     }
 }
 

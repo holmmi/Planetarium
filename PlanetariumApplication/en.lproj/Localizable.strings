@@ -27,7 +27,7 @@
 "location-search" = "Search for locations and places";
 "location-authorization-is-missing" = "Your device cannot be located because the location services for this app are denied. Please check your settings.";
 "satellite-picture-loading-failed" = "Loading the satellite picture for the selected location has failed. There is no picture available. Please try again later.";
-"satellite-picture-date %@" = "This picture was taken %@.";
+"satellite-picture-date %@" = "This picture was taken on %@.";
 //Satellite saving
 "satellite-picture-saved" = "Satellite picture has been saved to photo library.";
 "photo-library-permission-denied" = "Cannot access photo library. Authorize this application to add photos in settings.";
