@@ -26,6 +26,7 @@ struct APODSearchView: View {
                                selection: $searchData.startDate,
                                displayedComponents: [.date]
                     )
+                        .accessibilityIdentifier("startDate")
                 }
                 
                 Section(header: Text("end-date".localized())) {
@@ -33,6 +34,7 @@ struct APODSearchView: View {
                                selection: $searchData.endDate,
                                displayedComponents: [.date]
                     )
+                        .accessibilityIdentifier("endDate")
                 }
                 
                 Section(header: Text("random-pictures".localized())) {
@@ -40,6 +42,7 @@ struct APODSearchView: View {
                         TextField("amount-of-pictures".localized(), text: $searchData.picAmount)
                             .keyboardType(.numberPad)
                             .focused($isFocused)
+                            .accessibilityIdentifier("amountOfPicturesField")
                             
                         if isFocused {
                             Button(action: {
@@ -49,7 +52,7 @@ struct APODSearchView: View {
                                 Text("cancel".localized())
                             }
                             .padding(.leading, 10)
-                            
+                            .accessibilityIdentifier("cancelButton")
                         }
                     }
                 }
@@ -62,9 +65,11 @@ struct APODSearchView: View {
                     }) {
                         Text("reset".localized())
                     }
+                    .accessibilityIdentifier("resetButton")
                     NavigationLink(destination: APODSearchListView().environmentObject(searchData)) {
                         Text("search".localized())
                     }
+                    .accessibilityIdentifier("searchButton")
                 }
                 
             }

@@ -18,6 +18,10 @@
 "video" = "There is a video available";
 //Favorites
 "favorites" = "Favorites";
+"delete-favorite-title" = "Delete favorite";
+"delete-favorite-message" = "Are you sure you want to remove this item from favorites?";
+"delete-favorite-destructive" = "Delete";
+"delete-favorite-cancel" = "Cancel";
 //Satellite view
 "satellite" = "Satellite";
 "location-search" = "Search for locations and places";

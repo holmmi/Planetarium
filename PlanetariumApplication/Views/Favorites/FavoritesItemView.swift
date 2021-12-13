@@ -8,29 +8,33 @@
 import SwiftUI
 
 struct FavoritesItemView: View {
-    var favorite: Favorite
+    let favorite: Favorite
     
-    @StateObject var favoritesItemViewModel: FavoritesItemViewModel = FavoritesItemViewModel()
+    @EnvironmentObject var favoritesListViewModel: FavoritesListViewModel
+    
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    
+    @State private var showDeleteConfirmation: Bool = false
     
     var body: some View {
         ScrollView {
             VStack {
-                AsyncImage(url: URL(string: !favorite.video ? favorite.url! : favorite.thumbnailUrl!)) { image in
+                AsyncImage(url: URL(string: (!favorite.video ? favorite.url : favorite.thumbnailUrl) ?? "")) { image in
                     image.resizable()
                 } placeholder: {
                     ProgressView()
                 }.frame(height: 400)
                 
-                Text(favorite.title!)
+                Text(favorite.title ?? "")
                     .font(.title)
                     .multilineTextAlignment(.center)
                     .padding()
                 
                 if favorite.video {
-                    Link("video".localized(), destination: URL(string: favorite.url!)!)
+                    Link("video".localized(), destination: URL(string: favorite.url ?? "")!)
                 }
                 
-                Text(favorite.explanation!)
+                Text(favorite.explanation ?? "")
                     .multilineTextAlignment(.center)
                     .padding()
                 Spacer()
@@ -40,7 +44,27 @@ struct FavoritesItemView: View {
             ToolbarItem(placement: .navigationBarLeading, content: ({
                 NavigationBackButton()
             }))
+            ToolbarItem(placement: .navigationBarTrailing, content: ({
+                Button(action: ({
+                    showDeleteConfirmation.toggle()
+                })) {
+                    Image(systemName: "trash")
+                }
+                .aspectRatio(contentMode: .fit)
+                .foregroundColor(.white)
+            }))
         }
+        .alert("delete-favorite-title", isPresented: $showDeleteConfirmation, actions: ({
+            Button("delete-favorite-destructive", role: .destructive, action: ({
+                self.presentationMode.wrappedValue.dismiss()
+                favoritesListViewModel.deleteFavorite(favorite: favorite)
+            }))
+            Button("delete-favorite-cancel", role: .cancel, action: ({
+                
+            }))
+        }), message: ({
+            Text("delete-favorite-message")
+        }))
         .navigationBarBackButtonHidden(true)
     }
     
