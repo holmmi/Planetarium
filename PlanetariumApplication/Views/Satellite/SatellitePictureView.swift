@@ -29,7 +29,7 @@ struct SatellitePictureView: View {
                     }
                 }
             } else {
-                Text("satellite-picture-loading-failed".localized())
+                Text("satellite-picture-loading-failed")
             }
         }
         .onAppear(perform: {
@@ -47,19 +47,19 @@ struct SatellitePictureView: View {
                         .foregroundColor(satellitePictureViewModel.uiImage == nil ? .red : .white)
                 }
                 .disabled(satellitePictureViewModel.uiImage == nil)
-                .alert("notice".localized(), isPresented: $satellitePictureViewModel.imageIsSaved, actions: ({
-                    Button("ok".localized()) {
+                .alert("notice", isPresented: $satellitePictureViewModel.imageIsSaved, actions: ({
+                    Button("ok") {
                         
                     }
                 }), message: {
-                    Text("satellite-picture-saved".localized())
+                    Text("satellite-picture-saved")
                 })
-                .alert("notice".localized(), isPresented: $satellitePictureViewModel.permissionIsDenied, actions: ({
-                    Button("ok".localized()) {
+                .alert("notice", isPresented: $satellitePictureViewModel.permissionIsDenied, actions: ({
+                    Button("ok") {
                         
                     }
                 }), message: ({
-                    Text("photo-library-permission-denied".localized())
+                    Text("photo-library-permission-denied")
                 }))
             }
         }

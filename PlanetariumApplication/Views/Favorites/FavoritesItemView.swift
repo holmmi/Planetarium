@@ -31,7 +31,7 @@ struct FavoritesItemView: View {
                     .padding()
                 
                 if favorite.video {
-                    Link("video".localized(), destination: URL(string: favorite.url ?? "")!)
+                    Link("video", destination: URL(string: favorite.url ?? "")!)
                 }
                 
                 Text(favorite.explanation ?? "")
@@ -54,16 +54,16 @@ struct FavoritesItemView: View {
                 .foregroundColor(.white)
             }))
         }
-        .alert("delete-favorite-title".localized(), isPresented: $showDeleteConfirmation, actions: ({
-            Button("delete-favorite-destructive".localized(), role: .destructive, action: ({
+        .alert("delete-favorite-title", isPresented: $showDeleteConfirmation, actions: ({
+            Button("delete-favorite-destructive", role: .destructive, action: ({
                 self.presentationMode.wrappedValue.dismiss()
                 favoritesListViewModel.deleteFavorite(favorite: favorite)
             }))
-            Button("delete-favorite-cancel".localized(), role: .cancel, action: ({
+            Button("delete-favorite-cancel", role: .cancel, action: ({
                 
             }))
         }), message: ({
-            Text("delete-favorite-message".localized())
+            Text("delete-favorite-message")
         }))
         .navigationBarBackButtonHidden(true)
     }

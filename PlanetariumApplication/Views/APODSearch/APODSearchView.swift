@@ -16,30 +16,29 @@ class SearchData: ObservableObject {
 struct APODSearchView: View {
     @StateObject var searchData: SearchData = SearchData()
     @FocusState private var isFocused: Bool
-    @EnvironmentObject var settingsModel: SettingsModel
     
     var body: some View {
         NavigationView {
             Form {
-                Section(header: Text("start-date".localized())) {
-                    DatePicker("start-date".localized(),
+                Section(header: Text("start-date")) {
+                    DatePicker("start-date",
                                selection: $searchData.startDate,
                                displayedComponents: [.date]
                     )
                         .accessibilityIdentifier("startDate")
                 }
                 
-                Section(header: Text("end-date".localized())) {
-                    DatePicker("end-date".localized(),
+                Section(header: Text("end-date")) {
+                    DatePicker("end-date",
                                selection: $searchData.endDate,
                                displayedComponents: [.date]
                     )
                         .accessibilityIdentifier("endDate")
                 }
                 
-                Section(header: Text("random-pictures".localized())) {
+                Section(header: Text("random-pictures")) {
                     HStack {
-                        TextField("amount-of-pictures".localized(), text: $searchData.picAmount)
+                        TextField("amount-of-pictures", text: $searchData.picAmount)
                             .keyboardType(.numberPad)
                             .focused($isFocused)
                             .accessibilityIdentifier("amountOfPicturesField")
@@ -49,7 +48,7 @@ struct APODSearchView: View {
                                 isFocused.toggle()
                                 searchData.picAmount = ""
                             }) {
-                                Text("cancel".localized())
+                                Text("cancel")
                             }
                             .padding(.leading, 10)
                             .accessibilityIdentifier("cancelButton")
@@ -63,11 +62,11 @@ struct APODSearchView: View {
                         searchData.endDate = Date()
                         searchData.picAmount = ""
                     }) {
-                        Text("reset".localized())
+                        Text("reset")
                     }
                     .accessibilityIdentifier("resetButton")
                     NavigationLink(destination: APODSearchListView().environmentObject(searchData)) {
-                        Text("search".localized())
+                        Text("search")
                     }
                     .accessibilityIdentifier("searchButton")
                 }
@@ -75,12 +74,12 @@ struct APODSearchView: View {
             }
             .toolbar {
                     ToolbarItem(placement: .keyboard) {
-                        Button("done".localized()) {
+                        Button("done") {
                             isFocused = false
                         }
                 }
             }
-            .navigationBarTitle("find".localized())
+            .navigationBarTitle("find")
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarColor(backgroundColor: .planetariumPrimary, titleColor: .white)
         }
@@ -90,6 +89,5 @@ struct APODSearchView: View {
 struct APODSearchView_Previews: PreviewProvider {
     static var previews: some View {
         APODSearchView()
-            .environmentObject(SettingsModel())
     }
 }

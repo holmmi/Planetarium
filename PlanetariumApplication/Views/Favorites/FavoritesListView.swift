@@ -9,7 +9,6 @@ import SwiftUI
 
 struct FavoritesListView: View {
     @EnvironmentObject var favoritesListViewModel: FavoritesListViewModel
-    @EnvironmentObject var settingsModel: SettingsModel
     
     var body: some View {
         NavigationView {
@@ -37,7 +36,7 @@ struct FavoritesListView: View {
                 .onDelete(perform: favoritesListViewModel.deleteFavorite)
             }
             .listStyle(GroupedListStyle())
-            .navigationTitle("favorites".localized())
+            .navigationTitle("favorites")
             .listStyle(.grouped)
             .navigationBarColor(backgroundColor: .planetariumPrimary, titleColor: .white)
             .onAppear{
@@ -49,7 +48,6 @@ struct FavoritesListView: View {
     struct FavoritesListView_Previews: PreviewProvider {
         static var previews: some View {
             FavoritesListView()
-                .environmentObject(SettingsModel())
         }
     }
 }

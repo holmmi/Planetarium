@@ -13,7 +13,7 @@ struct APODSearchListView: View {
     
     var body: some View {
         if apodSearchViewModel.pictureInfos.isEmpty {
-            Text("loading".localized())
+            Text("loading")
                 .onAppear(perform: {
                     apodSearchViewModel.getSearchData(searchData: searchData)
                 })
@@ -28,7 +28,7 @@ struct APODSearchListView: View {
                     NavigationBackButton()
                 }))
             }
-            .navigationBarTitle("search-results".localized())
+            .navigationBarTitle("search-results")
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarBackButtonHidden(true)
             .navigationBarColor(backgroundColor: .planetariumPrimary, titleColor: .white)

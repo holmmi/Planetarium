@@ -7,44 +7,41 @@
 
 import SwiftUI
 
-enum Language: String, CaseIterable {
-    case finnish = "fi"
-    case english = "en"
-}
-
 struct SettingsView: View {
-    @EnvironmentObject var settingsModel: SettingsModel
-    @AppStorage("DarkMode") var isDarkMode: Bool = false
-    @AppStorage("i18n_language") var selectedLang: Language = Language.english
+    @StateObject private var settingsViewModel = SettingsViewModel()
+    
+    @AppStorage("darkMode") private var isDarkMode: Bool = false
+    @AppStorage("language") private var language = Language.english
     
     var body: some View {
         NavigationView {
             Form {
                 Section {
-                    Toggle("dark-mode".localized(), isOn: $isDarkMode)
+                    Toggle("dark-mode", isOn: $isDarkMode)
                         .toggleStyle(.switch)
                 }
-                Section(header: Text("language".localized()), footer: Text("localization-notice".localized())) {
-                    Picker("language".localized(), selection: $selectedLang) {
-                        Text("finnish".localized()).tag(Language.finnish)
-                        Text("english".localized()).tag(Language.english)
+                Section(header: Text("language"), footer: Text("localization-notice")) {
+                    Picker("language", selection: $language) {
+                        Text("finnish")
+                            .tag(Language.finnish)
+                        Text("english")
+                            .tag(Language.english)
                     }
-                    .pickerStyle(SegmentedPickerStyle())
-                    .onChange(of: selectedLang) { newValue in
-                        settingsModel.changeLanguage(newValue.rawValue)
+                    .pickerStyle(.segmented)
+                    .onChange(of: language) { newValue in
+                        settingsViewModel.changeLanguage(newValue.rawValue)
                     }
                 }
             }
+            .navigationBarTitle("settings")
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarColor(backgroundColor: .planetariumPrimary, titleColor: .white)
         }
-        .navigationBarTitle("settings".localized())
-        .navigationBarColor(backgroundColor: .planetariumPrimary, titleColor: .white)
-        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
         SettingsView()
-            .environmentObject(SettingsModel())
     }
 }

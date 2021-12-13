@@ -10,37 +10,42 @@ import SwiftUI
 struct MainView: View {
     @StateObject var apodListViewModel = APODListViewModel()
     @StateObject var favoritesListViewModel = FavoritesListViewModel()
-    @StateObject var settingsModel = SettingsModel()
-    @AppStorage("DarkMode") var isDarkMode: Bool = false
+    
+    @AppStorage("darkMode") private var isDarkMode = false
+    @AppStorage("language") private var language = Language.english
     
     var body: some View {
         TabView {
             APODListView()
                 .environmentObject(apodListViewModel)
-                .environmentObject(settingsModel)
                 .tabItem({
-                    Label("pictures".localized(), systemImage: "photo.fill")
+                    Label("pictures", systemImage: "photo.fill")
                 })
             APODSearchView()
-                .environmentObject(settingsModel)
                 .tabItem({
-                    Label("search".localized(), systemImage: "magnifyingglass")
+                    Label("search", systemImage: "magnifyingglass")
                 })
             FavoritesListView()
-                .environmentObject(settingsModel)
                 .environmentObject(favoritesListViewModel)
                 .tabItem({
-                    Label("favorites".localized(), systemImage: "star")
+                    Label("favorites", systemImage: "star")
                 })
             SatelliteView()
-                .environmentObject(settingsModel)
                 .tabItem {
-                    Label("satellite".localized(), systemImage: "livephoto")
+                    Label("satellite", systemImage: "livephoto")
+                }
+            SettingsView()
+                .tabItem {
+                    Label("settings", systemImage: "gear")
                 }
         }
+        .environment(\.locale, .init(identifier: language.rawValue))
         .environment(\.colorScheme, isDarkMode ? .dark : .light)
         .preferredColorScheme(isDarkMode ? .dark : .light)
         .accentColor(.planetariumPrimary)
+        .onAppear {
+            print(language.rawValue)
+        }
     }
 }
 
