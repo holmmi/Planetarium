@@ -4,7 +4,6 @@
 //
 //  Created by Mikael Holm on 25.11.2021.
 //
-//TODO: Try to fix text getting under the clearbutton.
 
 import SwiftUI
 

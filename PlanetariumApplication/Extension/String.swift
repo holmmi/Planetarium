@@ -8,19 +8,9 @@
 import SwiftUI
 
 extension String {
-    func localized() -> String {
-        @AppStorage("i18n_language") var lang: Language = Language.english
-        let langStr = lang.rawValue
-        
-        let path = Bundle.main.path(forResource: langStr, ofType: "lproj")
-        let bundle = Bundle(path: path!)
-        
-        return NSLocalizedString(self, tableName: nil, bundle: bundle!, value: "", comment: "")
-    }
-    
     // partly done with this stackoverflow answer: https://stackoverflow.com/a/35700409
     func formattedDate() -> String {
-        @AppStorage("i18n_language") var lang: Language = Language.english
+        @AppStorage("language") var lang = Language.english
         let langStr = lang.rawValue
         
         let dateFormatterGet = DateFormatter()

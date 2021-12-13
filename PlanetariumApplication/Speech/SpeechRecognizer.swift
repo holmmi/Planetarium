@@ -37,7 +37,7 @@ class SpeechRecognizer: ObservableObject {
     private let assistant = SpeechAssist()
     
     @Published private(set) var isRecording: Bool = false
-    @AppStorage("i18n_language") var lang: Language = Language.english
+    @AppStorage("language") private var lang: Language = Language.english
     
     func record(to speech: Binding<String>) {
         canAccess { authorized in
