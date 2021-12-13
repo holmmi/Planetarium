@@ -9,5 +9,6 @@ import Foundation
 import SwiftUI
 
 extension Color {
+    static let planetariumAccent = Color("PlanetariumAccent")
     static let planetariumPrimary = Color("PlanetariumPrimary")
 }

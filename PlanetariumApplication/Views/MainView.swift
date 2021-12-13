@@ -42,7 +42,7 @@ struct MainView: View {
         .environment(\.locale, .init(identifier: language.rawValue))
         .environment(\.colorScheme, isDarkMode ? .dark : .light)
         .preferredColorScheme(isDarkMode ? .dark : .light)
-        .accentColor(.planetariumPrimary)
+        .accentColor(.planetariumAccent)
         .onAppear {
             print(language.rawValue)
         }
