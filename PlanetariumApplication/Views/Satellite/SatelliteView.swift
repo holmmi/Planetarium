@@ -34,7 +34,7 @@ struct SatelliteView: View {
                                     satelliteViewModel.setRegionByUserLocation()
                                 }
                             }) {
-                                Image(systemName: "location")
+                                Image(systemName: "location").font(.system(size: 40))
                             }
                             .alert("notice", isPresented: $isAlertShowing, actions: ({
                                 Button("ok") {
@@ -49,7 +49,7 @@ struct SatelliteView: View {
                             Button(action: {
                                 isNavigationLinkActive = true
                             }) {
-                                Image(systemName: "camera.metering.center.weighted")
+                                Image(systemName: "camera.metering.center.weighted").font(.system(size: 40))
                             }
                         }
                         .padding([.leading, .bottom, .trailing], 25.0)
