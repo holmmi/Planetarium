@@ -22,6 +22,9 @@
 "delete-favorite-message" = "Are you sure you want to remove this item from favorites?";
 "delete-favorite-destructive" = "Delete";
 "delete-favorite-cancel" = "Cancel";
+"favorites-hint" = "Favorites can be added in the pictures tab";
+"no-items" = "No favorites added";
+
 //Satellite view
 "satellite" = "Satellite";
 "location-search" = "Search for locations and places";

@@ -11,6 +11,17 @@ struct FavoritesListView: View {
     
     var body: some View {
         NavigationView {
+            if favoritesListViewModel.favorites.isEmpty{
+                VStack{
+                Image(systemName: "shippingbox").font(.system(size: 100).weight(.thin))
+                    Text("no-items").font(.title2).padding()
+                    Text("favorites-hint").multilineTextAlignment(.center)
+                }
+                .navigationTitle("favorites")
+                .navigationBarTitleDisplayMode(.inline)
+                .navigationBarColor(backgroundColor: .planetariumPrimary, titleColor: .white)
+            }
+            else{
             List {
                 ForEach(favoritesListViewModel.favorites) { favorite in
                     NavigationLink(destination: FavoritesItemView(favorite: favorite)
@@ -35,12 +46,14 @@ struct FavoritesListView: View {
                 .onDelete(perform: favoritesListViewModel.deleteFavorite)
             }
             .listStyle(GroupedListStyle())
-            .navigationTitle("favorites")
             .listStyle(.grouped)
+            .navigationTitle("favorites")
+            .navigationBarTitleDisplayMode(.inline)
             .navigationBarColor(backgroundColor: .planetariumPrimary, titleColor: .white)
-            .onAppear{
-                favoritesListViewModel.getFavorites()
             }
+        }
+        .onAppear{
+            favoritesListViewModel.getFavorites()
         }
     }
     

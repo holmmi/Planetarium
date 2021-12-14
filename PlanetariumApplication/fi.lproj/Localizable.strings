@@ -22,6 +22,8 @@
 "delete-favorite-message" = "Oletko varma, että haluat poistaa tämän osuman suosikeista?";
 "delete-favorite-destructive" = "Poista";
 "delete-favorite-cancel" = "Peruuta";
+"favorites-hint" = "Suosikkeja voi lisätä kuvat välilehdeltä";
+"no-items" = "Ei suosikkeja";
 //Satellite view
 "satellite" = "Satelliitti";
 "location-search" = "Hae osoitteita tai paikkoja";
