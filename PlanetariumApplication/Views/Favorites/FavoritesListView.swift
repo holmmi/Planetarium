@@ -35,7 +35,7 @@ struct FavoritesListView: View {
                             VStack(alignment: .leading) {
                                 Text(favorite.title!)
                                     .font(.title2)
-                                Text(favorite.date!)
+                                Text(favorite.date?.formattedDate() ?? "")
                                     .padding(.top)
                                 Spacer()
                             }
