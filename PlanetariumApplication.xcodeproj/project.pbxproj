@@ -10,11 +10,15 @@
 		373F3C372757599800BF815D /* FavoritesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373F3C362757599800BF815D /* FavoritesListView.swift */; };
 		373F3C3A27575CC600BF815D /* FavoritesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373F3C3927575CC600BF815D /* FavoritesListViewModel.swift */; };
 		373F3C3C27575D0700BF815D /* FavoritesItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373F3C3B27575D0700BF815D /* FavoritesItemView.swift */; };
-		373F3C3E27575D3100BF815D /* FavoritesItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373F3C3D27575D3100BF815D /* FavoritesItemViewModel.swift */; };
+		6A29DCC327621F9A003FDFDD /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A29DCC227621F9A003FDFDD /* String.swift */; };
+		6A3637002764DEA6000C6EBA /* ListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3636FF2764DEA6000C6EBA /* ListRow.swift */; };
 		6A5294E7275644E400804BBA /* APODSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5294E4275644E400804BBA /* APODSearchView.swift */; };
 		6A5294E8275644E400804BBA /* APODSearchListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5294E5275644E400804BBA /* APODSearchListView.swift */; };
 		6A5294E9275644E400804BBA /* APODSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5294E6275644E400804BBA /* APODSearchViewModel.swift */; };
 		6A5294ED2756452200804BBA /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5294EC2756452200804BBA /* SpeechRecognizer.swift */; };
+		6A7A2332275F6F6E0095B937 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 6A7A2331275F6F6E0095B937 /* Config.xcconfig */; };
+		6A7A2336275FBEEF0095B937 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7A2335275FBEEF0095B937 /* SettingsView.swift */; };
+		6AB9D0DE275A3FA200DFE72B /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AB9D0DD275A3FA200DFE72B /* Launch Screen.storyboard */; };
 		730E767C27493BC800AA756D /* MapSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730E767B27493BC800AA756D /* MapSearch.swift */; };
 		730E7680274945B300AA756D /* MapSearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730E767F274945B300AA756D /* MapSearchBarView.swift */; };
 		730E768227494BF900AA756D /* SatelliteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730E768127494BF900AA756D /* SatelliteViewModel.swift */; };
@@ -44,6 +48,18 @@
 		7338F35F274537020038C370 /* FavoriteRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7338F35E274537020038C370 /* FavoriteRepositoryTest.swift */; };
 		7345895B274FEB0E00C2C6CD /* ClearButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7345895A274FEB0E00C2C6CD /* ClearButton.swift */; };
 		7346AE42274BDC1E0042DBF7 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7346AE41274BDC1E0042DBF7 /* Map.swift */; };
+		735D11A6275F9AFE00057528 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735D11A5275F9AFE00057528 /* Color.swift */; };
+		735D11AA275FA85900057528 /* NavigationBarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735D11A9275FA85900057528 /* NavigationBarModifier.swift */; };
+		735D11AC275FAA4900057528 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735D11AB275FAA4900057528 /* View.swift */; };
+		735D11AE275FAF5A00057528 /* NavigationBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735D11AD275FAF5A00057528 /* NavigationBackButton.swift */; };
+		735D11B0276315A200057528 /* SearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735D11AF276315A200057528 /* SearchUITests.swift */; };
+		735D11B227678F2600057528 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735D11B127678F2600057528 /* SettingsViewModel.swift */; };
+		735D11B42767A50E00057528 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735D11B32767A50E00057528 /* Language.swift */; };
+		7385111127514CBB00206077 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7385111327514CBB00206077 /* InfoPlist.strings */; };
+		7385111627550E6C00206077 /* SatellitePictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7385111527550E6C00206077 /* SatellitePictureView.swift */; };
+		73851118275525F700206077 /* SatellitePictureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73851117275525F700206077 /* SatellitePictureViewModel.swift */; };
+		7385111A2755E1FF00206077 /* EarthAssetsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738511192755E1FF00206077 /* EarthAssetsRequest.swift */; };
+		7385111C2755E35400206077 /* EarthAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7385111B2755E35400206077 /* EarthAsset.swift */; };
 		73B1545E274D2DA60015AF00 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B1545D274D2DA60015AF00 /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -66,14 +82,18 @@
 
 /* Begin PBXFileReference section */
 		373F3C362757599800BF815D /* FavoritesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListView.swift; sourceTree = "<group>"; };
-		373F3C3827575B1900BF815D /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		373F3C3827575B1900BF815D /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = SOURCE_ROOT; };
 		373F3C3927575CC600BF815D /* FavoritesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListViewModel.swift; sourceTree = "<group>"; };
 		373F3C3B27575D0700BF815D /* FavoritesItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesItemView.swift; sourceTree = "<group>"; };
-		373F3C3D27575D3100BF815D /* FavoritesItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesItemViewModel.swift; sourceTree = "<group>"; };
+		6A29DCC227621F9A003FDFDD /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		6A3636FF2764DEA6000C6EBA /* ListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRow.swift; sourceTree = "<group>"; };
 		6A5294E4275644E400804BBA /* APODSearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APODSearchView.swift; sourceTree = "<group>"; };
 		6A5294E5275644E400804BBA /* APODSearchListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APODSearchListView.swift; sourceTree = "<group>"; };
 		6A5294E6275644E400804BBA /* APODSearchViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APODSearchViewModel.swift; sourceTree = "<group>"; };
 		6A5294EC2756452200804BBA /* SpeechRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
+		6A7A2331275F6F6E0095B937 /* Config.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		6A7A2335275FBEEF0095B937 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		6AB9D0DD275A3FA200DFE72B /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		730E767B27493BC800AA756D /* MapSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSearch.swift; sourceTree = "<group>"; };
 		730E767F274945B300AA756D /* MapSearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSearchBarView.swift; sourceTree = "<group>"; };
 		730E768127494BF900AA756D /* SatelliteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatelliteViewModel.swift; sourceTree = "<group>"; };
@@ -100,13 +120,25 @@
 		7338F3412745309F0038C370 /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		7338F3442745309F0038C370 /* APODRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APODRequest.swift; sourceTree = "<group>"; };
 		7338F3462745309F0038C370 /* PictureInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureInfo.swift; sourceTree = "<group>"; };
-		7338F353274531C50038C370 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		7338F357274532A60038C370 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		7338F359274532BB0038C370 /* fi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fi; path = fi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		7338F35B274534950038C370 /* Main.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Main.xcdatamodel; sourceTree = "<group>"; };
 		7338F35E274537020038C370 /* FavoriteRepositoryTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteRepositoryTest.swift; sourceTree = "<group>"; };
 		7345895A274FEB0E00C2C6CD /* ClearButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearButton.swift; sourceTree = "<group>"; };
 		7346AE41274BDC1E0042DBF7 /* Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
+		735D11A5275F9AFE00057528 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		735D11A9275FA85900057528 /* NavigationBarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarModifier.swift; sourceTree = "<group>"; };
+		735D11AB275FAA4900057528 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		735D11AD275FAF5A00057528 /* NavigationBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBackButton.swift; sourceTree = "<group>"; };
+		735D11AF276315A200057528 /* SearchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUITests.swift; sourceTree = "<group>"; };
+		735D11B127678F2600057528 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		735D11B32767A50E00057528 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
+		7385111227514CBB00206077 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7385111427514CBD00206077 /* fi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fi; path = fi.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7385111527550E6C00206077 /* SatellitePictureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatellitePictureView.swift; sourceTree = "<group>"; };
+		73851117275525F700206077 /* SatellitePictureViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatellitePictureViewModel.swift; sourceTree = "<group>"; };
+		738511192755E1FF00206077 /* EarthAssetsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthAssetsRequest.swift; sourceTree = "<group>"; };
+		7385111B2755E35400206077 /* EarthAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthAsset.swift; sourceTree = "<group>"; };
 		73B1545D274D2DA60015AF00 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -141,7 +173,6 @@
 				373F3C362757599800BF815D /* FavoritesListView.swift */,
 				373F3C3927575CC600BF815D /* FavoritesListViewModel.swift */,
 				373F3C3B27575D0700BF815D /* FavoritesItemView.swift */,
-				373F3C3D27575D3100BF815D /* FavoritesItemViewModel.swift */,
 			);
 			path = Favorites;
 			sourceTree = "<group>";
@@ -154,6 +185,31 @@
 				6A5294E6275644E400804BBA /* APODSearchViewModel.swift */,
 			);
 			path = APODSearch;
+			sourceTree = "<group>";
+		};
+		6A7A2330275F6F050095B937 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				373F3C3827575B1900BF815D /* Config.xcconfig */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		6A7A2334275FBEDA0095B937 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				6A7A2335275FBEEF0095B937 /* SettingsView.swift */,
+				735D11B127678F2600057528 /* SettingsViewModel.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		6AB9D0DC275A3F9100DFE72B /* Launchscreen */ = {
+			isa = PBXGroup;
+			children = (
+				6AB9D0DD275A3FA200DFE72B /* Launch Screen.storyboard */,
+			);
+			path = Launchscreen;
 			sourceTree = "<group>";
 		};
 		730E767A27493BB400AA756D /* Map */ = {
@@ -189,6 +245,7 @@
 				7338F31C27452FD10038C370 /* PlanetariumApplicationTests */,
 				7338F32627452FD10038C370 /* PlanetariumApplicationUITests */,
 				7338F30527452FCF0038C370 /* Products */,
+				6A7A2330275F6F050095B937 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -205,8 +262,10 @@
 		7338F30627452FCF0038C370 /* PlanetariumApplication */ = {
 			isa = PBXGroup;
 			children = (
+				735D11A4275F9AED00057528 /* Extension */,
+				6A7A2331275F6F6E0095B937 /* Config.xcconfig */,
+				7385111D2757AF7700206077 /* Speech */,
 				730E767A27493BB400AA756D /* Map */,
-				7338F353274531C50038C370 /* Info.plist */,
 				7338F3402745309F0038C370 /* Data */,
 				7338F3452745309F0038C370 /* Models */,
 				7338F3432745309F0038C370 /* Network */,
@@ -217,7 +276,7 @@
 				7338F30D27452FD10038C370 /* Preview Content */,
 				7338F358274532A60038C370 /* Localizable.strings */,
 				7338F35A274534950038C370 /* Main.xcdatamodeld */,
-				373F3C3827575B1900BF815D /* Config.xcconfig */,
+				7385111327514CBB00206077 /* InfoPlist.strings */,
 			);
 			path = PlanetariumApplication;
 			sourceTree = "<group>";
@@ -246,6 +305,7 @@
 			children = (
 				7338F32727452FD10038C370 /* PlanetariumApplicationUITests.swift */,
 				7338F32927452FD10038C370 /* PlanetariumApplicationUITestsLaunchTests.swift */,
+				735D11AF276315A200057528 /* SearchUITests.swift */,
 			);
 			path = PlanetariumApplicationUITests;
 			sourceTree = "<group>";
@@ -253,6 +313,9 @@
 		7338F3362745309F0038C370 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6A7A2334275FBEDA0095B937 /* Settings */,
+				735D11A8275FA84200057528 /* Modifiers */,
+				6AB9D0DC275A3F9100DFE72B /* Launchscreen */,
 				373F3C352757595D00BF815D /* Favorites */,
 				6A5294EE275655A400804BBA /* APODSearch */,
 				7345895C2750ADC200C2C6CD /* APOD */,
@@ -283,6 +346,7 @@
 			isa = PBXGroup;
 			children = (
 				7338F3442745309F0038C370 /* APODRequest.swift */,
+				738511192755E1FF00206077 /* EarthAssetsRequest.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -290,9 +354,10 @@
 		7338F3452745309F0038C370 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				6A5294EC2756452200804BBA /* SpeechRecognizer.swift */,
 				7338F3462745309F0038C370 /* PictureInfo.swift */,
 				7346AE41274BDC1E0042DBF7 /* Map.swift */,
+				7385111B2755E35400206077 /* EarthAsset.swift */,
+				735D11B32767A50E00057528 /* Language.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -311,6 +376,8 @@
 				7322C0DD2747F74C00C3E1C5 /* SatelliteView.swift */,
 				730E767F274945B300AA756D /* MapSearchBarView.swift */,
 				730E768127494BF900AA756D /* SatelliteViewModel.swift */,
+				7385111527550E6C00206077 /* SatellitePictureView.swift */,
+				73851117275525F700206077 /* SatellitePictureViewModel.swift */,
 			);
 			path = Satellite;
 			sourceTree = "<group>";
@@ -319,6 +386,8 @@
 			isa = PBXGroup;
 			children = (
 				7345895A274FEB0E00C2C6CD /* ClearButton.swift */,
+				735D11AD275FAF5A00057528 /* NavigationBackButton.swift */,
+				6A3636FF2764DEA6000C6EBA /* ListRow.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -333,6 +402,32 @@
 				7322C0D927476FB300C3E1C5 /* APODItemViewModel.swift */,
 			);
 			path = APOD;
+			sourceTree = "<group>";
+		};
+		735D11A4275F9AED00057528 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				735D11A5275F9AFE00057528 /* Color.swift */,
+				735D11AB275FAA4900057528 /* View.swift */,
+				6A29DCC227621F9A003FDFDD /* String.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		735D11A8275FA84200057528 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				735D11A9275FA85900057528 /* NavigationBarModifier.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		7385111D2757AF7700206077 /* Speech */ = {
+			isa = PBXGroup;
+			children = (
+				6A5294EC2756452200804BBA /* SpeechRecognizer.swift */,
+			);
+			path = Speech;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -441,9 +536,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				7338F30F27452FD10038C370 /* Preview Assets.xcassets in Resources */,
+				7385111127514CBB00206077 /* InfoPlist.strings in Resources */,
 				7338F356274532A60038C370 /* Localizable.strings in Resources */,
 				7322C0D827476B6400C3E1C5 /* testAPOD.json in Resources */,
 				7338F30C27452FD10038C370 /* Assets.xcassets in Resources */,
+				6A7A2332275F6F6E0095B937 /* Config.xcconfig in Resources */,
+				6AB9D0DE275A3FA200DFE72B /* Launch Screen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,27 +567,39 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A29DCC327621F9A003FDFDD /* String.swift in Sources */,
 				7322C0DE2747F74C00C3E1C5 /* SatelliteView.swift in Sources */,
 				7338F34A2745309F0038C370 /* MainView.swift in Sources */,
 				730E7680274945B300AA756D /* MapSearchBarView.swift in Sources */,
 				7322C0DA27476FB300C3E1C5 /* APODItemViewModel.swift in Sources */,
+				735D11AC275FAA4900057528 /* View.swift in Sources */,
 				7338F3512745309F0038C370 /* APODRequest.swift in Sources */,
+				735D11A6275F9AFE00057528 /* Color.swift in Sources */,
+				735D11B227678F2600057528 /* SettingsViewModel.swift in Sources */,
 				730E767C27493BC800AA756D /* MapSearch.swift in Sources */,
 				7338F3472745309F0038C370 /* APODListItemView.swift in Sources */,
-				373F3C3E27575D3100BF815D /* FavoritesItemViewModel.swift in Sources */,
 				7338F34B2745309F0038C370 /* APODListViewModel.swift in Sources */,
 				73B1545E274D2DA60015AF00 /* LocationManager.swift in Sources */,
+				735D11AA275FA85900057528 /* NavigationBarModifier.swift in Sources */,
 				7346AE42274BDC1E0042DBF7 /* Map.swift in Sources */,
 				7338F3522745309F0038C370 /* PictureInfo.swift in Sources */,
+				7385111C2755E35400206077 /* EarthAsset.swift in Sources */,
 				7338F34E2745309F0038C370 /* FavoriteRepository.swift in Sources */,
 				6A5294E7275644E400804BBA /* APODSearchView.swift in Sources */,
+				735D11AE275FAF5A00057528 /* NavigationBackButton.swift in Sources */,
 				6A5294E8275644E400804BBA /* APODSearchListView.swift in Sources */,
+				735D11B42767A50E00057528 /* Language.swift in Sources */,
 				6A5294E9275644E400804BBA /* APODSearchViewModel.swift in Sources */,
 				7338F3482745309F0038C370 /* APODListView.swift in Sources */,
+				73851118275525F700206077 /* SatellitePictureViewModel.swift in Sources */,
 				6A5294ED2756452200804BBA /* SpeechRecognizer.swift in Sources */,
 				730E768227494BF900AA756D /* SatelliteViewModel.swift in Sources */,
+				6A3637002764DEA6000C6EBA /* ListRow.swift in Sources */,
 				7345895B274FEB0E00C2C6CD /* ClearButton.swift in Sources */,
+				7385111627550E6C00206077 /* SatellitePictureView.swift in Sources */,
+				7385111A2755E1FF00206077 /* EarthAssetsRequest.swift in Sources */,
 				7338F34F2745309F0038C370 /* Persistence.swift in Sources */,
+				6A7A2336275FBEEF0095B937 /* SettingsView.swift in Sources */,
 				373F3C372757599800BF815D /* FavoritesListView.swift in Sources */,
 				7338F30827452FCF0038C370 /* PlanetariumApplicationApp.swift in Sources */,
 				373F3C3A27575CC600BF815D /* FavoritesListViewModel.swift in Sources */,
@@ -514,6 +624,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				735D11B0276315A200057528 /* SearchUITests.swift in Sources */,
 				7338F32A27452FD10038C370 /* PlanetariumApplicationUITestsLaunchTests.swift in Sources */,
 				7338F32827452FD10038C370 /* PlanetariumApplicationUITests.swift in Sources */,
 			);
@@ -544,12 +655,21 @@
 			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
+		7385111327514CBB00206077 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7385111227514CBB00206077 /* en */,
+				7385111427514CBD00206077 /* fi */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		7338F32B27452FD10038C370 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 373F3C3827575B1900BF815D /* Config.xcconfig */;
+			baseConfigurationReference = 6A7A2331275F6F6E0095B937 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
@@ -612,7 +732,7 @@
 		};
 		7338F32C27452FD10038C370 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 373F3C3827575B1900BF815D /* Config.xcconfig */;
+			baseConfigurationReference = 6A7A2331275F6F6E0095B937 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
@@ -672,15 +792,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PlanetariumApplication/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PlanetariumApplication/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -701,15 +826,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PlanetariumApplication/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PlanetariumApplication/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

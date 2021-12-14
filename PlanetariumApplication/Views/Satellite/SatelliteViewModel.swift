@@ -11,13 +11,13 @@ class SatelliteViewModel: ObservableObject {
     private(set) var locationManager = LocationManager()
     @Published private(set) var mapItems: [MKMapItem] = []
     @Published var region = MKCoordinateRegion(
-        center: CLLocationCoordinate2D(latitude: 37.334_900,
-                                       longitude: -122.009_020),
+        center: CLLocationCoordinate2D(latitude: 060.223_854,
+                                       longitude: 024.758_627),
         latitudinalMeters: 750,
         longitudinalMeters: 750
     )
     private(set) var mapMarker: IdentifiablePlace = IdentifiablePlace(
-        location: CLLocationCoordinate2D(latitude: 37.334_900, longitude: -122.009_020)
+        location: CLLocationCoordinate2D(latitude: 060.223_854, longitude: 024.758_627)
     )
     
     func search(query: String) {

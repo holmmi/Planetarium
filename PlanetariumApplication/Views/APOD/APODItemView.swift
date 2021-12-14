@@ -8,7 +8,7 @@ import SwiftUI
 
 struct APODItemView: View {
     let pictureInfo: PictureInfo
-    @StateObject var apodItemViewModel: APODItemViewModel = APODItemViewModel()
+    @EnvironmentObject var apodItemViewModel: APODItemViewModel
     
     var body: some View {
         ScrollView {
@@ -34,12 +34,21 @@ struct APODItemView: View {
             }.padding()
         }
         .toolbar {
-            Button(action: addToFavorite) {
-                Image(systemName: apodItemViewModel.isFavorite ? "heart.fill" : "heart")
-            }
-        }.onAppear() {
+            ToolbarItem(placement: .navigationBarLeading, content: ({
+                NavigationBackButton()
+            }))
+            ToolbarItem(placement: .navigationBarTrailing, content: ({
+                Button(action: addToFavorite) {
+                    Image(systemName: apodItemViewModel.isFavorite ? "heart.fill" : "heart")
+                        .aspectRatio(contentMode: .fit)
+                        .foregroundColor(.white)
+                }
+            }))
+        }
+        .onAppear() {
             apodItemViewModel.updateIsFavorite(date: pictureInfo.date)
         }
+        .navigationBarBackButtonHidden(true)
     }
     
     func addToFavorite() {

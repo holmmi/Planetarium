@@ -10,29 +10,45 @@ import SwiftUI
 struct MainView: View {
     @StateObject var apodListViewModel = APODListViewModel()
     @StateObject var favoritesListViewModel = FavoritesListViewModel()
-
+    
+    @AppStorage("darkMode") private var isDarkMode = false
+    @AppStorage("language") private var language = Language.english
     
     var body: some View {
         TabView {
             APODListView()
                 .environmentObject(apodListViewModel)
                 .tabItem({
-                    Label("Pictures", systemImage: "photo.fill")
+                    Label("pictures", systemImage: "photo.fill")
                 })
             APODSearchView()
                 .tabItem({
-                    Label("Search", systemImage: "magnifyingglass")
+                    Label("search", systemImage: "magnifyingglass")
                 })
             FavoritesListView()
                 .environmentObject(favoritesListViewModel)
                 .tabItem({
-                    Label("Favorites", systemImage: "star")
+                    Label("favorites", systemImage: "star")
                 })
             SatelliteView()
                 .tabItem {
-                    Label("Satellite", systemImage: "livephoto")
+                    Label("satellite", systemImage: "livephoto")
                 }
-            
+            SettingsView()
+                .tabItem {
+                    Label("settings", systemImage: "gear")
+                }
+        }
+        .environment(\.locale, .init(identifier: language.rawValue))
+        .environment(\.colorScheme, isDarkMode ? .dark : .light)
+        .preferredColorScheme(isDarkMode ? .dark : .light)
+        .accentColor(.planetariumAccent)
+        .onAppear {
+            if let languageCode = Locale.current.languageCode {
+                if let language = Language.init(rawValue: languageCode) {
+                    self.language = language
+                }
+            }
         }
     }
 }
@@ -40,6 +56,6 @@ struct MainView: View {
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
         MainView()
-.previewInterfaceOrientation(.portrait)
+            .previewInterfaceOrientation(.portrait)
     }
 }

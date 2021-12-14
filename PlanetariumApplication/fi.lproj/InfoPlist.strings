@@ -6,3 +6,6 @@
   
 */
 "NSLocationWhenInUseUsageDescription" = "Sijaintipalveluita käytetään laitteen sijainnin paikantamiseksi, jotta nykyisestä sijainnista voidaan ottaa satelliittikuva.";
+"NSSpeechRecognitionUsageDescription" = "Puheentunnistusta käytetään kartassa eri sijaintien hakemiseksi.";
+"NSMicrophoneUsageDescription" = "Mikrofonia käytetään puheentunnistuksessa.";
+"NSPhotoLibraryAddUsageDescription" = "Kuvakirjastoa käytetään satelliittikuvien tallentamista varten.";

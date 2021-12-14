@@ -22,7 +22,7 @@ struct APODRequest {
     
     func getPictureInfos(startDate: Date, endDate: Date, completion: @escaping (Result<[PictureInfo], Error>) -> Void) -> Void {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "YYYY-MM-dd"
+        dateFormatter.dateFormat = "yyyy-MM-dd"
         
         var urlComponents = URLComponents(string: "https://api.nasa.gov/planetary/apod")!
         urlComponents.queryItems = [

@@ -11,12 +11,13 @@ import Foundation
 import Speech
 import SwiftUI
 
-struct SpeechRecognizer {
+class SpeechRecognizer: ObservableObject {
     private class SpeechAssist {
         var audioEngine: AVAudioEngine?
         var recognitionRequest: SFSpeechAudioBufferRecognitionRequest?
         var recognitionTask: SFSpeechRecognitionTask?
-        let speechRecognizer = SFSpeechRecognizer()
+        var speechRecognizer = SFSpeechRecognizer()
+        var defaultTaskHint: SFSpeechRecognitionTaskHint?
         var timer: Timer?
         
         deinit {
@@ -35,58 +36,63 @@ struct SpeechRecognizer {
     
     private let assistant = SpeechAssist()
     
-    @Binding var clr: Color
-    @Binding var isRecording: Bool
-    
-    init(clr: Binding<Color>, isRecording: Binding<Bool>) {
-        self._clr = clr
-        self._isRecording = isRecording
-    }
+    @Published private(set) var isRecording: Bool = false
+    @AppStorage("language") private var lang: Language = Language.english
     
     func record(to speech: Binding<String>) {
-        //relay(speech, message: "Requesting access")
         canAccess { authorized in
             guard authorized else {
-                //relay(speech, message: "Access denied")
                 return
             }
-            
-            //relay(speech, message: "Access granted")
-            
-            assistant.audioEngine = AVAudioEngine()
-            guard let audioEngine = assistant.audioEngine else {
+            self.assistant.defaultTaskHint = .search
+            self.assistant.audioEngine = AVAudioEngine()
+            self.assistant.speechRecognizer = SFSpeechRecognizer(locale: Locale.init(identifier: self.lang.rawValue))       // change speech recognizer language according to current user selected language
+            guard let audioEngine = self.assistant.audioEngine else {
                 fatalError("Unable to create audio engine")
             }
-            assistant.recognitionRequest = SFSpeechAudioBufferRecognitionRequest()
-            guard let recognitionRequest = assistant.recognitionRequest else {
+            
+            self.assistant.recognitionRequest = SFSpeechAudioBufferRecognitionRequest()
+            guard let recognitionRequest = self.assistant.recognitionRequest else {
                 fatalError("Unable to create request")
             }
             recognitionRequest.shouldReportPartialResults = true
             
             do {
-                //relay(speech, message: "Booting audio subsystem")
                 
                 let audioSession = AVAudioSession.sharedInstance()
                 try audioSession.setCategory(.record, mode: .measurement, options: .duckOthers)
                 try audioSession.setActive(true, options: .notifyOthersOnDeactivation)
                 let inputNode = audioEngine.inputNode
-                //relay(speech, message: "Found input node")
                 
                 let recordingFormat = inputNode.outputFormat(forBus: 0)
                 inputNode.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat) { (buffer: AVAudioPCMBuffer, when: AVAudioTime) in
                     recognitionRequest.append(buffer)
                 }
-                let beginRecordingId: SystemSoundID = 1113
-                //relay(speech, message: "Preparing audio engine")
+                
                 audioEngine.prepare()
                 try audioEngine.start()
-                changeColor($clr, newColor: Color(.red))
+                
+                let beginRecordingId: SystemSoundID = 1113
                 AudioServicesPlaySystemSound(beginRecordingId)
-                assistant.recognitionTask = assistant.speechRecognizer?.recognitionTask(with: recognitionRequest) { (result, error) in
+                
+                DispatchQueue.main.async {
+                    self.isRecording = true
+                }
+                
+                let formatter = NumberFormatter()
+                formatter.numberStyle = .spellOut
+                
+                self.assistant.recognitionTask = self.assistant.speechRecognizer?.recognitionTask(with: recognitionRequest) { (result, error) in
                     var isFinal = false
                     
+                    //convert spelled number to number, only working in english
                     if let result = result {
-                        relay(speech, message: result.bestTranscription.formattedString)
+                        if let number = formatter.number(from: result.bestTranscription.formattedString.lowercased())?.stringValue {
+                            self.relay(speech, message: number)
+                        }
+                        else {
+                            self.relay(speech, message: result.bestTranscription.formattedString)
+                        }
                         isFinal = result.isFinal
                     }
                     
@@ -95,22 +101,23 @@ struct SpeechRecognizer {
                         inputNode.removeTap(onBus: 0)
                         self.assistant.recognitionRequest = nil
                     }
-                    else if error == nil {
-                        restartSpeechTimer()
+                    
+                    if error == nil && !isFinal {
+                        self.restartSpeechTimer()
                     }
                 }
             } catch {
                 print("Error transcibing audio: " + error.localizedDescription)
-                assistant.reset()
+                self.assistant.reset()
             }
         }
     }
     
     func stopRecording() {
+        isRecording = false
         assistant.reset()
         let endRecordingId: SystemSoundID = 1114
         AudioServicesPlaySystemSound(endRecordingId)
-        changeColor($clr, newColor: Color(.blue))
     }
     
     private func canAccess(withHandler handler: @escaping (Bool) -> Void) {
@@ -124,11 +131,12 @@ struct SpeechRecognizer {
             }
         }
     }
+    
     // timer from this stackoverflow answer: https://stackoverflow.com/a/45195741 thank you nuvaryan
     private func restartSpeechTimer() {
         assistant.timer?.invalidate()
         assistant.timer = Timer.scheduledTimer(withTimeInterval: 1.5, repeats: false, block: { (timer) in
-            stopRecording()
+            self.stopRecording()
         })
     }
     
@@ -137,12 +145,4 @@ struct SpeechRecognizer {
             binding.wrappedValue = message
         }
     }
-    
-    private func changeColor(_ binding: Binding<Color>, newColor: Color) {
-        DispatchQueue.main.async {
-            binding.wrappedValue = newColor
-        }
-    }
 }
-
-

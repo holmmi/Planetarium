@@ -11,39 +11,31 @@ struct MapSearchBarView: View {
     @FocusState private var isSearching: Bool
     @State private var searchText = ""
     @ObservedObject var satelliteViewModel: SatelliteViewModel
-    @State private var speechRecognizer: SpeechRecognizer!
-    @State private var btnColor = Color(.blue)
-    @State private var isRecording: Bool = false
-    @State private var clr = Color(.blue)
+    @StateObject private var speechRecognizer = SpeechRecognizer()
     
     var body: some View {
         VStack {
             HStack {
-                TextField("Location Search", text: $searchText)
+                TextField("location-search", text: $searchText)
                     .disableAutocorrection(true)
-                    .textFieldStyle(.roundedBorder)
                     .focused($isSearching)
                     .onChange(of: searchText) {newValue in
                         satelliteViewModel.search(query: newValue)
                     }
-                    .modifier(ClearButton(text: $searchText))
+                    .modifier( ClearButton(text: $searchText, isSearching: $isSearching) )
+                    .padding(10)
+                
+                 //TODO: Try to fix text getting under the clearbutton.
 
-                if isSearching {
-                    Button(action: {
-                        isSearching.toggle()
-                        searchText = ""
-                    }) {
-                        Text("Cancel")
-                    }
-                    .padding(.leading, 10)
-                }
                 Button(action: initTextToSpeech) {
                     Image(systemName: "mic")
-                        .foregroundColor(clr)
+                        .foregroundColor(speechRecognizer.isRecording ? .red : .secondary)
                 }
+                .padding(10)
             }
+            .background(RoundedRectangle(cornerRadius: 5, style: .continuous).fill(.background))
+            //.padding()
             
-           
             if isSearching && !satelliteViewModel.mapItems.isEmpty {
                 List(satelliteViewModel.getMapInfo()) { mapInfo in
                     Button(action: {
@@ -67,24 +59,13 @@ struct MapSearchBarView: View {
                 .listStyle(.plain)
                 .frame(maxHeight: 250)
             }
-            
-        }.padding()
-            .onAppear() {
-                speechRecognizer = SpeechRecognizer(clr: $clr, isRecording: $isRecording)
-            }
+        }
+        .padding()
     }
     
-    
     private func initTextToSpeech() {
-        //print("type:", type(of: speechRecognizer.store.isRecording))
-        if !isRecording {
-            isSearching = true
-            speechRecognizer.record(to: $searchText)
-        }
-        else {
-            isSearching = false
-            speechRecognizer.stopRecording()
-        }
+        isSearching = true
+        speechRecognizer.isRecording ? speechRecognizer.stopRecording() : speechRecognizer.record(to: $searchText)
     }
 }
 

@@ -5,12 +5,46 @@
   Created by Mikael Holm on 17.11.2021.
   
 */
-"Pictures" = "Pictures";
-"Astronomical Pictures" = "Astronomical pictures";
-"Picture %@" = "Picture of %@";
-"Video" = "There is a video available";
-"Sattelite" = "Satellite";
-"Location Search" = "Search for locations and places";
-"Cancel" = "Cancel";
-"Notice" = "Notice";
-"Location Authorization Is Missing" = "Your device cannot be located because the location services for this app are denied. Please check your settings.";
+//Common
+"notice" = "Notice";
+"cancel" = "Cancel";
+"done" = "Done";
+"ok" = "OK";
+"loading" = "Pictures are loading. Please wait...";
+//APOD
+"pictures" = "Pictures";
+"astronomical-pictures" = "Astronomical pictures";
+"picture %@" = "Picture of %@";
+"video" = "There is a video available";
+//Favorites
+"favorites" = "Favorites";
+"delete-favorite-title" = "Delete favorite";
+"delete-favorite-message" = "Are you sure you want to remove this item from favorites?";
+"delete-favorite-destructive" = "Delete";
+"delete-favorite-cancel" = "Cancel";
+//Satellite view
+"satellite" = "Satellite";
+"location-search" = "Search for locations and places";
+"location-authorization-is-missing" = "Your device cannot be located because the location services for this app are denied. Please check your settings.";
+"satellite-picture-loading-failed" = "Loading the satellite picture for the selected location has failed. There is no picture available. Please try again later.";
+"satellite-picture-date %@" = "This picture was taken on %@.";
+//Satellite saving
+"satellite-picture-saved" = "Satellite picture has been saved to photo library.";
+"photo-library-permission-denied" = "Cannot access photo library. Authorize this application to add photos in settings.";
+//Search view
+"find" = "Astronomical picture search";
+"amount-of-pictures" = "Amount of pictures";
+"start-date" = "Start date";
+"end-date" = "End date";
+"random-pictures" = "Random pictures";
+"search" = "Search";
+"reset" = "Reset";
+//Search results
+"search-results" = "Search results";
+//Settings
+"settings" = "Settings";
+"dark-mode" = "Dark Mode";
+"language" = "Language";
+"finnish" = "Finnish";
+"english" = "English";
+"localization-notice" = "Note that some changes will take effect after reloading the application.";

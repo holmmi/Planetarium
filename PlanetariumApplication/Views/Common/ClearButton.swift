@@ -9,22 +9,24 @@ import SwiftUI
 
 struct ClearButton: ViewModifier {
     @Binding var text: String
+    var isSearching: FocusState<Bool>.Binding
     
     public func body(content: Content) -> some View {
         ZStack(alignment: .trailing)
         {
             content
             
-            if !text.isEmpty
+            if isSearching.wrappedValue
             {
                 Button(action: {
                     self.text = ""
+                    isSearching.wrappedValue = false
                 })
                 {
                     Image(systemName: "xmark.circle.fill")
                         .foregroundColor(.secondary)
                 }
-                .padding(.trailing, 8)
+               // .padding(.trailing, 8)
             }
         }
     }

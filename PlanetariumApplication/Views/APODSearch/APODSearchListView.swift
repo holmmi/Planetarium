@@ -12,18 +12,29 @@ struct APODSearchListView: View {
     @StateObject var apodSearchViewModel: APODSearchViewModel = APODSearchViewModel()
     
     var body: some View {
-        List (apodSearchViewModel.pictureInfos) { pictureInfo in
-            NavigationLink(destination: APODItemView(pictureInfo: pictureInfo).navigationTitle("Picture \(pictureInfo.date)")) {
-                APODListItemView(pictureInfo: pictureInfo)
-            }
+        if apodSearchViewModel.pictureInfos.isEmpty {
+            Text("loading")
+                .onAppear(perform: {
+                    apodSearchViewModel.getSearchData(searchData: searchData)
+                })
         }
-        .onAppear(perform: {
-            apodSearchViewModel.getSearchData(searchData: searchData)
-        })
-        .navigationBarTitle("Search results")
-        .navigationBarTitleDisplayMode(.inline)
-    }
+        else {
+            List (apodSearchViewModel.pictureInfos) { pictureInfo in
+                ListRow(pictureInfo: pictureInfo)
+            }
+            .listStyle(.grouped)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading, content: ({
+                    NavigationBackButton()
+                }))
+            }
+            .navigationBarTitle("search-results")
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarBackButtonHidden(true)
+            .navigationBarColor(backgroundColor: .planetariumPrimary, titleColor: .white)
+        }
         
+    }
     
 }
 

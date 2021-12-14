@@ -11,21 +11,24 @@ struct APODListView: View {
     
     var body: some View {
         NavigationView {
-            List (apodListViewModel.pictureInfos) { pictureInfo in
-                NavigationLink(destination: APODItemView(pictureInfo: pictureInfo).navigationTitle("Picture \(pictureInfo.date)")) {
-                    APODListItemView(pictureInfo: pictureInfo)
+            VStack {
+                if apodListViewModel.pictureInfos.isEmpty {
+                    Text("loading")
+                } else {
+                    List (apodListViewModel.pictureInfos) { pictureInfo in
+                        ListRow(pictureInfo: pictureInfo)
+                    }
+                    .listStyle(.grouped)
                 }
             }
-            .navigationTitle("Astronomical Pictures")
+            .navigationTitle("astronomical-pictures")
             .navigationBarTitleDisplayMode(.inline)
+            .navigationBarColor(backgroundColor: .planetariumPrimary, titleColor: .white)
         }
-        
     }
 }
 
 struct APODListView_Previews: PreviewProvider {
-    
-    
     static var previews: some View {
         APODListView()
             .environmentObject(APODListViewModel())
