@@ -39,6 +39,7 @@ struct FavoritesItemView: View {
                     .padding()
                 Spacer()
             }.padding()
+                .navigationTitle("picture-of \(favorite.date?.formattedDate() ?? "")")
         }
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading, content: ({

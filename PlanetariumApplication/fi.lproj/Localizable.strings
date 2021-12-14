@@ -24,6 +24,7 @@
 "delete-favorite-cancel" = "Peruuta";
 "favorites-hint" = "Suosikkeja voi lisätä kuvat välilehdeltä";
 "no-items" = "Ei suosikkeja";
+"picture-of %@" = "Kuva ajalta %@";
 //Satellite view
 "satellite" = "Satelliitti";
 "location-search" = "Hae osoitteita tai paikkoja";

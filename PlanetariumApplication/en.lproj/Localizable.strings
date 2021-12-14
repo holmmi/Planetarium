@@ -24,6 +24,7 @@
 "delete-favorite-cancel" = "Cancel";
 "favorites-hint" = "Favorites can be added in the pictures tab";
 "no-items" = "No favorites added";
+"picture-of %@" = "Picture of %@";
 
 //Satellite view
 "satellite" = "Satellite";
